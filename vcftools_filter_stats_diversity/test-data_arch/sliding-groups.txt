@@ -1,0 +1,7 @@
+BA55_G;Pop1
+BA58_G;Pop1
+BA59_G;Pop1
+BD54_C;Pop2
+BD65_C;Pop2
+b2_UW;Pop2
+j1_UW;Pop2

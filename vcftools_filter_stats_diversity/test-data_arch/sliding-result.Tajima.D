@@ -1,0 +1,2 @@
+CHROM	BIN_START	N_SNPS	TajimaD
+chr1	0	3737	-nan

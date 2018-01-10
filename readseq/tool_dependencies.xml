@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tool_dependency>
+    <package name="readseq.jar" version="10.03.13">
+        <repository changeset_revision="fea210e6e159" name="package_readseq_jar_10_03_13" owner="gandres" toolshed="https://toolshed.g2.bx.psu.edu" />
+    </package>
+</tool_dependency>

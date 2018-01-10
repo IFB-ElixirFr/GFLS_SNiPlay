@@ -1,0 +1,78 @@
+<tool id="snpEff" name="SnpEff" version="4.0">
+	<description>predicts SNP effect from a genomic VCF file</description>
+	<requirements>
+		<requirement type="package" version="4.0">snpEff</requirement>
+	</requirements> 	
+
+        <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+        <stdio>
+            <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+            <exit_code range="1:" level="fatal" />
+        </stdio>
+
+	<!-- 
+	    You will need to change the path to wherever your installation is.
+		You can change the amount of memory used by snpEff, just change the -Xmx parameter (e.g. use -Xmx2G for 2Gb of memory)
+	-->
+	<command interpreter="bash">./snpEff-pipe.sh $vcf $genome $gff $output $statsFile $log</command>
+	<inputs>
+		<param format="vcf" name="vcf" type="data" label="VCF input file" help="Positions must be genomic positions"/>
+		<param format="fasta" name="genome" type="data" label="Reference genome in Fasta" help=""/>
+		<param format="gff3" name="gff" type="data" label="GFF annotation of the genome" help=""/>
+
+	</inputs>
+	<outputs>
+		<data format="vcf" name="output" label="Annotated VCF" />
+		<data format="html" name="statsFile" label="HTML statistics output"/>
+		<data format="txt" name="log" label="Log file"/>
+	</outputs>
+
+    <tests>
+        <test>
+            <param name="vcf" value="input.vcf"/>
+            <param name="fasta" value="input.fasta"/>
+            <param name="gff3" value="input.gff3"/>
+            <output name="output" file="output.vcf"/>
+            <output name="statsFile" file="output.html"/>
+            <output name="log" file="output.txt"/>
+        </test>
+    </tests>
+
+
+	<help>
+
+
+.. class:: infomark
+
+**Program encapsulated in Galaxy by Southgreen**
+
+.. class:: infomark
+
+**SnpEff version 4.0**
+
+-----
+
+==============
+ Please cite:
+==============
+
+"A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3.", **Cingolani P, Platts A, Wang le L, Coon M, Nguyen T, Wang L, Land SJ, Lu X, Ruden DM.**, Fly (Austin). 2012 Apr-Jun;6(2):80-92.
+
+-----
+
+===========
+ Overview:
+===========
+
+Genetic variant annotation and effect prediction toolbox. It annotates and predicts the effects of variants on genes (such as amino acid changes).
+
+-----
+
+For further informations, please visite the SnpEff_ website.
+
+
+.. _SnpEff: http://snpeff.sourceforge.net/
+        </help>
+
+</tool>
+

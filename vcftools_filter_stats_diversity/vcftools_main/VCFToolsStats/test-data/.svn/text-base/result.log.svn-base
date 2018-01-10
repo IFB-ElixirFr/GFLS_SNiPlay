@@ -1,0 +1,44 @@
+
+VCFtools - v0.1.12b
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /w/galaxy/galaxy4gwen/galaxy-dist/database/files/000/dataset_21.dat
+	--het
+	--out vcf_stats
+	--remove-filtered-all
+
+After filtering, kept 1 out of 1 Individuals
+Outputting Individual Heterozygosity
+	Individual Heterozygosity: Only using biallelic SNPs.
+After filtering, kept 4813 out of a possible 4955 Sites
+Run Time = 0.00 seconds
+
+VCFtools - v0.1.12b
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /w/galaxy/galaxy4gwen/galaxy-dist/database/files/000/dataset_21.dat
+	--out vcf_stats
+	--TsTv-summary
+	--remove-filtered-all
+
+After filtering, kept 1 out of 1 Individuals
+Outputting Ts/Tv summary
+Ts/Tv ratio: 1.883
+After filtering, kept 4813 out of a possible 4955 Sites
+Run Time = 0.00 seconds
+
+VCFtools - v0.1.12b
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /w/galaxy/galaxy4gwen/galaxy-dist/database/files/000/dataset_21.dat
+	--missing-indv
+	--out vcf_stats
+	--remove-filtered-all
+
+After filtering, kept 1 out of 1 Individuals
+Outputting Individual Missingness
+After filtering, kept 4813 out of a possible 4955 Sites
+Run Time = 0.00 seconds

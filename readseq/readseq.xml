@@ -1,0 +1,324 @@
+<tool id="sniplay_readseq" name="Readseq" version="1.0.3">
+    
+    <!-- [REQUIRED] Tool description displayed after the tool name -->
+    <description> Convert various alignment formats </description>
+    
+    <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
+    <requirements>
+        <requirement type="binary">perl</requirement>
+	<requirement type="package" version="10.03.13">readseq.jar</requirement>
+    </requirements>
+    
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>
+
+    <!-- [REQUIRED] The command to execute -->
+    <command>
+	java -jar \$JAVA_JAR_PATH/readseq.jar $filein -f $format >> $fileout_log 2>&amp;1 &amp;&amp;
+#if str( $format ) == "1":
+ mv ${filein}.ig $fileout
+#elif str( $format ) == "2"  :
+ mv ${filein}.gb $fileout
+#elif str( $format ) == "3"  :
+ mv ${filein}.nbrf $fileout
+#elif str( $format ) == "4"  :
+ mv ${filein}.embl $fileout
+#elif str( $format ) == "5"  :
+ mv ${filein}.gcg $fileout
+#elif str( $format ) == "6"  :
+ mv ${filein}.strider $fileout
+#elif str( $format ) == "8"  :
+ mv ${filein}.fasta $fileout
+#elif str( $format ) == "11"  :
+ mv ${filein}.phylip2 $fileout
+#elif str( $format ) == "12"  :
+ mv ${filein}.phylip $fileout
+#elif str( $format ) == "13"  :
+ mv ${filein}.seq $fileout
+#elif str( $format ) == "14"  :
+ mv ${filein}.pir $fileout
+#elif str( $format ) == "15"  :
+ mv ${filein}.msf $fileout
+#elif str( $format ) == "17"  :
+ mv ${filein}.nexus $fileout
+#elif str( $format ) == "18"  :
+ mv ${filein}.pretty $fileout
+#elif str( $format ) == "19"  :
+ mv ${filein}.xml $fileout
+#elif str( $format ) == "22"  :
+ mv ${filein}.aln $fileout
+#elif str( $format ) == "25"  :
+ mv ${filein}.ace $fileout
+#end if
+    </command>
+   
+    <!-- [REQUIRED] Input files and tool parameters -->
+    <inputs>
+	<param name="filein" type="data" format="fasta" optional="false" label="Fasta alignment input" />
+	<param name="fileout_label" type="text" value="phylip conversion" label="Output name" help="Output name for files" />
+	<param name="format" type="select" label="Output format" >
+	    <option value="1">1.IG|Stanford</option>
+	    <option value="2">2.GenBank|gb</option>
+	    <option value="3">3.NBRF</option>
+	    <option value="4">4.EMBL|em</option>
+	    <option value="5">5.GCG</option>
+	    <option value="6">6.DNAStrider</option>
+	    <option value="8">8.Pearson|Fasta|fa</option>
+	    <option value="11">11.Phylip3.2</option>
+	    <option value="12" selected="true">12.Phylip|Phylip4</option>
+	    <option value="13">13.Plain|Raw</option>
+	    <option value="14">14.PIR|CODATA</option>
+	    <option value="15">15.MSF</option>
+	    <option value="17">17.PAUP|NEXUS</option>
+	    <option value="18">18.Pretty</option>
+	    <option value="19">19.XML</option>
+	    <option value="22">22.Clustal</option>
+	    <option value="25">25.ACEDB</option>
+        </param>
+    </inputs> 
+    
+    <!-- [REQUIRED] Output files -->
+    <outputs>
+	<data name="fileout_log" format="txt" label="${fileout_label}.log" />
+	<data name="fileout" format="txt" label="${fileout_label}" >
+		<change_format>
+			<when input="format" value="1" format="ig" />
+			<when input="format" value="2" format="genbank" />
+			<when input="format" value="4" format="embl" />
+			<when input="format" value="5" format="gcg" />
+			<when input="format" value="6" format="strider" />
+			<when input="format" value="8" format="fasta" />
+			<when input="format" value="11" format="phylip" />
+			<when input="format" value="12" format="phylip" />
+			<when input="format" value="14" format="pir" />
+			<when input="format" value="17" format="nexus" />
+			<when input="format" value="18" format="prettyseq" />
+			<when input="format" value="19" format="xml" />
+			<when input="format" value="22" format="clustal" />
+			<when input="format" value="25" format="acedb" />
+		</change_format>
+	</data>
+    </outputs>
+    
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="1" />
+         <output name="fileout" file="readseq-standford" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="2" />
+         <output name="fileout" file="readseq-GenBank" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="3" />
+         <output name="fileout" file="readseq-NBRF" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="4" />
+         <output name="fileout" file="readseq-EMBL" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="5" />
+	 <assert_command>
+	  <has_text text="-f 5" />
+	  <has_text text=".gcg" />
+	 </assert_command>
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="6" />
+         <output name="fileout" file="readseq-DNAStrider" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="8" />
+         <output name="fileout" file="readseq-Pearson" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="11" />
+         <output name="fileout" file="readseq-phylip32" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="12" />
+         <output name="fileout" file="readseq-phylip" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="13" />
+         <output name="fileout" file="readseq-raw" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="14" />
+         <output name="fileout" file="readseq-PIR" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="15" />
+         <output name="fileout" file="readseq-MSF.txt" lines_diff="2" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="17" />
+         <output name="fileout" file="readseq-NEXUS" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="18" />
+         <output name="fileout" file="readseq-Pretty" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="19" />
+         <output name="fileout" file="readseq-XML" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="22" />
+         <output name="fileout" file="readseq-Clustal" />
+        </test>
+        <test>
+         <param name="filein" value="readseq-alignment.fa" />
+	 <param name="format" value="25" />
+         <output name="fileout" file="readseq-ACEDB" />
+        </test>
+
+    </tests>
+    
+    <!-- [OPTIONAL] Help displayed in Galaxy -->
+    <help>
+
+.. class:: infomark
+
+**Authors** Don Gilbert software@bio.indiana.edu
+
+  | **Please cite** If you use this tool, please cite Don Gilbert software@bio.indiana.edu
+
+
+.. class:: infomark
+
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+
+---------------------------------------------------
+
+
+=======
+Readseq
+=======
+
+-----------
+Description
+-----------
+
+  Compute a phylip tree from a fasta alignment.
+
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tools**
+
+=========== ========================== =======
+Name            output file(s)         format 
+=========== ========================== =======
+=========== ========================== =======
+
+
+**Downstream tools**
+
+=========== ========================== =======
+Name            output file(s)         format
+=========== ========================== =======
+fastme      Newick tree                Newick 
+Rooting     out tree                   Newick 
+=========== ========================== =======
+
+
+----------
+Input file
+----------
+
+Fasta file
+	The input data file contains sequence alignment(s)
+	
+
+----------
+Parameters
+----------
+
+Output name
+        Output base name for the ouput files
+
+
+------------
+Output files
+------------
+
+Output_name
+	Resulting tree in phylip format
+
+Output_name.log
+	Log file
+
+------------
+Dependencies
+------------
+ReadSeq
+	readseq.jar at 10.03.13 version
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+Fasta file
+-----------
+
+::
+
+	>IRAT112 GAGAACCGTCCTGTAAGTACTCTTGCTTTAAGTAATAAAGTAATACTAATCCATGACGCTTAAGTCGAAGAGAGAATAAGTCAATATTTAATTGGACTCATCGCTTATTATCATTATGAATCAATAAACAACTTGATGTTGTGCTCCATGTACGATATATAAAGACAGATA
+	>KARASUKARASURANKASU GAGAACCGTCCTGTAAGTACTCTTGCTTTAAATACGAAAGTAATACTAATCCATGACGCTTAAGTCGAAGAGAGAATAAGTCAATATTTAATTGGACTCATCGCTTATGTTCATCATGAATCTATAGTTAACTTGATGTTGTGCTCCATGTACGATATAAAAAGTTAGATA
+
+
+Parameters
+==========
+
+Output name -> phylip conversion
+
+
+Output files
+============
+
+phylip conversion
+-----------------
+
+::
+
+	168 5125
+	IRAT112      GAGAACCGTC CTGTAAGTAC TCTTGCTTTA AGTAATAAAG TAATACTAAT
+	KARASUKARA   GAGAACCGTC CTGTAAGTAC TCTTGCTTTA AATACGAAAG TAATACTAAT
+	
+    </help>
+    
+</tool>

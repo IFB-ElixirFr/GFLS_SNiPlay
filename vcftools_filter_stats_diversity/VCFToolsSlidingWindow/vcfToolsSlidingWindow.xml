@@ -1,0 +1,266 @@
+<tool id="sniplay_vcftoolsslidingwindow" name="VCF tools SlidingWindow" version="1.3.0">
+    
+    <!-- [REQUIRED] Tool description displayed after the tool name -->
+    <description> Make diversity computation with sliding window </description>
+    
+    <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
+    <requirements>
+        <requirement type="binary">perl</requirement>
+        <requirement type="package" version="1.6.924">perl-bioperl</requirement>
+	<requirement type="package" version="0.1.11">vcftools</requirement>
+	<requirement type="package" >perl-vcftools-vcf</requirement>
+
+    </requirements>
+    
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>
+    
+    
+    <!-- [REQUIRED] The command to execute -->
+    <command interpreter="bash">
+    	vcfToolsSlidingWindow.sh ${filein} $window $filelog ${fileout_taj} ${fileout_tstv} ${fileout_windowed} ${fileout_snp} 
+	#if  $group :
+	$group ${fileout_fst} ${fileout_fst_marker}  ${fileout_taj_combined} ${fileout_windowed_combined} ${fileout_tstv_combined} ${fileout_snp_combined}
+	#else : 
+	"none"
+	#end if
+    </command>
+     
+    <!-- [REQUIRED] Input files and tool parameters -->
+    <inputs>
+	<param name="filein" type="data" format="vcf" optional="false" label="VCF input" />
+	<param name="fileout_label" type="text" value="snp_density" optional="false" label="Output file basename"/>
+	<param name="window" type="integer" value="200000" optional="false" label="Window size (in bp)"/>
+	<param name="group" type="data" format="tab" optional="True" label="(optionnal) Groups" help="Each line of the file should be : Indiv;Pop" />
+    </inputs>
+    
+    <!-- [REQUIRED] Output files -->
+    <outputs>
+	<data name="fileout_snp" format="txt" label="${fileout_label}.snpden" />
+	<data name="fileout_taj" format="txt" label="${fileout_label}.Tajima.D" />
+	<data name="fileout_tstv" format="txt" label="${fileout_label}.TsTv" />
+	<data name="fileout_windowed" format="txt" label="${fileout_label}.windowed.pi" />
+	<data name="filelog" format="txt" label="${fileout_label}.log" />
+	<data name="fileout_fst" format="txt" label="${fileout_label}.fst.txt">
+		<filter>(group != None)</filter>
+	</data>
+	<data name="fileout_fst_marker" format="txt" label="${fileout_label}.fst.by_marker.genes.txt">
+		<filter>(group != None)</filter>
+	</data>
+	<data name="fileout_windowed_combined" format="txt" label="${fileout_label}.combined.pi.txt" >
+		<filter>(group != None)</filter>
+	</data>
+	<data name="fileout_taj_combined" format="txt" label="${fileout_label}.combined.dtajima.txt" >
+		<filter>(group != None)</filter>
+	</data>
+	<data name="fileout_tstv_combined" format="txt" label="${fileout_label}.combined.TsTv.txt" >
+		<filter>(group != None)</filter>
+	</data>
+	<data name="fileout_snp_combined" format="txt" label="${fileout_label}.combined.snpden.txt" >
+		<filter>(group != None)</filter>
+	</data>
+    </outputs>
+    
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+	<test>
+         <param name="filein" value="sliding-sample_group.vcf" />
+	 <param name="group" value="sliding-groups.txt" />
+         <output name="fileout_snp" file="sliding-result2.snpden" />
+         <output name="fileout_taj" file="sliding-result2.Tajima.D" />
+         <output name="fileout_tstv" file="sliding-result2.TsTv" />
+         <output name="fileout_windowed" file="sliding-result2.windowed.pi" />
+	 <output name="fileout_fst" file="sliding-result2.fst.txt" />
+         <output name="fileout_fst_marker" file="sliding-result2.fst.by_marker.genes.txt" />
+         <output name="fileout_taj_combined" file="sliding-result2.combined.dtajima.txt" />
+         <output name="fileout_windowed_combined" file="sliding-result2.combined.pi.txt" />
+	 <output name="fileout_tstv_combined" file="sliding-result2.combined.TsTv.txt" />
+	 <output name="fileout_snp_combined" file="sliding-result2.combined.snpden.txt" />
+        </test>
+	<test>
+         <param name="filein" value="sample.vcf" />
+         <output name="fileout_snp" file="sliding-result.snpden" />
+         <output name="fileout_taj" file="sliding-result.Tajima.D" />
+         <output name="fileout_tstv" file="sliding-result.TsTv" />
+         <output name="fileout_windowed" file="sliding-result.windowed.pi" />
+        </test>
+    </tests>
+    
+    <!-- [OPTIONAL] Help displayed in Galaxy -->
+    <help>
+
+.. class:: infomark
+
+**Authors**     Adam Auton, Petr Danecek and Anthony Marcketta (C++ Module) : VCFtools_
+
+.. _VCFtools: http://vcftools.sourceforge.net
+
+ | **Please cite** "The Variant Call Format and VCFtools", Petr Danecek, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert Handsaker, Gerton Lunter, Gabor Marth, Stephen T. Sherry, Gilean McVean, Richard Durbin and 1000 Genomes Project Analysis Group, **Bioinformatics**, 2011 
+
+.. class:: infomark
+
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+
+---------------------------------------------------
+
+
+================
+VCF tools filter
+================
+
+-----------
+Description
+-----------
+
+  | Compute statistics on VCF file 
+  | For further informations on VCFtools, please visite the VCFtools website_.
+
+.. _website: http://vcftools.sourceforge.net
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tools**
+
+=========== ========================== =======
+Name            output file(s)         format 
+=========== ========================== =======
+=========== ========================== =======
+
+
+**Downstream tools**
+
+=========== ========================== =======
+Name            output file(s)         format
+=========== ========================== =======
+=========== ========================== =======
+
+
+----------
+Input file
+----------
+
+VCF file
+	VCF file with all SNPs
+
+----------
+Parameters
+----------
+
+Output file basename
+	Prefix for the output VCF file
+
+------------
+Output files
+------------
+
+.snpden file
+	SNP density along chromosomes (number of variants)
+
+.Tajima.D file 
+	Tajima's D statistics
+
+.TsTv file
+	TsTv (Transition/transversion ratio)
+.windowed.pi file
+	Nucleotide diversity Pi
+
+.log file
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+VCF file
+---------
+
+::
+
+	#fileformat=VCFv4.1
+	#FILTER=&lt;ID=LowQual,Description="Low quality">
+	#FORMAT=&lt;ID=AD,Number=.,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+	[...]
+	CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	CATB1
+	chr1	2209	.	G	T	213.84	.	AC=2;AF=1.00;AN=2;DP=7;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=41.50;MQ0=0;QD=30.55;EFF=DOWNSTREAM(MODIFIER||||Cc01g00020|mRNA||GSCOCT00012438001|),UPSTREAM(MODIFIER||||Cc01g00010|mRNA||GSCOCT00012439001|)	GT:AD:DP:GQ:PL	1/1:0,7:7:18:242,18,0
+
+
+Parameters
+==========
+
+Output name -> snp_density
+
+
+Output files
+============
+
+.snpden file
+------------
+
+::
+
+	CHROM	BIN_START	SNP_COUNT	VARIANTS/KB
+	chr1	0	4955	24.775
+
+        
+.Tajima.D file
+--------------
+
+::
+
+	CHROM	BIN_START	N_SNPS	TajimaD
+	chr1	0	3737	-nan
+
+.TsTv file
+----------
+
+::
+
+	CHROM	BinStart	SNP_count	Ts/Tv
+	chr1	0	4928	1.88356
+
+.windowed.pi file
+-----------------
+
+::
+
+	CHROM	BIN_START	BIN_END	N_VARIANTS	PI
+	chr1	1	200000	3764	0.01882
+
+
+    </help>
+    <citations>
+            <!-- [HELP] As DOI or BibTex entry -->
+        <citation type="bibtex">    
+@article{Danecek01082011,
+author = {Danecek, Petr and Auton, Adam and Abecasis, Goncalo and Albers, Cornelis A. and Banks, Eric and DePristo, Mark A. and Handsaker, Robert E. and Lunter, Gerton and Marth, Gabor T. and Sherry, Stephen T. and McVean, Gilean and Durbin, Richard and 1000 Genomes Project Analysis Group}, 
+title = {The variant call format and VCFtools},
+volume = {27}, 
+number = {15}, 
+pages = {2156-2158}, 
+year = {2011}, 
+doi = {10.1093/bioinformatics/btr330}, 
+abstract ={Summary: The variant call format (VCF) is a generic format for storing DNA polymorphism data such as SNPs, insertions, deletions and structural variants, together with rich annotations. VCF is usually stored in a compressed manner and can be indexed for fast data retrieval of variants from a range of positions on the reference genome. The format was developed for the 1000 Genomes Project, and has also been adopted by other projects such as UK10K, dbSNP and the NHLBI Exome Project. VCFtools is a software suite that implements various utilities for processing VCF files, including validation, merging, comparing and also provides a general Perl API.Availability: http://vcftools.sourceforge.netContact: rd@sanger.ac.uk}, 
+URL = {http://bioinformatics.oxfordjournals.org/content/27/15/2156.abstract}, 
+eprint = {http://bioinformatics.oxfordjournals.org/content/27/15/2156.full.pdf+html}, 
+journal = {Bioinformatics} 
+}
+	</citation>
+
+    </citations>
+
+</tool>
+

@@ -1,0 +1,309 @@
+git --git-dir /home/vmarcon/.planemo/gx_repo fetch >/dev/null 2>&1
+cd /tmp/tmpV3FcFx; git clone  --branch 'master' '/home/vmarcon/.planemo/gx_repo' 'galaxy-dev'; cd galaxy-dev; if [ -d .venv ] || [ -f dist-eggs.ini ]; then GALAXY_VIRTUAL_ENV=.venv;  else GALAXY_VIRTUAL_ENV=/home/vmarcon/.planemo/gx_venv; fi; export GALAXY_VIRTUAL_ENV; if [ ! -e $GALAXY_VIRTUAL_ENV ]; then /home/vmarcon/Work/GFLS/PLANEMO/.venv/bin/virtualenv -p /home/vmarcon/Work/GFLS/PLANEMO/.venv/bin/python2.7 $GALAXY_VIRTUAL_ENV; fi; [ -e $GALAXY_VIRTUAL_ENV ] && . $GALAXY_VIRTUAL_ENV/bin/activate; COMMON_STARTUP_ARGS=; $(grep -q 'skip-venv' run_tests.sh) && COMMON_STARTUP_ARGS="--dev-wheels"; export COMMON_STARTUP_ARGS; echo "Set COMMON_STARTUP_ARGS to ${COMMON_STARTUP_ARGS}"; ./scripts/common_startup.sh ${COMMON_STARTUP_ARGS}
+Clonage dans 'galaxy-dev'...
+fait.
+Set COMMON_STARTUP_ARGS to --dev-wheels
+Initializing config/migrated_tools_conf.xml from migrated_tools_conf.xml.sample
+Initializing config/shed_tool_conf.xml from shed_tool_conf.xml.sample
+Initializing config/shed_tool_data_table_conf.xml from shed_tool_data_table_conf.xml.sample
+Initializing config/shed_data_manager_conf.xml from shed_data_manager_conf.xml.sample
+Initializing tool-data/shared/ucsc/builds.txt from builds.txt.sample
+Initializing tool-data/shared/ucsc/manual_builds.txt from manual_builds.txt.sample
+Initializing static/welcome.html from welcome.html.sample
+Activating virtualenv at /home/vmarcon/.planemo/gx_venv
+Requirement already satisfied: pip>=8.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages
+Requirement already satisfied: bx-python==0.7.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+Requirement already satisfied: MarkupSafe==0.23 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+Requirement already satisfied: PyYAML==3.11 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+Requirement already satisfied: SQLAlchemy==1.0.15 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 5))
+Requirement already satisfied: mercurial==3.7.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 6))
+Requirement already satisfied: numpy==1.9.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 7))
+Requirement already satisfied: pycrypto==2.6.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 8))
+Requirement already satisfied: Paste==2.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 15))
+Requirement already satisfied: PasteDeploy==1.5.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 16))
+Requirement already satisfied: docutils==0.12 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 17))
+Requirement already satisfied: wchartype==0.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 18))
+Requirement already satisfied: repoze.lru==0.6 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 19))
+Requirement already satisfied: Routes==2.4.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 20))
+Requirement already satisfied: WebOb==1.4.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 21))
+Requirement already satisfied: WebHelpers==1.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 22))
+Requirement already satisfied: Mako==1.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 23))
+Requirement already satisfied: pytz==2015.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 24))
+Requirement already satisfied: Babel==2.1.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 25))
+Requirement already satisfied: Beaker==1.7.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 26))
+Requirement already satisfied: dictobj==0.3.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 27))
+Requirement already satisfied: nose==1.3.7 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 28))
+Requirement already satisfied: Parsley==1.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 29))
+Requirement already satisfied: six==1.10.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 30))
+Requirement already satisfied: Whoosh==2.7.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 31))
+Requirement already satisfied: testfixtures==4.10.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 32))
+Requirement already satisfied: galaxy_sequence_utils==1.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 33))
+Requirement already satisfied: Cheetah==2.4.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 36))
+Requirement already satisfied: Markdown==2.6.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 37))
+Requirement already satisfied: bioblend==0.7.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 40))
+Requirement already satisfied: boto==2.38.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 41))
+Requirement already satisfied: requests==2.8.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 42))
+Requirement already satisfied: requests-toolbelt==0.4.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 43))
+Requirement already satisfied: kombu==3.0.30 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 46))
+Requirement already satisfied: amqp==1.4.8 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 47))
+Requirement already satisfied: anyjson==0.3.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 48))
+Requirement already satisfied: psutil==4.1.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 51))
+Requirement already satisfied: pulsar-galaxy-lib==0.7.0.dev5 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 52))
+Requirement already satisfied: sqlalchemy-migrate==0.10.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 55))
+Requirement already satisfied: decorator==4.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 56))
+Requirement already satisfied: Tempita==0.5.3dev in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 57))
+Requirement already satisfied: sqlparse==0.1.16 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 58))
+Requirement already satisfied: pbr==1.8.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 59))
+Requirement already satisfied: svgwrite==1.1.6 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 62))
+Requirement already satisfied: pyparsing==2.1.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 63))
+Requirement already satisfied: Fabric==1.10.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 66))
+Requirement already satisfied: paramiko==1.15.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 67))
+Requirement already satisfied: ecdsa==0.13 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 68))
+Requirement already satisfied: pysam==0.8.4+gx5 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 71))
+Requirement already satisfied: PasteScript in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from pulsar-galaxy-lib==0.7.0.dev5->-r requirements.txt (line 52))
+Requirement already satisfied: nose in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 1))
+Requirement already satisfied: NoseHTML in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 2))
+Requirement already satisfied: twill==0.9.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 3))
+Requirement already satisfied: mock in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: selenium in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 5))
+Requirement already satisfied: sphinx in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: sphinx_rtd_theme in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 9))
+Requirement already satisfied: lxml in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 10))
+Requirement already satisfied: recommonmark in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 11))
+Requirement already satisfied: six>=1.9 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from mock->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: funcsigs>=1; python_version < "3.3" in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from mock->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: pbr>=0.11 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from mock->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: sphinxcontrib-websupport in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: requests>=2.0.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: docutils>=0.11 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: typing; python_version < "3.5" in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: Pygments>=2.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: setuptools in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: imagesize in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: babel!=2.0,>=1.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: snowballstemmer>=1.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: Jinja2>=2.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: alabaster<0.8,>=0.7 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: commonmark<=0.5.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from recommonmark->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 11))
+Requirement already satisfied: pytz>=0a in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from babel!=2.0,>=1.3->sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: MarkupSafe>=0.23 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from Jinja2>=2.3->sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Testing using galaxy_root /tmp/tmpV3FcFx/galaxy-dev
+Testing tools with command [cd /tmp/tmpV3FcFx/galaxy-dev; if [ -d .venv ] || [ -f dist-eggs.ini ]; then GALAXY_VIRTUAL_ENV=.venv;  else GALAXY_VIRTUAL_ENV=/home/vmarcon/.planemo/gx_venv; fi; export GALAXY_VIRTUAL_ENV; if [ ! -e $GALAXY_VIRTUAL_ENV ]; then /home/vmarcon/Work/GFLS/PLANEMO/.venv/bin/virtualenv -p /home/vmarcon/Work/GFLS/PLANEMO/.venv/bin/python2.7 $GALAXY_VIRTUAL_ENV; fi; [ -e $GALAXY_VIRTUAL_ENV ] && . $GALAXY_VIRTUAL_ENV/bin/activate; sh run_tests.sh $COMMON_STARTUP_ARGS --report_file /home/vmarcon/Work/GFLS/Sniplay/TOOLSHED/vcftools_filter_stats_diversity/VCFToolsStats/tool_test_output.html --xunit_report_file /tmp/tmpV3FcFx/xunit.xml --structured_data_report_file /home/vmarcon/Work/GFLS/Sniplay/TOOLSHED/vcftools_filter_stats_diversity/VCFToolsStats/tool_test_output.json functional.test_toolbox]
+Activating virtualenv at /home/vmarcon/.planemo/gx_venv
+Requirement already satisfied: pip>=8.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages
+Requirement already satisfied: bx-python==0.7.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 2))
+Requirement already satisfied: MarkupSafe==0.23 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+Requirement already satisfied: PyYAML==3.11 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+Requirement already satisfied: SQLAlchemy==1.0.15 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 5))
+Requirement already satisfied: mercurial==3.7.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 6))
+Requirement already satisfied: numpy==1.9.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 7))
+Requirement already satisfied: pycrypto==2.6.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 8))
+Requirement already satisfied: Paste==2.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 15))
+Requirement already satisfied: PasteDeploy==1.5.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 16))
+Requirement already satisfied: docutils==0.12 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 17))
+Requirement already satisfied: wchartype==0.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 18))
+Requirement already satisfied: repoze.lru==0.6 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 19))
+Requirement already satisfied: Routes==2.4.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 20))
+Requirement already satisfied: WebOb==1.4.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 21))
+Requirement already satisfied: WebHelpers==1.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 22))
+Requirement already satisfied: Mako==1.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 23))
+Requirement already satisfied: pytz==2015.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 24))
+Requirement already satisfied: Babel==2.1.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 25))
+Requirement already satisfied: Beaker==1.7.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 26))
+Requirement already satisfied: dictobj==0.3.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 27))
+Requirement already satisfied: nose==1.3.7 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 28))
+Requirement already satisfied: Parsley==1.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 29))
+Requirement already satisfied: six==1.10.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 30))
+Requirement already satisfied: Whoosh==2.7.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 31))
+Requirement already satisfied: testfixtures==4.10.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 32))
+Requirement already satisfied: galaxy_sequence_utils==1.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 33))
+Requirement already satisfied: Cheetah==2.4.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 36))
+Requirement already satisfied: Markdown==2.6.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 37))
+Requirement already satisfied: bioblend==0.7.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 40))
+Requirement already satisfied: boto==2.38.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 41))
+Requirement already satisfied: requests==2.8.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 42))
+Requirement already satisfied: requests-toolbelt==0.4.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 43))
+Requirement already satisfied: kombu==3.0.30 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 46))
+Requirement already satisfied: amqp==1.4.8 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 47))
+Requirement already satisfied: anyjson==0.3.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 48))
+Requirement already satisfied: psutil==4.1.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 51))
+Requirement already satisfied: pulsar-galaxy-lib==0.7.0.dev5 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 52))
+Requirement already satisfied: sqlalchemy-migrate==0.10.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 55))
+Requirement already satisfied: decorator==4.0.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 56))
+Requirement already satisfied: Tempita==0.5.3dev in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 57))
+Requirement already satisfied: sqlparse==0.1.16 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 58))
+Requirement already satisfied: pbr==1.8.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 59))
+Requirement already satisfied: svgwrite==1.1.6 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 62))
+Requirement already satisfied: pyparsing==2.1.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 63))
+Requirement already satisfied: Fabric==1.10.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 66))
+Requirement already satisfied: paramiko==1.15.2 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 67))
+Requirement already satisfied: ecdsa==0.13 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 68))
+Requirement already satisfied: pysam==0.8.4+gx5 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r requirements.txt (line 71))
+Requirement already satisfied: PasteScript in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from pulsar-galaxy-lib==0.7.0.dev5->-r requirements.txt (line 52))
+Requirement already satisfied: nose in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 1))
+Requirement already satisfied: NoseHTML in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 2))
+Requirement already satisfied: twill==0.9.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 3))
+Requirement already satisfied: mock in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: selenium in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 5))
+Requirement already satisfied: sphinx in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: sphinx_rtd_theme in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 9))
+Requirement already satisfied: lxml in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 10))
+Requirement already satisfied: recommonmark in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from -r ./lib/galaxy/dependencies/dev-requirements.txt (line 11))
+Requirement already satisfied: six>=1.9 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from mock->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: funcsigs>=1; python_version < "3.3" in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from mock->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: pbr>=0.11 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from mock->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 4))
+Requirement already satisfied: sphinxcontrib-websupport in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: requests>=2.0.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: docutils>=0.11 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: typing; python_version < "3.5" in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: Pygments>=2.0 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: setuptools in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: imagesize in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: babel!=2.0,>=1.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: snowballstemmer>=1.1 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: Jinja2>=2.3 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: alabaster<0.8,>=0.7 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: commonmark<=0.5.4 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from recommonmark->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 11))
+Requirement already satisfied: pytz>=0a in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from babel!=2.0,>=1.3->sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Requirement already satisfied: MarkupSafe>=0.23 in /home/vmarcon/.planemo/gx_venv/lib/python2.7/site-packages (from Jinja2>=2.3->sphinx->-r ./lib/galaxy/dependencies/dev-requirements.txt (line 8))
+Activating virtualenv at /home/vmarcon/.planemo/gx_venv
+2018-01-04 17:40:48,784 WARNI [galaxy.containers] config file './config/containers_conf.yml' does not exist, running with default config
+2018-01-04 17:40:48,784 INFO  [galaxy.queue_worker] Initializing main Galaxy Queue Worker on sqlalchemy+sqlite://
+2018-01-04 17:40:48,840 INFO  [galaxy.model.migrate.check] Migrating 127 -> 128... 
+2018-01-04 17:40:49,222 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,222 INFO  [galaxy.model.migrate.check] Migration script to add session update time (used for timeouts)
+2018-01-04 17:40:49,222 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,222 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,222 INFO  [galaxy.model.migrate.check] Migrating 128 -> 129... 
+2018-01-04 17:40:49,527 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,527 INFO  [galaxy.model.migrate.check] Migration script to allow invalidation of job external output metadata temp files
+2018-01-04 17:40:49,527 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,527 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,527 INFO  [galaxy.model.migrate.check] Migrating 129 -> 130... 
+2018-01-04 17:40:49,862 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,863 INFO  [galaxy.model.migrate.check] Migration script to change the 'value' column of 'user_preference' table from varchar to text.
+2018-01-04 17:40:49,863 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,863 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:49,863 INFO  [galaxy.model.migrate.check] Migrating 130 -> 131... 
+2018-01-04 17:40:50,403 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,404 INFO  [galaxy.model.migrate.check] Migration script to support subworkflows and workflow request input parameters
+2018-01-04 17:40:50,404 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,404 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,404 INFO  [galaxy.model.migrate.check] Migrating 131 -> 132... 
+2018-01-04 17:40:50,438 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,438 INFO  [galaxy.model.migrate.check] Migrating 132 -> 133... 
+2018-01-04 17:40:50,741 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,742 INFO  [galaxy.model.migrate.check] Add dependencies column to jobs table
+2018-01-04 17:40:50,742 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,742 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,742 INFO  [galaxy.model.migrate.check] Migrating 133 -> 134... 
+2018-01-04 17:40:50,756 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,756 INFO  [galaxy.model.migrate.check] Migration script to set the 'deleted' column of the
+2018-01-04 17:40:50,757 INFO  [galaxy.model.migrate.check] 'history_dataset_association' table to True if 'purged' is True.
+2018-01-04 17:40:50,757 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,757 INFO  [galaxy.model.migrate.check] 
+2018-01-04 17:40:50,768 INFO  [galaxy.config] Install database targetting Galaxy's database configuration.
+2018-01-04 17:40:51,235 ERROR [galaxy.visualization.genomes] Error reading twobit.loc
+Traceback (most recent call last):
+  File "/tmp/tmpV3FcFx/galaxy-dev/lib/galaxy/visualization/genomes.py", line 210, in reload_genomes
+    for line in open( os.path.join( self.app.config.tool_data_path, "twobit.loc" ) ):
+IOError: [Errno 2] Aucun fichier ou dossier de ce type: '/tmp/tmpV3FcFx/galaxy-dev/tool-data/twobit.loc'
+2018-01-04 17:40:51,250 INFO  [galaxy.util.handlers] Setting <handlers> default to child with id 'main'
+2018-01-04 17:40:51,250 INFO  [galaxy.tools.toolbox.watcher] Watchdog library unavailable, cannot monitor tools.
+2018-01-04 17:40:51,295 INFO  [galaxy.tools.toolbox.base] Parsing the tool configuration /tmp/tmpV3FcFx/tool_conf.xml
+2018-01-04 17:40:51,316 INFO  [galaxy.tools.toolbox.base] Parsing the tool configuration /tmp/tmpV3FcFx/shed_tools_conf.xml
+2018-01-04 17:40:51,316 INFO  [galaxy.tools.toolbox.base] Parsing the tool configuration /tmp/tmpV3FcFx/empty_tool_conf.xml
+No handlers could be found for logger "galaxy.datatypes.display_applications.application"
+2018-01-04 17:40:51,540 INFO  [galaxy.jobs] Handler 'main' will load all configured runner plugins
+2018-01-04 17:40:51,545 INFO  [galaxy.jobs.handler] job handler stop queue started
+2018-01-04 17:40:51,553 INFO  [galaxy.jobs.handler] job handler queue started
+2018-01-04 17:40:51,568 INFO  [galaxy.app] Galaxy app startup finished (2830.113 ms)
+2018-01-04 17:40:52,106 INFO  [galaxy.queue_worker] Binding and starting galaxy control worker for main
+/home/vmarcon/.planemo/gx_venv/local/lib/python2.7/site-packages/sqlalchemy/sql/sqltypes.py:562: SAWarning: Dialect sqlite+pysqlite does *not* support Decimal objects natively, and SQLAlchemy must convert from floating point - rounding errors and other issues may occur. Please consider storing Decimal numbers as strings or integers on this platform for lossless storage.
+  'storage.' % (dialect.name, dialect.driver))
+/home/vmarcon/.planemo/gx_venv/local/lib/python2.7/site-packages/sqlalchemy/sql/default_comparator.py:153: SAWarning: The IN-predicate on "request_type.id" was invoked with an empty sequence. This results in a contradiction, which nonetheless can be expensive to evaluate.  Consider alternative strategies for improved performance.
+  'strategies for improved performance.' % expr)
+VCFtools Stats ( sniplay_vcftoolsstats ) > Test-1 ... 2018-01-04 17:40:52,860 INFO  [galaxy.tools.actions.upload_common] tool upload1 created job id 1
+2018-01-04 17:40:53,827 INFO  [galaxy.jobs.handler] (1) Job dispatched
+2018-01-04 17:40:54,055 DEBUG [galaxy.tools.deps] Using dependency samtools version None of type conda
+2018-01-04 17:40:54,055 DEBUG [galaxy.tools.deps] Using dependency samtools version None of type conda
+2018-01-04 17:40:54,090 INFO  [galaxy.jobs.command_factory] Built script [/tmp/tmpV3FcFx/job_working_directory/000/1/tool_script.sh] for tool command [export PATH=$PATH:'/home/vmarcon/miniconda3/envs/__samtools@1.3.1/bin' ; python /tmp/tmpV3FcFx/galaxy-dev/tools/data_source/upload.py /tmp/tmpV3FcFx/galaxy-dev /tmp/tmpYQqYq4 /tmp/tmpeaOrK8 1:/tmp/tmpV3FcFx/job_working_directory/000/1/dataset_1_files:/tmp/tmpV3FcFx/files/000/dataset_1.dat]
+2018-01-04 17:40:54,226 DEBUG [galaxy.tools.deps] Using dependency samtools version None of type conda
+2018-01-04 17:40:54,227 DEBUG [galaxy.tools.deps] Using dependency samtools version None of type conda
+2018-01-04 17:40:56,939 INFO  [galaxy.tools.actions] Handled output named fileout_het for tool sniplay_vcftoolsstats (38.788 ms)
+2018-01-04 17:40:56,964 INFO  [galaxy.tools.actions] Handled output named fileout_imiss for tool sniplay_vcftoolsstats (25.169 ms)
+2018-01-04 17:40:56,989 INFO  [galaxy.tools.actions] Handled output named fileout_sum for tool sniplay_vcftoolsstats (25.171 ms)
+2018-01-04 17:40:57,009 INFO  [galaxy.tools.actions] Handled output named filelog for tool sniplay_vcftoolsstats (19.699 ms)
+2018-01-04 17:40:57,027 INFO  [galaxy.tools.actions] Added output datasets to history (17.975 ms)
+2018-01-04 17:40:57,046 INFO  [galaxy.tools.actions] Verified access to datasets for Job[unflushed,tool_id=sniplay_vcftoolsstats] (6.799 ms)
+2018-01-04 17:40:57,046 INFO  [galaxy.tools.actions] Setup for job Job[unflushed,tool_id=sniplay_vcftoolsstats] complete, ready to flush (18.891 ms)
+2018-01-04 17:40:57,068 INFO  [galaxy.tools.actions] Flushed transaction for job Job[id=2,tool_id=sniplay_vcftoolsstats] (21.832 ms)
+2018-01-04 17:40:58,060 INFO  [galaxy.jobs.handler] (2) Job dispatched
+2018-01-04 17:40:58,229 DEBUG [galaxy.tools.deps.conda_util] Executing command: /home/vmarcon/miniconda3/bin/conda create -y --name mulled-v1-7ab952e09c6f044ec4d5435cec7f695599278162e174f0a2eedee62212c64f62 perl-bioperl=1.6.924 vcftools=0.1.15
+2018-01-04 17:41:05,283 DEBUG [galaxy.tools.deps] Using dependency perl-bioperl version 1.6.924 of type conda
+2018-01-04 17:41:05,283 DEBUG [galaxy.tools.deps] Using dependency vcftools version 0.1.15 of type conda
+2018-01-04 17:41:05,283 DEBUG [galaxy.tools.deps] Using dependency perl-bioperl version 1.6.924 of type conda
+2018-01-04 17:41:05,283 DEBUG [galaxy.tools.deps] Using dependency vcftools version 0.1.15 of type conda
+2018-01-04 17:41:05,312 INFO  [galaxy.jobs.command_factory] Built script [/tmp/tmpV3FcFx/job_working_directory/000/2/tool_script.sh] for tool command [[ "$CONDA_DEFAULT_ENV" = "/home/vmarcon/miniconda3/envs/mulled-v1-7ab952e09c6f044ec4d5435cec7f695599278162e174f0a2eedee62212c64f62" ] ||
+MAX_TRIES=3
+COUNT=0
+while [ $COUNT -lt $MAX_TRIES ]; do
+    . /home/vmarcon/miniconda3/bin/activate '/home/vmarcon/miniconda3/envs/mulled-v1-7ab952e09c6f044ec4d5435cec7f695599278162e174f0a2eedee62212c64f62' > conda_activate.log 2>&1
+    if [ $? -eq 0 ];then
+        break
+    else
+        let COUNT=COUNT+1
+        if [ $COUNT -eq $MAX_TRIES ];then
+            echo "Failed to activate conda environment! Error was:"
+            cat conda_activate.log
+            exit 1
+        fi
+        sleep 10s
+    fi
+done ; [ "$CONDA_DEFAULT_ENV" = "/home/vmarcon/miniconda3/envs/mulled-v1-7ab952e09c6f044ec4d5435cec7f695599278162e174f0a2eedee62212c64f62" ] ||
+MAX_TRIES=3
+COUNT=0
+while [ $COUNT -lt $MAX_TRIES ]; do
+    . /home/vmarcon/miniconda3/bin/activate '/home/vmarcon/miniconda3/envs/mulled-v1-7ab952e09c6f044ec4d5435cec7f695599278162e174f0a2eedee62212c64f62' > conda_activate.log 2>&1
+    if [ $? -eq 0 ];then
+        break
+    else
+        let COUNT=COUNT+1
+        if [ $COUNT -eq $MAX_TRIES ];then
+            echo "Failed to activate conda environment! Error was:"
+            cat conda_activate.log
+            exit 1
+        fi
+        sleep 10s
+    fi
+done ; perl /home/vmarcon/Work/GFLS/Sniplay/TOOLSHED/vcftools_filter_stats_diversity/VCFToolsStats/vcfToolsStats.sh /tmp/tmpV3FcFx/files/000/dataset_1.dat /tmp/tmpV3FcFx/files/000/dataset_2.dat /tmp/tmpV3FcFx/files/000/dataset_3.dat /tmp/tmpV3FcFx/files/000/dataset_4.dat /tmp/tmpV3FcFx/files/000/dataset_5.dat]
+2018-01-04 17:41:05,617 DEBUG [galaxy.tools.deps] Using dependency samtools version None of type conda
+2018-01-04 17:41:05,617 DEBUG [galaxy.tools.deps] Using dependency samtools version None of type conda
+ok
+
+----------------------------------------------------------------------
+XML: /tmp/tmpV3FcFx/xunit.xml
+----------------------------------------------------------------------
+Ran 1 test in 18.525s
+
+OK
+2018-01-04 17:41:10,918 INFO  [test_driver] Shutting down
+2018-01-04 17:41:10,918 INFO  [test_driver] Shutting down embedded galaxy web server
+2018-01-04 17:41:10,919 INFO  [test_driver] Embedded web server galaxy stopped
+2018-01-04 17:41:10,919 INFO  [test_driver] Stopping application galaxy
+2018-01-04 17:41:10,919 INFO  [galaxy.jobs.handler] sending stop signal to worker thread
+2018-01-04 17:41:10,919 INFO  [galaxy.jobs.handler] job handler queue stopped
+2018-01-04 17:41:10,919 INFO  [galaxy.jobs.runners] TaskRunner: Sending stop signal to 2 worker threads
+2018-01-04 17:41:10,919 INFO  [galaxy.jobs.runners] LocalRunner: Sending stop signal to 4 worker threads
+2018-01-04 17:41:10,920 INFO  [galaxy.jobs.handler] sending stop signal to worker thread
+2018-01-04 17:41:10,920 INFO  [galaxy.jobs.handler] job handler stop queue stopped
+2018-01-04 17:41:10,920 INFO  [test_driver] Application galaxy stopped.
+2018-01-04 17:41:11,898 INFO  [galaxy.jobs.handler] sending stop signal to worker thread
+2018-01-04 17:41:11,898 INFO  [galaxy.jobs.handler] job handler queue stopped
+2018-01-04 17:41:11,898 INFO  [galaxy.jobs.runners] TaskRunner: Sending stop signal to 2 worker threads
+2018-01-04 17:41:11,899 INFO  [galaxy.jobs.runners] LocalRunner: Sending stop signal to 4 worker threads
+2018-01-04 17:41:11,899 INFO  [galaxy.jobs.handler] sending stop signal to worker thread
+2018-01-04 17:41:11,899 INFO  [galaxy.jobs.handler] job handler stop queue stopped
+Testing complete. HTML report is in "/home/vmarcon/Work/GFLS/Sniplay/TOOLSHED/vcftools_filter_stats_diversity/VCFToolsStats/tool_test_output.html".
+All 1 test(s) executed passed.
+sniplay_vcftoolsstats[0]: passed

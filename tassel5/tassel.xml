@@ -1,0 +1,173 @@
+<tool id="Tassel" name="Tassel" version="5.0">
+	<description> Software package to evaluate traits associations, evolutionary patterns, and linkage disequilibrium. </description>
+	<requirements>
+                <requirement type="package" version="5.0">tassel</requirement>
+        </requirements>
+
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>
+
+	<command interpreter="bash">./tassel.sh $analysis_opts.fonction_selector $output1 $output2 $output3 $log tmpdir$$/
+#if $analysis_opts.fonction_selector == "mlm":
+ -fork1 -h $hapmap -filterAlign -filterAlignMinFreq $filterAlignMinFreq
+ -fork2 -r $analysis_opts.trait
+ #if $analysis_opts.add_structure_file.additional_file_selector == "yes":
+  -fork3 -q $analysis_opts.add_structure_file.structure -excludeLastTrait
+ #end if
+ -fork4 -k $analysis_opts.kinship
+ -combineA -input1 -input2 
+ #if $analysis_opts.add_structure_file.additional_file_selector == "yes":
+  -input3
+ #end if
+ -intersect -combineB -inputA -input4 -mlm -mlmVarCompEst $analysis_opts.mlmVarCompEst -mlmCompressionLevel $analysis_opts.mlmCompressionLevel -export tmpdir$$/TASSELMLM -runfork1 -runfork2 
+ #if $analysis_opts.add_structure_file.additional_file_selector == "yes":
+  -runfork3
+ #end if
+ -runfork4
+ 
+#else if $analysis_opts.fonction_selector == "glm":
+ -fork1 -h $hapmap -filterAlign -filterAlignMinFreq $filterAlignMinFreq
+ -fork2 -r $analysis_opts.trait
+ #if $analysis_opts.add_file.additional_file_selector == "yes":
+  -fork3 -q $analysis_opts.add_file.structure -excludeLastTrait
+ #end if
+ -combineA -input1 -input2 
+ #if $analysis_opts.add_file.additional_file_selector == "yes":
+  -input3
+ #end if
+ -intersect -glm -export tmpdir$$/TASSELGLM -runfork1 -runfork2
+ #if $analysis_opts.add_file.additional_file_selector == "yes":
+  -runfork3
+ #end if 
+#else if $analysis_opts.fonction_selector == "ld":
+ -fork1 -h $hapmap
+ -ld -ldType All -ldd png -ldplotsize 3000 -o $output1 -runfork1
+#else if $analysis_opts.fonction_selector == "ck":
+ -fork1 -h $hapmap
+ -ck -export tmpdir$$/kinship -runfork1
+#end if
+	</command>
+	<inputs>
+		<param format="txt" name="hapmap" type="data" label="HapMap file"/>
+		<conditional name="analysis_opts">
+			<param name="fonction_selector" type="select" label="Type of analysis">
+				<option value="mlm" selected="True">MLM</option>
+				<option value="glm">GLM</option>
+				<option value="ld">Linkage Disequilibrium</option>
+				<option value="ck">Kinship</option>
+			</param>
+			<when value="glm">
+                		<param format="txt" name="trait" type="data" label="Trait file"/>
+				<conditional name="add_file">
+					<param name="additional_file_selector" type="select" label="Add structure file">
+        	                	        <option value="no" selected="True">no</option>
+                	                	<option value="yes">yes</option>
+	                	        </param>
+					<when value="yes">
+						<param format="txt" name="structure" type="data" label="Structure file"/>
+					</when>
+				</conditional>
+			</when>
+			<when value="mlm">
+                		<param format="txt" name="trait" type="data" label="Trait file"/>
+		                <param format="txt" name="kinship" type="data" label="Kinship file"/>
+				<conditional name="add_structure_file">
+					<param name="additional_file_selector" type="select" label="Add structure file">
+        	                	        <option value="no" selected="True">no</option>
+                	                	<option value="yes">yes</option>
+	                	        </param>
+					<when value="yes">
+						<param format="txt" name="structure" type="data" label="Structure file"/>
+					</when>
+				</conditional>
+				<param name="mlmVarCompEst" type="select" label="Variance Component Estimation">
+					<option value="P3D" selected="True">P3D</option>
+					<option value="EachMarker">EachMarker</option>
+				</param>
+				<param name="mlmCompressionLevel" type="select" label="Compression Level">
+					<option value="Optimum" selected="True">Optimum</option>
+					<option value="Custom">Custom</option>
+					<option value="None">None</option>
+				</param>
+                        </when>
+			<when value="ld"></when>
+			<when value="ck"></when>
+		</conditional>
+		<param type="text" name="filterAlignMinFreq" label="Filter minimal frequency allele" value="0.05"/>
+	</inputs>
+	<outputs>
+		<data format="txt" name="output1" label="Tassel output">
+			<change_format>
+				<when input="analysis_opts['fonction_selector']" value="ld" format="png"/>
+			</change_format>
+		</data>
+		
+		<data format="txt" name="output2" label="Allele effects">
+			<filter>analysis_opts['fonction_selector'] == "glm" or analysis_opts['fonction_selector'] == "mlm"</filter>
+		</data>
+		
+		<data format="txt" name="output3" label="Compression file">
+			<filter>analysis_opts['fonction_selector'] == "mlm"</filter>
+		</data>
+		
+		<data format="txt" name="log" label="Log file"/>
+	</outputs>
+
+    <tests>
+        <test>
+            <param name="hapmap" value="input_hapmap.txt"/>
+            <conditional name="analysis_opts">
+                <param name="fonction_selector" value="mlm"/>
+                <param name="trait" value="input_trait.txt"/>
+                <param name="kinship" value="input_kinship.txt"/>
+                <conditional name="add_structure_file">
+                    <param name="additional_file_selector" value="no"/>
+                </conditional>
+                <param name="mlmVarCompEst" value="P3D"/>
+                <param name="mlmCompressionLevel" value="Optimum"/>
+            </conditional>
+            <param name="filterAlignMinFreq" value="0.05"/>
+
+            <output name="output1" value="output1.txt"/>
+            <output name="output2" value="output2.txt"/>
+            <output name="output3" value="output3.txt"/>
+        </test>
+    </tests>
+
+	<help>
+
+.. class:: infomark
+
+**Program encapsulated in Galaxy by Southgreen**
+
+.. class:: infomark
+
+**Tassel**
+
+-----
+
+==========
+ Authors:
+==========
+
+**Terry Casstevens**
+
+-----
+
+==========
+ Overview
+==========
+
+Software package to evaluate traits associations, evolutionary patterns, and linkage disequilibrium.
+
+-----
+
+For further informations, please visite the website of TASSEL_.
+
+
+.. _TASSEL: http://www.maizegenetics.net/tassel/
+
+	</help>
+</tool>

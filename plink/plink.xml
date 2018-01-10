@@ -1,0 +1,97 @@
+<tool id="sniplay_plink" name="plink" version="1.0">
+    
+    <!-- [REQUIRED] Tool description displayed after the tool name -->
+    <description> - Filter large VCF file</description>
+    
+    <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
+    <requirements>
+        <requirement type="binary">perl</requirement>
+	<requirement type="package" version="1.90b4">plink</requirement>
+    </requirements>
+    
+    <code file="find_indiv.py"/>
+
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>    
+
+    <!-- [REQUIRED] The command to execute -->
+    <command interpreter="bash">
+	./plink.sh $vcf $fileout $filelog $frequency $max_freq $allow_missing $type_p $bound_start $bound_end
+	#if str( $samples ) == "":
+	'None'
+	#else
+	$samples
+	#end if
+	#if str( $chromosomes ) == "":
+	'None'
+	#else
+	$chromosomes
+	#end if
+    </command>
+    <!-- [REQUIRED] Input files and tool parameters -->
+    <inputs>
+	<param name="vcf" type="data" format="vcf" optional="false" label="VCF input" />
+
+	<param name="samples" type="select" label="Samples" multiple="true" dynamic_options="get_field_samples_options(vcf)" help="Samples to be analyzed." />
+	<!--<param name="samples" type="text" label="Samples" multiple="true" help="Samples to be analyzed." />-->
+        <!--<param name="chromosomes" type="select" label="Chromosomes" multiple="true" dynamic_options="get_field_chrs_options(input)" help="Chromosomes to be analyzed." />-->
+	<param name="frequency" type="float" value="0" label="Minimum MAF" help="Minimum Minor Allele Frequency (MAF)" />
+	<param name="max_freq" type="float" value="0.5" label="Maximum MAF" help="Maximum Minor Allele Frequency (MAF)" />
+	<param name="allow_missing" type="float" value="1" min="0" max="1" label="Missing data proportion" help="Allowed missing data proportion per site. Must be comprised between 0 and 1." />
+        <param name="type_p" type="select" label="Polymorphisms" help="Type of polymorphisms to keep." >
+            <option value="ALL" selected="true">All</option>
+            <option value="SNP">SNPs only</option>
+        </param>
+        <param name="chromosomes" type="text" label="Chromosomes" multiple="true" help="Chromosomes to be analyzed. (Comma-separated list of reference sequences, ex: Chr1,Chr2)" />
+	<param name="bound_start" type="integer" value="1" label="Lower bound" help="Lower bound for a range of sites to be processed." />
+	<param name="bound_end" type="integer" value="100000000" label="Upper bound" help="Upper bound for a range of sites to be processed." />
+    </inputs>
+    
+    <!-- [REQUIRED] Output files -->
+    <outputs>
+	<data name="fileout" format="vcf" label="Plink filtered VCF"/>
+	<data name="filelog" format="txt" label="Plink logfile" />
+    </outputs>
+    
+    <tests>
+        <test>
+            <param name="vcf" value="input.vcf"/>
+            <param name="frequency" value="0"/>
+            <param name="max_freq" value="0.5"/>
+            <param name="allow_missing" value="1"/>
+            <param name="type_p" value="ALL"/>
+            <param name="chromosomes" value="Chr1,Chr2"/>
+            <param name="bound_start" value="1"/>
+            <param name="bound_end" value="100000000"/>
+            <output name="fileout" file="output.vcf"/>
+            <output name="filelog" file="output.txt"/>
+        </test>
+    </tests> 
+    
+    <!-- [OPTIONAL] Help displayed in Galaxy -->
+    <help>
+
+.. class:: infomark
+
+**Authors**     Shaun Purcell : plink_
+
+.. _plink: https://www.cog-genomics.org/plink2
+
+ | **Please cite** "PLINK: a toolset for whole-genome association and population-based linkage analysis.", Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC, **American Journal of Human Genetics**, 2007 
+
+.. class:: infomark
+
+**Galaxy integration** Dereeper Alexis (IRD), Andres Gwendoline (Institut Français de Bioinformatique).
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+
+
+
+    </help>
+
+</tool>
