@@ -7,7 +7,7 @@
     <requirements>
         <requirement type="binary">perl</requirement>
 	<requirement type="package" version="1.6.924">perl-bioperl</requirement>
-	<requirement type="package" version="0.1.15">vcftools</requirement>
+	<requirement type="package" version="0.1.14">vcftools</requirement>
     </requirements>
     
     <!-- [STRONGLY RECOMMANDED] Exit code rules -->

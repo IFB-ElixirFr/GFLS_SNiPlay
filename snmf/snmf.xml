@@ -1,6 +1,8 @@
 <tool id="snmf" name="sNMF" version="1.2">
 	<description>a population structure from large SNP genotype datasets</description>
 	<requirements>
+                <requirement type="binary">perl</requirement>
+                <requirement type="package" version="1.6.924">perl-bioperl</requirement>
 		<requirement type="package" version="1.2">snmf</requirement>
 		<requirement type="package" version="1.90">plink</requirement>
 	</requirements>
@@ -27,11 +29,26 @@
 	<tests>
 		<test>
 			<param name="vcf" value="input.vcf" />
-			<param name="kmax" value="3" />
-			<param name="threshold_group" value="60" />
-			<output name="best_k_output" file="output" />
-			<output name="outputs" file="outputs.Q" />
-			<output name="best_k_groups" file="groups" />
+			<param name="kmin" value="2" />
+			<param name="kmax" value="5" />
+			<param name="threshold_group" value="50" />
+			<output name="best_k_output" file="output"  compare="sim_size"  >
+			    <assert_contents>
+			   	<has_n_columns n="4" />
+                                <has_line_matching expression=".*\s\d\..*" />
+			    </assert_contents>
+                        </output>
+			<output name="best_k_groups" file="groups" compare="sim_size" >
+			    <assert_contents>
+                                <has_line_matching expression=".*;.*" />
+			    </assert_contents>
+                        </output>
+			<output name="outputs" file="outputs.Q" compare="sim_size" >
+			    <assert_contents>
+                                <has_line_matching expression=".*\s\d\..*" />
+			    </assert_contents>
+                       </output> <!--testet les assert contents avec les /output....-->
+
 		</test>
 	</tests>
 

@@ -17,7 +17,7 @@
 
     <!-- [REQUIRED] The command to execute -->
     <command>
-	java -jar \$JAVA_JAR_PATH/readseq.jar $filein -f $format >> $fileout_log 2>&amp;1 &amp;&amp;
+        java -jar \$JAVA_JAR_PATH/readseq.jar $filein -f $format >> $fileout_log 2>&amp;1 &amp;&amp;
 #if str( $format ) == "1":
  mv ${filein}.ig $fileout
 #elif str( $format ) == "2"  :
@@ -320,5 +320,8 @@ phylip conversion
 	KARASUKARA   GAGAACCGTC CTGTAAGTAC TCTTGCTTTA AATACGAAAG TAATACTAAT
 	
     </help>
-    
+<citations>
+<citation type="doi" >10.1002/0471250953.bia01es00</citation>
+</citations>
+ 
 </tool>

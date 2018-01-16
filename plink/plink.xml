@@ -6,6 +6,7 @@
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
         <requirement type="binary">perl</requirement>
+        <requirement type="package" version="1.6.924">perl-bioperl</requirement>
 	<requirement type="package" version="1.90b4">plink</requirement>
     </requirements>
     
