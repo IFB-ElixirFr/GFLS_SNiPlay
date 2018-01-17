@@ -72,10 +72,12 @@ close($C);
 close($C2);
 
 
-my $build_cmd = "java -jar $SNPEFF_PATH/snpEff.jar build -c $session/snpEff.config -gff3 myspecies";
+my $build_cmd = "snpEff build -c $session/snpEff.config -gff3 myspecies";
+#my $build_cmd = "java -jar $SNPEFF_PATH/snpEff.jar build -c $session/snpEff.config -gff3 myspecies";
 system($build_cmd);
 
-my $eff_cmd = "java -jar $SNPEFF_PATH/snpEff.jar eff -c $session/snpEff.config -o vcf -no-downstream -no-upstream myspecies -s $html $input >$output";
+my $eff_cmd = "snpEff eff -c $session/snpEff.config -o vcf -no-downstream -no-upstream myspecies -s $html $input >$output";
+#my $eff_cmd = "java -jar $SNPEFF_PATH/snpEff.jar eff -c $session/snpEff.config -o vcf -no-downstream -no-upstream myspecies -s $html $input >$output";
 system($eff_cmd);
 
 

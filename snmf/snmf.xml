@@ -47,7 +47,7 @@
 			    <assert_contents>
                                 <has_line_matching expression=".*\s\d\..*" />
 			    </assert_contents>
-                       </output> <!--testet les assert contents avec les /output....-->
+                       </output> 
 
 		</test>
 	</tests>

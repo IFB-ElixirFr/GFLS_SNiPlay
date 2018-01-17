@@ -1,7 +1,7 @@
 <tool id="Tassel" name="Tassel" version="5.0">
 	<description> Software package to evaluate traits associations, evolutionary patterns, and linkage disequilibrium. </description>
 	<requirements>
-                <requirement type="package" version="5.0">tassel</requirement>
+                <requirement type="package" version="5.2.40">tassel</requirement>
         </requirements>
 
     <stdio>
@@ -119,20 +119,16 @@
         <test>
             <param name="hapmap" value="input_hapmap.txt"/>
             <conditional name="analysis_opts">
-                <param name="fonction_selector" value="mlm"/>
-                <param name="trait" value="input_trait.txt"/>
-                <param name="kinship" value="input_kinship.txt"/>
+                <param name="fonction_selector" value="glm"/>
+                <param name="trait" value="phenotyping_DRB.csv"/>
                 <conditional name="add_structure_file">
-                    <param name="additional_file_selector" value="no"/>
+                    <param name="additional_file_selector" value="yes"/>
+                    <param name="structure" value="Best_K_Output"/>
                 </conditional>
-                <param name="mlmVarCompEst" value="P3D"/>
-                <param name="mlmCompressionLevel" value="Optimum"/>
             </conditional>
             <param name="filterAlignMinFreq" value="0.05"/>
-
-            <output name="output1" value="output1.txt"/>
-            <output name="output2" value="output2.txt"/>
-            <output name="output3" value="output3.txt"/>
+            <output name="output1" value="Tassel_output.txt"/>
+            <output name="output2" value="Allele_effects.txt"/>
         </test>
     </tests>
 

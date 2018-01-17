@@ -225,7 +225,7 @@ $bed_input =~s/\.bed//g;
 if (-e "$bed_input.bed"){
         system("$PLINK_EXE --bfile $bed_input --out $out $type_cmd $export_cmd $chrom_cmd $indiv_cmd $minfreq_cmd $maxfreq_cmd --geno $missing_data $thin_cmd $bounds_cmd --allow-extra-chr 1>$out.plink.stdout 2>$out.plink.stderr");
 	# for first 1000 SNPs
-	system("$PLINK_EXE --bfile $bed_input --out $out.recode $type_cmd --recode vcf-fid $chrom_cmd $indiv_cmd $minfreq_cmd $maxfreq_cmd --geno $missing_data $thin_cmd $bounds_cmd --allow-extra-chr --thin-count 800 1>$out.2.plink.stdout 2>$out.2.plink.stderr");
+	system("$PLINK_EXE $bed_input --out $out.recode $type_cmd --recode vcf-fid $chrom_cmd $indiv_cmd $minfreq_cmd $maxfreq_cmd --geno $missing_data $thin_cmd $bounds_cmd --allow-extra-chr --thin-count 800 1>$out.2.plink.stdout 2>$out.2.plink.stderr");
 }
 elsif (-e $bcf_input){
 	system("$PLINK_EXE --bcf $bcf_input --out $out $type_cmd $export_cmd $chrom_cmd $indiv_cmd $minfreq_cmd $maxfreq_cmd --geno $missing_data $thin_cmd $bounds_cmd --allow-extra-chr 1>$out.plink.stdout 2>$out.plink.stderr");

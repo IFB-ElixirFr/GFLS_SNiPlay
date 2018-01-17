@@ -1,0 +1,59 @@
+/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/LiuExt.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/sqlite-jdbc-3.8.4.3-SNAPSHOT.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/itextpdf-5.1.0.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/biojava3-alignment-4.0.0.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-css.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/xmlParserAPIs.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/poi-3.0.1-FINAL-20070705.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-awt-util.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/jcommon-1.0.6.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/snappy-java-1.1.1.6.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-util.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/commons-codec-1.10.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/log4j-1.2.13.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/biojava3-phylo-4.0.0.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/xml.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/geronimo-spec-activation-1.0.2-rc4.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/json-simple-1.1.1.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/jfreechart-1.0.3.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-xml.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/colt.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-dom.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/biojava3-core-4.0.0.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/junit-4.10.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-gui-util.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-ext.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/trove-3.0.3.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/mail-1.4.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/ejml-0.23.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-gvt.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/forester.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/commons-math3-3.4.1.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/guava-14.0.1.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/xercesImpl.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/cisd-jhdf5-batteries_included_lin_win_mac.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-svg-dom.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-svggen.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/lib/batik-parser.jar:/work/GALAXY/galaxy/dependencies/tassel/5.0/dereeper/package_tassel_5_0/097d4c366e0d/bin/sTASSEL.jar
+Memory Settings: -Xms512m -Xmx1536m
+Tassel Pipeline Arguments: -fork1 -h /work/GALAXY/galaxy/database/files/047/dataset_47692.dat -filterAlign -filterAlignMinFreq 0.05 -fork2 -r /work/GALAXY/galaxy/database/files/022/dataset_22503.dat -fork3 -q /work/GALAXY/galaxy/database/files/047/dataset_47687.dat -excludeLastTrait -combineA -input1 -input2 -input3 -intersect -glm -export tmpdir103174/TASSELGLM -runfork1 -runfork2 -runfork3
+[main] INFO net.maizegenetics.tassel.TasselLogging - Tassel Version: 5.2.4  Date: February 19, 2015
+[main] INFO net.maizegenetics.tassel.TasselLogging - Max Available Memory Reported by JVM: 1365 MB
+[main] INFO net.maizegenetics.tassel.TasselLogging - Java Version: 1.8.0_31
+[main] INFO net.maizegenetics.tassel.TasselLogging - OS: Linux
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Pipeline Arguments: [-fork1, -h, /work/GALAXY/galaxy/database/files/047/dataset_47692.dat, -filterAlign, -filterAlignMinFreq, 0.05, -fork2, -r, /work/GALAXY/galaxy/database/files/022/dataset_22503.dat, -fork3, -q, /work/GALAXY/galaxy/database/files/047/dataset_47687.dat, -excludeLastTrait, -combineA, -input1, -input2, -input3, -intersect, -glm, -export, tmpdir103174/TASSELGLM, -runfork1, -runfork2, -runfork3]
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - loadFile: /work/GALAXY/galaxy/database/files/047/dataset_47692.dat
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - loadFile: /work/GALAXY/galaxy/database/files/022/dataset_22503.dat
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - loadFile: /work/GALAXY/galaxy/database/files/047/dataset_47687.dat
+net.maizegenetics.analysis.data.FileLoadPlugin
+   net.maizegenetics.analysis.filter.FilterAlignmentPlugin
+      net.maizegenetics.analysis.data.CombineDataSetsPlugin
+         net.maizegenetics.analysis.data.IntersectionAlignmentPlugin
+            net.maizegenetics.analysis.association.FixedEffectLMPlugin
+               net.maizegenetics.analysis.data.ExportMultiplePlugin
+net.maizegenetics.analysis.data.FileLoadPlugin
+net.maizegenetics.analysis.data.FileLoadPlugin
+   net.maizegenetics.analysis.filter.FilterTraitsPlugin
+[pool-1-thread-2] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.data.FileLoadPlugin: progress: 100%
+[pool-1-thread-2] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.analysis.data.FileLoadPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
+[Thread-4] INFO net.maizegenetics.plugindef.AbstractPlugin - net.maizegenetics.analysis.data.CombineDataSetsPlugin  Citation: Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) TASSEL: Software for association mapping of complex traits in diverse samples. Bioinformatics 23:2633-2635.
+[pool-1-thread-3] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.data.FileLoadPlugin: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.data.FileLoadPlugin: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.analysis.filter.FilterAlignmentPlugin - Resulting Number Sites: 12363
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.filter.FilterAlignmentPlugin: progress: 100%
+[pool-1-thread-1] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.data.FileLoadPlugin: progress: 100%
+[main] WARN net.maizegenetics.pipeline.TasselPipeline - parseArgs: NOTE: The -glm flags are deprecated.
+parseArgs: PLEASE RUN THIS COMMAND TO GET USAGE: ./run_pipeline.pl -FixedEffectLMPlugin
+
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.data.IntersectionAlignmentPlugin: progress: 100%
+[Thread-35] INFO net.maizegenetics.plugindef.AbstractPlugin - 
+FixedEffectLMPlugin Parameters
+phenoOnly: false
+saveToFile: false
+siteFile: null
+alleleFile: null
+maxP: 1.0
+permute: false
+nperm: 0
+genotypeComponent: Genotype
+
+[Thread-35] INFO net.maizegenetics.matrixalgebra.Matrix.DoubleMatrixFactory - TasselBlas library for system-specific BLAS/LAPACK not found. Using system-independent EJML for DoubleMatrix operations.
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 0%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 10%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 20%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 30%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 40%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 50%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 60%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 70%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 80%
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 90%
+[Thread-35] INFO net.maizegenetics.analysis.data.ExportPlugin - performFunction: wrote dataset: GLM_Stats_dataset_47692_chrChr1_Chr10_Chr11_Chr12_Chr2_Chr3_Chr4_Chr5_Chr6_Chr7_Chr8_Chr9_4299-22650481 + dataset_22503 + Filtered_dataset_47687 to file: /work/GALAXY/galaxy/database/job_working_directory/025/25260/working/tmpdir103174/TASSELGLM1.txt
+[Thread-35] INFO net.maizegenetics.analysis.data.ExportMultiplePlugin - Datum: GLM_Stats_dataset_47692_chrChr1_Chr10_Chr11_Chr12_Chr2_Chr3_Chr4_Chr5_Chr6_Chr7_Chr8_Chr9_4299-22650481 + dataset_22503 + Filtered_dataset_47687 Written to: /work/GALAXY/galaxy/database/job_working_directory/025/25260/working/tmpdir103174/TASSELGLM1.txt
+[Thread-35] INFO net.maizegenetics.analysis.data.ExportPlugin - performFunction: wrote dataset: GLM_Genotypes_dataset_47692_chrChr1_Chr10_Chr11_Chr12_Chr2_Chr3_Chr4_Chr5_Chr6_Chr7_Chr8_Chr9_4299-22650481 + dataset_22503 + Filtered_dataset_47687 to file: /work/GALAXY/galaxy/database/job_working_directory/025/25260/working/tmpdir103174/TASSELGLM2.txt
+[Thread-35] INFO net.maizegenetics.analysis.data.ExportMultiplePlugin - Datum: GLM_Genotypes_dataset_47692_chrChr1_Chr10_Chr11_Chr12_Chr2_Chr3_Chr4_Chr5_Chr6_Chr7_Chr8_Chr9_4299-22650481 + dataset_22503 + Filtered_dataset_47687 Written to: /work/GALAXY/galaxy/database/job_working_directory/025/25260/working/tmpdir103174/TASSELGLM2.txt
+[Thread-35] INFO net.maizegenetics.pipeline.TasselPipeline - net.maizegenetics.analysis.association.FixedEffectLMPlugin: progress: 100%
