@@ -1,0 +1,232 @@
+<tool id="sniplay_mdsplot" name="MDS plot" version="1.2.0">
+    
+    <!-- [REQUIRED] Tool description displayed after the tool name -->
+    <description> IBS matrix / multi-dimensional scaling</description>
+    
+    <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
+    <requirements>
+        <requirement type="binary">perl</requirement>
+	<requirement type="package" version="1.07">plink</requirement>
+    </requirements>
+
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+            <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>
+
+    
+    <!-- [OPTIONAL] Command to be executed to get the tool's version string -->
+    <version_command>
+<!--
+        tool_binary -v
+-->
+    </version_command>
+    
+    <!-- [REQUIRED] The command to execute -->
+    <command interpreter="bash">
+	mdsplot.sh $fileped $filemap $fileout_matrix $fileout_plot $fileout_log
+    </command>
+   
+    <!-- [REQUIRED] Input files and tool parameters -->
+    <inputs>
+	<param name="fileped" type="data" format="txt" optional="false" label="PED input" />
+	<param name="filemap" type="data" format="txt" optional="false" label="MAP input" help="4 columns tabular file: chromosome, snp id, genetic distance, bp position"/>
+	<param name="fileout_label" type="text" value="analyse" label="Output name" help="Output name for tabular files" />
+    </inputs>
+    
+    <!-- [REQUIRED] Output files -->
+    <outputs>
+	<data name="fileout_matrix" type="data" format="txt" label="${fileout_label}.ibs_matrix.txt" />
+	<data name="fileout_plot" type="data" format="txt" label="${fileout_label}.mds_plot.txt" />
+	<data name="fileout_log" type="data" format="txt" label="${fileout_label}.log" />
+    </outputs>
+    
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+
+        <test>
+         <param name="fileped" value="MDSplot-input.ped" />
+	 <param name="filemap" value="MDSplot-input.map" />
+         <output name="fileout_matrix" file="MDSplot-output.ibs_matrix.txt" />
+	 <output name="fileout_plot" file="MDSplot-output.mds_plot.txt" />
+        </test>
+
+        <!-- [HELP] Multiple tests can be defined with different parameters -->
+<!--
+        <test>
+        </test>
+-->
+    </tests>
+    
+    <!-- [OPTIONAL] Help displayed in Galaxy -->
+    <help>
+
+
+.. class:: infomark
+
+**Authors** plink_
+
+.. _plink: http://pngu.mgh.harvard.edu/purcell/plink/
+
+  | "PLINK: a toolset for whole-genome association and population-based linkage analysis.", **Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC.**, American Journal of Human Genetics, 81, 2007.
+
+
+.. class:: infomark
+
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+
+.. class:: infomark
+
+**Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+
+---------------------------------------------------
+
+
+
+========
+MDS plot
+========
+
+-----------
+Description
+-----------
+
+  Compute an IBS matrix and a multi-dimensional scaling.
+
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tool**
+
+=============== ========================== ===============
+Name            output file(s)             format 
+=============== ========================== ===============
+VCFtools Filter PED and MAP file	   tabular and MAP
+=============== ========================== ===============
+
+
+
+----------
+Input file
+----------
+
+PED file
+
+MAP file
+	4 columns tabular file: chromosome, snp id, genetic distance, bp position 
+
+
+----------
+Parameters
+----------
+
+Output name
+        Output base name for the ouput files
+
+
+------------
+Output files
+------------
+
+Output_name.ibs_matrix.txt
+	Tabular file with IBS matrix 
+
+Output_name.mds_plot.txt
+	File to construct mds plot
+
+Output_name.log
+	Log file
+
+------------
+Dependencies
+------------
+plink 
+	version 1.07
+	
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+PED file
+-----------
+
+::
+
+	IRAT112	1	0	0	1	1	1 1	4 4	...
+	IAC25	1	0	0	1	1	1 1	4 4	...
+	CIRAD409	1	0	0	1	1	3 3	1 1	...
+
+
+MAP file
+-----------
+
+::
+
+	Chr1	Chr1:4299	0	4299
+	Chr1	Chr1:26710	0	26710
+	Chr1	Chr1:56184	0	56184
+	Chr1	Chr1:93272	0	93272
+
+
+
+Parameters
+==========
+
+Output name -> densities
+
+
+Output files
+============
+
+densities.ibs_matrix.txt
+------------------------
+
+::
+
+	Individuals	IRAT112	IAC25	IAC165	KARASUKARASURANKASU	DOURADOPRECOCE	...
+	IRAT112	1	0.93691	0.937407	0.734724	0.943368	...
+	IAC25	0.93691	1	0.958768	0.723299	0.965723	...
+
+
+densities.mds_plot.txt
+----------------------
+
+::
+
+	IRAT112	-0.0969382	0.0376036
+	IAC25	-0.0918126	0.0501177
+
+	
+
+    </help>
+    <citations>
+        <!-- [HELP] As DOI or BibTex entry -->
+    	<citation type="bibtex">@article{Dereeper03062015,
+author = {Dereeper, Alexis and Homa, Felix and Andres, Gwendoline and Sempere, Guilhem and Sarah, Gautier and Hueber, Yann and Dufayard, Jean-François and Ruiz, Manuel}, 
+title = {SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations},
+year = {2015}, 
+doi = {10.1093/nar/gkv351}, 
+abstract ={SNiPlay is a web-based tool for detection, management and analysis of genetic variants including both single nucleotide polymorphisms (SNPs) and InDels. Version 3 now extends functionalities in order to easily manage and exploit SNPs derived from next generation sequencing technologies, such as GBS (genotyping by sequencing), WGRS (whole gre-sequencing) and RNA-Seq technologies. Based on the standard VCF (variant call format) format, the application offers an intuitive interface for filtering and comparing polymorphisms using user-defined sets of individuals and then establishing a reliable genotyping data matrix for further analyses. Namely, in addition to the various scaled-up analyses allowed by the application (genomic annotation of SNP, diversity analysis, haplotype reconstruction and network, linkage disequilibrium), SNiPlay3 proposes new modules for GWAS (genome-wide association studies), population stratification, distance tree analysis and visualization of SNP density. Additionally, we developed a suite of Galaxy wrappers for each step of the SNiPlay3 process, so that the complete pipeline can also be deployed on a Galaxy instance using the Galaxy ToolShed procedure and then be computed as a Galaxy workflow. SNiPlay is accessible at http://sniplay.southgreen.fr.}, 
+URL = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.abstract}, 
+eprint = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.full.pdf+html}, 
+journal = {Nucleic Acids Research} 
+}
+
+    	</citation>
+
+    </citations>
+    
+</tool>

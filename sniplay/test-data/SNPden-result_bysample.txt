@@ -1,0 +1,11 @@
+Chromosome	CATB1
+chr1	188
+chr1	544
+chr1	746
+chr1	412
+chr1	356
+chr1	625
+chr1	769
+chr1	512
+chr1	510
+chr1	293

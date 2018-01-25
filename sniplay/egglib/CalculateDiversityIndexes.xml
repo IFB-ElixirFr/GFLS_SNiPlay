@@ -1,0 +1,175 @@
+<tool id="calculate_diversity" name="Diversity by gene" version="2.1.6">
+	<description>calculates various diversity indexes with EggLib.</description>
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>
+    <command interpreter="bash">./CalculateDiversityIndexes.sh $input $output $log
+    </command>
+	<inputs>
+		<param format="fasta" name="input" type="data" label="Fasta alignment" help="..."/>
+	</inputs>
+	<outputs>
+		<data format="txt" name="output" label="Diversity"/>
+		<data format="txt" name="log" label="Logfile"/>
+	</outputs>
+    
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+        <!-- [HELP] Multiple tests can be defined with different parameters -->
+        <test>
+         <param name="input" value="egglib-alignment.fa" />
+         <output name="output" file="egglib-result.txt" />
+        </test>
+    </tests>
+	<help>
+	
+
+
+.. class:: infomark
+
+**Authors** EggLib_
+
+.. _EggLib: http://egglib.sourceforge.net/
+
+  | "EggLib: processing, analysis and simulation tools for population genetics and genomics.", **De Mita S. and M. Siol.**, BMC Genet. 2012. 13:27.
+
+.. class:: infomark
+
+**Galaxy integration** South Green.
+
+.. class:: infomark
+
+**Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+
+---------------------------------------------------
+
+
+
+==================
+Diversity by genes
+==================
+
+-----------
+Description
+-----------
+
+  | Provides various diversity indexes using EggLib library.
+  | For further informations, please visite the EggLib website_.
+
+.. _website: http://egglib.sourceforge.net/
+
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tool**
+
+=============== ====================== ===========
+Name            output file(s)         format 
+=============== ====================== ===========
+VCF to Hapmap   Fasta alignment        fasta
+=============== ====================== ===========
+
+
+
+----------
+Input file
+----------
+
+Fasta file
+	Fasta alignment
+
+
+
+------------
+Output files
+------------
+
+Diversity
+
+Log file
+
+
+------------
+Dependencies
+------------
+EggLib 
+	version 2.1.5
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+Fasta file
+----------
+
+::
+	
+	>LOCOs11g09160_AZUCENA_1
+	ATGTGGCGGGCGAGGCGGTGGCCGTGGCCGTGGCGGTCGCAGCGGCGCGCGGCGAGGATGCTCTCGTCGGGTGAGCCAGCGGCGGGGCGGCGGAGGGTGGCGGCGCTGTGGGGGAACGGGGA
+	CTACGGGCGGCTGGGGATGGGGGCGCTGGAGTCGCGGTGGAGCCCCACGGCGTGCCCCTTCTTCCTCACCGGCCGCCCCGGCGACGACGACGACGACCCGCCCGCCTCCCTCGCCTGCGGCG
+	GCGCCCACACCCTCTTCCTCACCGGTACTCCTGAATTGAAATCGCCTGCTTGTGTAATTACTCGAGCGAGAGAGAGATTGTGTTGAATCGAGATTAATGTGGGAGTATGTGATTTTTGGCCT
+	GCTGGTTTTGCTCAGAGAGCGGGCGCGTGTTCGCCGCGGGTCTCAACGACTTCGGGCAGCTCGGGATAGGCTCCTCCGTGACTCATTCCCTGGTACTGAGCTTCTTGTACATCATGCCTCCA
+	TGTGAAATTTTCATCTACATTGTGAGCCAGCCTACTTTTACACAGTAAGCGAAAGCTGGCTGGACATATCAGAGTTGCAATGGGGATTGACCAAATCAATTCTGACTCCTGTTACATGTTGC
+	>LOCOs11g09160_AZUCENA_2
+	ATGAGGCGGGCGAGGCGGTGGCCGTGGCCGTGGCGGTCGCAGCGGCGAGCGGCGAGGATGCTCTCGTCGGGTGAGCCAGCGGCGGGGCGGCGGAGGGTGGCGGCGCTGTGGGGGAACGGGGA
+	CTACGGGCGGCTGGGGATGGGGGCGCTGGAGTCGCGGTGGAGCCCCACGGCGTGCCCCTTCTTCCTCACCGGCCGCCCCGGCGACGACGACGACGACCCGCCCGCCTCCCTCGCCTGCGGCG
+	GCGCCCACACCCTCTTCCTCACCGGTACTCCTGAATTGAAATCGCCAGCTTGTGTAATTACTCGAGCGAGAGAGAGATTGTGTTGAATCGAGATTAATGTGGGAGTATGTGATTTTTGGCCT
+	GCTGGTTTTGCTCAGAGAGCGGGCGCGTGTTCGCCGCGGGTCTCAACGACTTCGGGCAGCTCGGGATAGGCTCCTCCGTGACTCATTCCCTGGTACTGAGCTTCTTGTACATCATGCCTCCA
+	TGTGAAATTTTCATCTACATTGTGAGCCAGCCTACTTTTACACAGTAAGCGAAAGCTGGCTGGACATATCAGAGTTGCAATGGGGATTGACCAAATCAATTCTGACTCCTGTTACATGTTGC
+	>LOCOs11g09160_BULUPANDAK_1
+	ATGTGGCGGGCGAGGCGGTGGCCGTGGCCGTGGCGGTCGCAGCGGCGCGCGGCGAGGATGCTCTCGTCGGGTGAGCCAGCGGCGGGGCGGCGGAGGGTGGCGGCGCTGTGGGGGAACGGGGA
+	CTACGGGCGGCTGGGGATGGGGGCGCTGGAGTCGCGGTGGAGCCCCACGGCGTGCCCCTTCTTCCTCACCGGCCGCCCCGGCGACGACGACGACGACCCGCCCGCCTCCCTCGCCTGCGGCG
+	GCGCCCACACCCTCTTCCTCACCGGTACTCCTGAATTGAAATCGCCTGCTTGTGTAATTACTCGAGCGAGAGAGAGATTGTGTTGAATCGAGATTAATGTGGGAGTATGTGATTTTTGGCCT
+	GCTGGTTTTGCTCAGAGAGCGGGCGCGTGTTCGCCGCGGGTCTCAACGACTTCGGGCAGCTCGGGATAGGCTCCTCCGTGACTCATTCCCTGGTACTGAGCTTCTTGTACATCATGCCTCCA
+	TGTGAAATTTTCATCTACATTGTGAGCCAGCCTACTTTTACACAGTAAGCGAAAGCTGGCTGGACATATCAGAGTTGCAATGGGGATTGACCAAATCAATTCTGACTCCTGTTACATGTTGC
+	>LOCOs11g09160_BULUPANDAK_2
+	ATGAGGCGGGCGAGGCGGTGGCCGTGGCCGTGGCGGTCGCAGCGGCGAGCGGCGAGGATGCTCTCGTCGGGTGAGCCAGCGGCGGGGCGGCGGAGGGTGGCGGCGCTGTGGGGGAACGGGGA
+	CTACGGGCGGCTGGGGATGGGGGCGCTGGAGTCGCGGTGGAGCCCCACGGCGTGCCCCTTCTTCCTCACCGGCCGCCCCGGCGACGACGACGACGACCCGCCCGCCTCCCTCGCCTGCGGCG
+	GCGCCCACACCCTCTTCCTCACCGGTACTCCTGAATTGAAATCGCCAGCTTGTGTAATTACTCGAGCGAGAGAGAGATTGTGTTGAATCGAGATTAATGTGGGAGTATGTGATTTTTGGCCT
+	GCTGGTTTTGCTCAGAGAGCGGGCGCGTGTTCGCCGCGGGTCTCAACGACTTCGGGCAGCTCGGGATAGGCTCCTCCGTGACTCATTCCCTGGTACTGAGCTTCTTGTACATCATGCCTCCA
+	TGTGAAATTTTCATCTACATTGTGAGCCAGCCTACTTTTACACAGTAAGCGAAAGCTGGCTGGACATATCAGAGTTGCAATGGGGATTGACCAAATCAATTCTGACTCCTGTTACATGTTGC
+	>LOCOs07g23169_AZUCENA_1
+	ACTAGTGAAGTGTTGCCCGTTGGGTTTGGTGGAGTTTGAAGAGCTCTGTCGCCGTCTTCACTCCTCGCAGTCAGACGGGAGTGGACTACTGGAGGGAGAGAGAGGGTGAGCGAGGTGTGGGA
+	GCTGGTTTTGCTCAGAGAGCGGGCGCGTGTTCGCCGCGGGTCTCAACGACTTCGGGCAGCTCGGGATAGGCTCCTCCGTGACTCATTCCCTGGTACTGAGCTTCTTGTACATCATGCCTCCA
+	TGTGAAATTTTCATCTACATTGTGAGCCAGCCTACTTTTACACAGTAAGCGAAAGCTGGCTGGACATATCAGAGTTGCAATGGGGATTGACCAAATCAATTCTGACTCCTGTTACATGTTGC
+
+Output files
+============
+
+Diversity
+---------
+
+::
+
+	LOCOs07g23169;8;10494;10494;2;7.35039e-05;8.16793e-05;0.414213;2;0.428571;0.857143;0;1;
+	LOCOs11g09160;8;6577;6577;2;0.00011728;0.000130324;0.414213;2;0.428571;0.857143;0;1;
+
+
+	</help>
+    <citations>
+        <!-- [HELP] As DOI or BibTex entry -->
+    	<citation type="bibtex">@article{Dereeper03062015,
+author = {Dereeper, Alexis and Homa, Felix and Andres, Gwendoline and Sempere, Guilhem and Sarah, Gautier and Hueber, Yann and Dufayard, Jean-François and Ruiz, Manuel}, 
+title = {SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations},
+year = {2015}, 
+doi = {10.1093/nar/gkv351}, 
+abstract ={SNiPlay is a web-based tool for detection, management and analysis of genetic variants including both single nucleotide polymorphisms (SNPs) and InDels. Version 3 now extends functionalities in order to easily manage and exploit SNPs derived from next generation sequencing technologies, such as GBS (genotyping by sequencing), WGRS (whole gre-sequencing) and RNA-Seq technologies. Based on the standard VCF (variant call format) format, the application offers an intuitive interface for filtering and comparing polymorphisms using user-defined sets of individuals and then establishing a reliable genotyping data matrix for further analyses. Namely, in addition to the various scaled-up analyses allowed by the application (genomic annotation of SNP, diversity analysis, haplotype reconstruction and network, linkage disequilibrium), SNiPlay3 proposes new modules for GWAS (genome-wide association studies), population stratification, distance tree analysis and visualization of SNP density. Additionally, we developed a suite of Galaxy wrappers for each step of the SNiPlay3 process, so that the complete pipeline can also be deployed on a Galaxy instance using the Galaxy ToolShed procedure and then be computed as a Galaxy workflow. SNiPlay is accessible at http://sniplay.southgreen.fr.}, 
+URL = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.abstract}, 
+eprint = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.full.pdf+html}, 
+journal = {Nucleic Acids Research} 
+}
+
+    	</citation>
+
+    </citations>
+</tool>

@@ -1,0 +1,199 @@
+<tool id="ped2bed" name="plink: ped2bed" version="1.24">
+	<description>Convert ped to bed</description>
+	<requirements>
+		<requirement type="package" version="1.07">plink</requirement>
+	</requirements>
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>
+    <command interpreter="bash">./ped2bed.sh $ped $map $bed $fam $bim $logs
+    </command>
+	<inputs>
+		<param format="txt" name="ped" type="data" label="Allelic file in PED format" help="Allelic file in PED format"/>
+		<param format="txt" name="map" type="data" label="Map file" help="Map file"/>
+	</inputs>
+	<outputs>
+		<data format="txt" name="bed" label="Bed file"/>
+		<data format="txt" name="fam" label="Fam file"/>
+		<data format="txt" name="bim" label="Bim file"/>
+		<data format="txt" name="logs" label="All Logs"/>
+	</outputs>
+    
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+        <!-- [HELP] Multiple tests can be defined with different parameters -->
+        <test>
+         <param name="ped" value="ped2bed-input.ped" />
+	 <param name="map" value="ped2bed-input.map" />
+         <output name="bed" file="ped2bed-result.bed" />
+         <output name="fam" file="ped2bed-result.fam" />
+         <output name="bim" file="ped2bed-result.bim" />
+        </test>
+    </tests>
+	<help>
+	
+
+.. class:: infomark
+
+**Authors** plink_
+
+.. _plink: http://pngu.mgh.harvard.edu/purcell/plink/
+
+  | "PLINK: a toolset for whole-genome association and population-based linkage analysis.", **Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC.**, American Journal of Human Genetics, 81, 2007.
+
+.. class:: infomark
+
+**Galaxy integration** South Green.
+
+.. class:: infomark
+
+**Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+
+
+---------------------------------------------------
+
+
+
+=======
+Ped2Bed
+=======
+
+-----------
+Description
+-----------
+
+  | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner.
+  | For further informations, please visite the plink website_.
+
+.. _website: http://pngu.mgh.harvard.edu/purcell/plink/
+
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tool**
+
+=============== ========================== ===========
+Name            output file(s)             format 
+=============== ========================== ===========
+VCFtools filter PED and map files          ped and map
+=============== ========================== ===========
+
+
+**Downstream tool**
+
+=========== ========================== =======
+Name            input file(s)          format
+=========== ========================== =======
+Admixture   Bed, fam and bim file      txt
+=========== ========================== =======
+
+
+----------
+Input file
+----------
+
+PED file
+	Allelic file in PED format 
+
+MAP file
+
+
+
+------------
+Output files
+------------
+
+Bed file
+
+Fam file
+
+Bim file
+
+All logs 
+	Log file
+
+
+------------
+Dependencies
+------------
+plink 
+	version 1.07
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+PED file
+--------
+
+::
+	
+	AZUCENA	AZUCENA	0	0	0	0	G	G	A	A	C	C	T	T	T	
+	BULUPANDAK	BULUPANDAK	0	0	0	0	G	G	A	A	A	A	T	
+
+MAP file
+--------
+
+::
+	
+	0	Chr1:4299	0	4299
+	0	Chr1:26710	0	26710
+	0	Chr1:56184	0	56184
+	0	Chr1:93272	0	93272
+
+
+Output files
+============
+
+Bed file
+--------
+
+::
+
+	binary file
+
+Fam file
+--------
+
+::
+
+	AZUCENA AZUCENA 0 0 0 -9
+	BULUPANDAK BULUPANDAK 0 0 0 -9
+
+Bim file
+--------
+
+::
+
+	0	Chr1:4299	0	4299	A	G
+	0	Chr8:18058	0	18058	C	T
+
+
+	</help>
+    <citations>
+        <!-- [HELP] As DOI or BibTex entry -->
+    	<citation type="bibtex">@article{Dereeper03062015,
+author = {Dereeper, Alexis and Homa, Felix and Andres, Gwendoline and Sempere, Guilhem and Sarah, Gautier and Hueber, Yann and Dufayard, Jean-François and Ruiz, Manuel}, 
+title = {SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations},
+year = {2015}, 
+doi = {10.1093/nar/gkv351}, 
+abstract ={SNiPlay is a web-based tool for detection, management and analysis of genetic variants including both single nucleotide polymorphisms (SNPs) and InDels. Version 3 now extends functionalities in order to easily manage and exploit SNPs derived from next generation sequencing technologies, such as GBS (genotyping by sequencing), WGRS (whole gre-sequencing) and RNA-Seq technologies. Based on the standard VCF (variant call format) format, the application offers an intuitive interface for filtering and comparing polymorphisms using user-defined sets of individuals and then establishing a reliable genotyping data matrix for further analyses. Namely, in addition to the various scaled-up analyses allowed by the application (genomic annotation of SNP, diversity analysis, haplotype reconstruction and network, linkage disequilibrium), SNiPlay3 proposes new modules for GWAS (genome-wide association studies), population stratification, distance tree analysis and visualization of SNP density. Additionally, we developed a suite of Galaxy wrappers for each step of the SNiPlay3 process, so that the complete pipeline can also be deployed on a Galaxy instance using the Galaxy ToolShed procedure and then be computed as a Galaxy workflow. SNiPlay is accessible at http://sniplay.southgreen.fr.}, 
+URL = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.abstract}, 
+eprint = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.full.pdf+html}, 
+journal = {Nucleic Acids Research} 
+}
+
+    	</citation>
+
+    </citations>
+</tool>

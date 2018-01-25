@@ -1,0 +1,171 @@
+<tool id="getHaplotypesFromPhasedVCF" name="Get Haplotypes From Phased VCF" version="1.0.0">
+    <requirements>
+	<requirement type="binary">perl</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command interpreter="perl">
+        GetHaplotypesFromPhasedVCF.pl $input $output_label &amp;&amp; mv ${output_label}.distinct_haplotypes.txt $output_distinct &amp;&amp; mv ${output_label}.haplo.fas $output_haplo
+    </command>
+    <inputs>
+        <param type="data" name="input" format="vcf" label="Phased VCF" />
+        <param type="text" name="output_label" label="Output_label" value='Haplotypes' />
+    </inputs>
+    <outputs>
+        <data name="output_distinct" format="txt" label="${output_label}.distinct_haplotypes.txt"/>
+        <data name="output_haplo" format="fasta" label="${output_label}.haplo.fas"/>
+    </outputs>
+    <tests>
+        <test>
+            <param name="input" value="getHaplotypesFromPhasedVCF-input.vcf"/>
+            <output name="output_distinct" file="getHaplotypesFromPhasedVCF-result.distinct_haplotypes.txt"/>
+            <output name="output_haplo" file="getHaplotypesFromPhasedVCF-result.haplo.fas"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+
+.. class:: infomark
+
+**Authors** Dereeper Alexis (alexis.dereeper@ird.fr), IRD, South Green platform
+
+ | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+
+.. class:: infomark
+
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+
+.. class:: infomark
+
+**Support** For any questions, please send an e-mail to support.abims@sb-roscoff.fr
+
+---------------------------------------------------
+
+==============================
+Get Haplotypes From Phased VCF
+==============================
+
+-----------
+Description
+-----------
+
+    | Get Haplotype from phased VCF
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tool**
+
+=============== ========================== =======
+Name            output file(s)             format
+=============== ========================== =======
+Beagle          Phased VCF file            VCF
+=============== ========================== =======
+
+
+**Downstream tool**
+
+=============== ========================== ===========
+Name            input file(s)              format
+=============== ========================== ===========
+=============== ========================== ===========
+
+
+----------
+Input file
+----------
+
+VCF file
+        Phased VCF file
+
+----------
+Parameters
+----------
+
+Output file basename
+        Prefix for the output VCF file
+
+------------
+Output files
+------------
+
+
+Text file
+        File describing haplotypes
+
+Fasta file
+        Fasta file with haplotypes
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+VCF file
+---------
+
+::
+
+        #fileformat=VCFv4.1
+        #FILTER=&lt;ID=LowQual,Description="Low quality">
+        #FORMAT=&lt;ID=AD,Number=.,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+        [...]
+        CHROM   POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  AZUCENA
+	Chr1    4299    .       G       A       .       PASS    AR2=1;DR2=1;AF=0.168    GT:DS:GP        0|0:0:1,0,0    
+
+                              
+Parameters
+==========
+
+Output name -> haplotypes
+
+
+Output files
+============
+
+haplotypes.distinct_haplotypes.txt
+----------------------------------
+
+::
+
+	===Chr10===
+	haplo1:2:CIRAD403_1,CIRAD403_2,
+	TTTAAGAAATTCCTATATAGGTCTTCTAAGCGTATCTATTAACAT
+	haplo2:2:MAHAE_1,MAHAE_2,
+	TAAATCTTGGTGCTGATCTGATATTTAATGCGT
+
+
+haplotypes.haplo.fas
+--------------------
+
+::
+
+	>Chr10_AZUCENA_1
+	TTTAAGAAATTCCTATATAGGTCTTCTAAGCGTATCTATTAACAT
+	>Chr10_AZUCENA_2
+	TAAATCTTGGTGCTGATCTGATATTTAATGCGT
+
+    ]]></help>
+    <citations>
+                <!-- [HELP] As DOI or BibTex entry -->
+        <citation type="bibtex">@article{Dereeper03062015,
+        author = {Dereeper, Alexis and Homa, Felix and Andres, Gwendoline and Sempere, Guilhem and Sarah, Gautier and Hueber, Yann and Dufayard, Jean-François and Ruiz, Manuel},
+        title = {SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations},
+        year = {2015},
+        doi = {10.1093/nar/gkv351},
+        abstract ={SNiPlay is a web-based tool for detection, management and analysis of genetic variants including both single nucleotide polymorphisms (SNPs) and InDels. Version 3 now extends functionalities in order to easily manage and exploit SNPs derived from next generation sequencing technologies, such as GBS (genotyping by sequencing), WGRS (whole gre-sequencing) and RNA-Seq technologies. Based on the standard VCF (variant call format) format, the application offers an intuitive interface for filtering and comparing polymorphisms using user-defined sets of individuals and then establishing a reliable genotyping data matrix for further analyses. Namely, in addition to the various scaled-up analyses allowed by the application (genomic annotation of SNP, diversity analysis, haplotype reconstruction and network, linkage disequilibrium), SNiPlay3 proposes new modules for GWAS (genome-wide association studies), population stratification, distance tree analysis and visualization of SNP density. Additionally, we developed a suite of Galaxy wrappers for each step of the SNiPlay3 process, so that the complete pipeline can also be deployed on a Galaxy instance using the Galaxy ToolShed procedure and then be computed as a Galaxy workflow. SNiPlay is accessible at http://sniplay.southgreen.fr.},
+        URL = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.abstract},
+        eprint = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.full.pdf+html},
+        journal = {Nucleic Acids Research}
+        }
+
+        }</citation>
+
+    </citations>
+
+</tool>

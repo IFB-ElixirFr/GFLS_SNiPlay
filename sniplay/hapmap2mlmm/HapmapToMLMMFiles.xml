@@ -1,0 +1,160 @@
+<tool id="hapmap_to_mlmm_files" name="HapmapToMLMMFiles" version="1.1">
+    <description>converts a hapmap file into MLMM input files</description>
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>
+    <command interpreter="bash">./HapmapToMLMMFiles.sh $input $snp_info $genot
+    </command>
+	<inputs>
+		<param format="txt" name="input" type="data" label="Allelic file in Hapmap format" help="Allelic file in Hapmap format"/>
+	</inputs>
+	<outputs>
+		<data format="txt" name="snp_info" label="SNP Info file"/>
+		<data format="txt" name="genot" label="Genotyping file for MLMM"/>
+	</outputs>
+    
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+        <!-- [HELP] Multiple tests can be defined with different parameters -->
+
+        <test>
+            <param name="input" value="hapmap2mlmm-hapmap" />
+            <output name="snp_info" file="hapmap2mlmm-result_snp.hapmap" />
+	    <output name="genot" file="hapmap2mlmm-result_genot" />
+        </test>
+    </tests>
+	<help>
+	
+
+
+
+.. class:: infomark
+
+**Authors** Dereeper Alexis (alexis.dereeper@ird.fr), IRD, South Green platform
+
+  | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+
+.. class:: infomark
+
+**Galaxy integration** South Green.
+
+---------------------------------------------------
+
+
+=================
+HapmapToMLMMFiles
+=================
+
+-----------
+Description
+-----------
+
+  | HapmapToMLMMFiles converts a hapmap file into input files compatible with the MLMM software.
+
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tool**
+
+=============== ====================== ===========
+Name            output file(s)         format 
+=============== ====================== ===========
+VCF to Hapmap   Fasta alignment        fasta
+=============== ====================== ===========
+
+
+**Downstream tool**
+
+=========== ========================== =======
+Name            input file(s)          format
+=========== ========================== =======
+MLMM                                        
+=========== ========================== =======
+
+
+
+----------
+Input file
+----------
+
+Hapmap file
+	Allelic file in Hapmap format
+
+
+
+------------
+Output files
+------------
+
+SNP Info file
+
+Genotyping file for MLMM
+
+
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+Hapmap file
+-----------
+
+::
+	
+	rs#	alleles	chrom	pos	strand	assembly#	center	protLSID	assayLSID	panel	QCcode	Ind1	Ind2
+	SNP1	A/T	1	3102	+	assembly	NA	NA	NA	speciesname	NA	AA	AA	AA
+	SNP2	A/T	1	4648	+	assembly	NA	NA	NA	speciesname	NA	AA	AA	AA
+
+
+Output files
+============
+
+SNP Info file
+-------------
+
+::
+
+	SNP	Chr	Pos
+	SNP1	1	3102
+	SNP2	1	4648
+	SNP3	1	7601
+
+
+Genotyping file for MLMM
+------------------------
+
+::
+
+	Ind_id	SNP1	SNP2	SNP3	SNP4	SNP5	SNP6	SNP7	SNP8	SNP9	SNP10	SNP11	SNP12	SNP13	SNP14
+	Ind1	0	0	0	0	0	0	2	0	2	0	0	0	2	0
+	Ind2	0	0	0	0	0	2	2	0	0	0	0	0	0	0
+
+
+	</help>
+    <citations>
+        <!-- [HELP] As DOI or BibTex entry -->
+    	<citation type="bibtex">@article{Dereeper03062015,
+author = {Dereeper, Alexis and Homa, Felix and Andres, Gwendoline and Sempere, Guilhem and Sarah, Gautier and Hueber, Yann and Dufayard, Jean-François and Ruiz, Manuel}, 
+title = {SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations},
+year = {2015}, 
+doi = {10.1093/nar/gkv351}, 
+abstract ={SNiPlay is a web-based tool for detection, management and analysis of genetic variants including both single nucleotide polymorphisms (SNPs) and InDels. Version 3 now extends functionalities in order to easily manage and exploit SNPs derived from next generation sequencing technologies, such as GBS (genotyping by sequencing), WGRS (whole gre-sequencing) and RNA-Seq technologies. Based on the standard VCF (variant call format) format, the application offers an intuitive interface for filtering and comparing polymorphisms using user-defined sets of individuals and then establishing a reliable genotyping data matrix for further analyses. Namely, in addition to the various scaled-up analyses allowed by the application (genomic annotation of SNP, diversity analysis, haplotype reconstruction and network, linkage disequilibrium), SNiPlay3 proposes new modules for GWAS (genome-wide association studies), population stratification, distance tree analysis and visualization of SNP density. Additionally, we developed a suite of Galaxy wrappers for each step of the SNiPlay3 process, so that the complete pipeline can also be deployed on a Galaxy instance using the Galaxy ToolShed procedure and then be computed as a Galaxy workflow. SNiPlay is accessible at http://sniplay.southgreen.fr.}, 
+URL = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.abstract}, 
+eprint = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.full.pdf+html}, 
+journal = {Nucleic Acids Research} 
+}
+
+    	</citation>
+
+    </citations>
+</tool>

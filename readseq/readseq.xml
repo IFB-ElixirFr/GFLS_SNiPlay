@@ -6,7 +6,7 @@
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
         <requirement type="binary">perl</requirement>
-	<requirement type="package" version="10.03.13">readseq.jar</requirement>
+	<requirement type="package" version="2.1.30">readseq</requirement>
     </requirements>
     
     <!-- [STRONGLY RECOMMANDED] Exit code rules -->
@@ -17,7 +17,7 @@
 
     <!-- [REQUIRED] The command to execute -->
     <command>
-        java -jar \$JAVA_JAR_PATH/readseq.jar $filein -f $format >> $fileout_log 2>&amp;1 &amp;&amp;
+        readseq $filein -f $format >> $fileout_log 2>&amp;1 &amp;&amp;
 #if str( $format ) == "1":
  mv ${filein}.ig $fileout
 #elif str( $format ) == "2"  :

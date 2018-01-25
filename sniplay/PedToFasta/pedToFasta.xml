@@ -1,0 +1,171 @@
+<tool id="sniplay_pedToFasta" name="Ped2Fasta" version="1.0.0">
+    
+    <!-- [REQUIRED] Tool description displayed after the tool name -->
+    <description> Convert PED file to Fasta File </description>
+    
+    <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
+    <requirements>
+        <requirement type="binary">perl</requirement>
+    </requirements>
+
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+            <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+     </stdio>
+    
+    <!-- [OPTIONAL] Command to be executed to get the tool's version string -->
+    <version_command>
+<!--
+        tool_binary -v
+-->
+    </version_command>
+    
+    <!-- [REQUIRED] The command to execute -->
+    <command interpreter="perl">
+	Ped2Fasta.pl --in $filein --out $fileout 
+    </command>
+     
+    <!-- [REQUIRED] Input files and tool parameters -->
+    <inputs>
+	<param name="filein" type="data" format="txt" optional="false" label="PED input" />
+	<param name="fileout_label" type="text" value="filtered" optional="false" label="Output file name"/>
+    </inputs>
+    
+    <!-- [REQUIRED] Output files -->
+    <outputs>
+	<data name="fileout" type="data" format="fasta" label="${fileout_label}.fa" />
+    </outputs>
+    
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+        <test>
+         <param name="filein" value="ped2fasta-sample.ped" />
+         <output name="fileout" file="ped2fasta-result.fa" />
+        </test>
+    </tests>
+    
+    <!-- [OPTIONAL] Help displayed in Galaxy -->
+    <help>
+
+.. class:: infomark
+
+**Authors** Dereeper Alexis (alexis.dereeper@ird.fr), IRD, South Green platform
+
+ | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+
+.. class:: infomark
+
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. 
+
+.. class:: infomark
+
+**Support** For any questions, please send an e-mail to support.abims@sb-roscoff.fr 
+
+---------------------------------------------------
+
+=========
+Ped2Fasta
+=========
+
+-----------
+Description
+-----------
+
+  Convert PED file to Fasta File
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tool**
+
+=============== ========================== =======
+Name            output file(s)             format 
+=============== ========================== =======
+VCFtools Filter VCF file  	 	   VCF
+=============== ========================== =======
+
+
+**Downstream tool**
+
+=========== ========================== =======
+Name            input file(s)          format
+=========== ========================== =======
+Readseq     Fasta alignment	       fasta
+=========== ========================== =======
+
+
+----------
+Input file
+----------
+
+PED file
+	PED file usually from VCF tools
+
+----------
+Parameters
+----------
+
+Output file name
+	Prefix for the output fasta file
+
+------------
+Output files
+------------
+
+Fasta file
+	PED file conversion 
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input files
+===========
+
+PED file
+---------
+
+::
+
+	CATB1   CATB1   0       0       0       0       C       T       T       A       C       T       A       T       A       T       A       G       G       A
+
+Parameters
+==========
+
+Output name -> pedFile
+
+Output files
+============
+
+pedFile.fa
+----------
+
+::
+
+        YWYWWRRSYYMKRRKMYRKSRKYRYRYKRKRSKKSYRWYSYRRYRRRWYWWYYWRRYRSRWSSRMYRRKSWMSKWRRYYWMYKYWRSYRWRYMWYYYMKYKYWRYRYRY
+
+
+    </help>
+
+    <citations>
+        <!-- [HELP] As DOI or BibTex entry -->
+    	<citation type="bibtex">@article{Dereeper03062015,
+author = {Dereeper, Alexis and Homa, Felix and Andres, Gwendoline and Sempere, Guilhem and Sarah, Gautier and Hueber, Yann and Dufayard, Jean-François and Ruiz, Manuel}, 
+title = {SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations},
+year = {2015}, 
+doi = {10.1093/nar/gkv351}, 
+abstract ={SNiPlay is a web-based tool for detection, management and analysis of genetic variants including both single nucleotide polymorphisms (SNPs) and InDels. Version 3 now extends functionalities in order to easily manage and exploit SNPs derived from next generation sequencing technologies, such as GBS (genotyping by sequencing), WGRS (whole gre-sequencing) and RNA-Seq technologies. Based on the standard VCF (variant call format) format, the application offers an intuitive interface for filtering and comparing polymorphisms using user-defined sets of individuals and then establishing a reliable genotyping data matrix for further analyses. Namely, in addition to the various scaled-up analyses allowed by the application (genomic annotation of SNP, diversity analysis, haplotype reconstruction and network, linkage disequilibrium), SNiPlay3 proposes new modules for GWAS (genome-wide association studies), population stratification, distance tree analysis and visualization of SNP density. Additionally, we developed a suite of Galaxy wrappers for each step of the SNiPlay3 process, so that the complete pipeline can also be deployed on a Galaxy instance using the Galaxy ToolShed procedure and then be computed as a Galaxy workflow. SNiPlay is accessible at http://sniplay.southgreen.fr.}, 
+URL = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.abstract}, 
+eprint = {http://nar.oxfordjournals.org/content/early/2015/06/03/nar.gkv351.full.pdf+html}, 
+journal = {Nucleic Acids Research} 
+}
+
+    	</citation>
+
+    </citations>
+</tool>
