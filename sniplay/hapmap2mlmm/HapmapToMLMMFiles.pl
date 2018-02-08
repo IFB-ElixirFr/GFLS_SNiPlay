@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
-use Switch;
+
 use Getopt::Long;
 
 my $usage = qq~Usage:$0 <args> [<opts>]

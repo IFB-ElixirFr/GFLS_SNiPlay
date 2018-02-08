@@ -1,7 +1,9 @@
 <tool id="ped2bed" name="plink: ped2bed" version="1.24">
 	<description>Convert ped to bed</description>
 	<requirements>
-		<requirement type="package" version="1.07">plink</requirement>
+        	<requirement type="binary">perl</requirement>
+        	<requirement type="package" version="1.6.924">perl-bioperl</requirement>
+        	<requirement type="package" version="1.90b4">plink</requirement>
 	</requirements>
     <!-- [STRONGLY RECOMMANDED] Exit code rules -->
     <stdio>

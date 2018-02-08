@@ -1,9 +1,5 @@
 <?xml version="1.0"?>
 <tool_dependency>
-    <package name="plink" version="1.07">
-        <repository changeset_revision="65400c333b88" name="package_plink_1_07" owner="dereeper" toolshed="https://toolshed.g2.bx.psu.edu" />
-    </package>
-    <package name="vcftools" version="0.1.12b">
-        <repository changeset_revision="a655cb1dfc58" name="package_vcftools_0_1_12b" owner="iuc" toolshed="https://toolshed.g2.bx.psu.edu" />
-    </package>
+    <package name="plink" version="1.90b4"/>
+    <package name="vcftools" version="0.1.14"/>
 </tool_dependency>

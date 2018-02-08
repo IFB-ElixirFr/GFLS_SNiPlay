@@ -7,9 +7,15 @@ fileout_label=$(date "+%Y%m%d%H%M%S")
 fileout_matrix=$3
 fileout_plot=$4
 fileout_log=$5
+groups=$6
+
 
 rsync -a $ped input.ped 
 rsync -a $map input.map
+if [ -f $groups ]
+  then
+    cp -rf $groups input.individual_info.txt
+fi
 
 perl $tool_path/MDSbasedOnIBSmatrix.pl --in input --out $fileout_label
 

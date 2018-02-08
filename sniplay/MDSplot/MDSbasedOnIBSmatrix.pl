@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 
 use strict;
-use Switch;
 use Getopt::Long;
 use Bio::SeqIO;
 
@@ -63,6 +62,7 @@ while(<$O>)
 		{
 			my $ind = $i[1];
 			my $pop = "Pop1";
+			#if ($ind=~/^d/){$pop="Pop2";}
 			if ($populations{$ind})
 			{
 				$pop = $populations{$ind};
@@ -73,6 +73,7 @@ while(<$O>)
 		{
 			my $ind = $i[0];
 			my $pop = "Pop1";
+			#if ($ind=~/^d/){$pop="Pop2";}
 			if ($populations{$ind})
 			{
 				$pop = $populations{$ind};

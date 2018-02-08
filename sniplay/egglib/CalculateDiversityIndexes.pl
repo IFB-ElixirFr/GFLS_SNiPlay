@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
-use Switch;
+
 use Getopt::Long;
 use Bio::SeqIO;
 
