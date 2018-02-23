@@ -34,7 +34,7 @@
     
     <!-- [REQUIRED] Output files -->
     <outputs>
-	<data name="fileout" type="data" format="fasta" label="${fileout_label}.fa" />
+	<data name="fileout" format="fasta" label="${fileout_label}.fa" />
     </outputs>
     
     <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->

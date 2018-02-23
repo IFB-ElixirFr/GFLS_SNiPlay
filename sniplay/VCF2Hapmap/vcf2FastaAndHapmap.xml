@@ -86,7 +86,7 @@
          <param name="filegff" value="vcf2fastaAndHapmap-reference.gff" />
          <output name="fileout" file="vcf2fastaAndHapmap-result3.hapmap" />
          <output name="fileout_seq" file="vcf2fastaAndHapmap-result3.flanking.txt" />
-         <output name="fileout_fa1" file="vcf2fastaAndHapmap-result3.gene_alignment.fas" />
+         <output name="fileout_fa1" file="vcf2fastaAndHapmap-result3.gene_alignment.fas" compare="sim_size" delta="0"/>
         </test>
     </tests>
     

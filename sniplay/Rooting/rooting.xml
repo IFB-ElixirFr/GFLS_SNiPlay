@@ -6,7 +6,7 @@
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
         <requirement type="binary">perl</requirement>
-	<requirement type="package">Rootings_54.jar</requirement>
+        <requirement type="package" version="1.6.924">perl-bioperl</requirement>
     </requirements>
 
     <!-- [STRONGLY RECOMMANDED] Exit code rules -->
@@ -30,30 +30,23 @@
    
     <!-- [REQUIRED] Input files and tool parameters -->
     <inputs>
-	<param name="filein" type="data" format="nwk" optional="false" label="Fasta alignment input" />
+	<param name="filein" type="data" format="nwk,nhx" optional="false" label="Fasta alignment input" />
 	<param name="fileout_label" type="text" value="out tree" label="Output name" help="Output name for files" />
     </inputs> 
     
     <!-- [REQUIRED] Output files -->
     <outputs>
-	<data name="fileout_log" type="data" format="txt" label="${fileout_label}.log" />
-	<data name="fileout" type="data" format="nwk" label="${fileout_label}" />
+	<data name="fileout_log" format="txt" label="${fileout_label}.log" />
+	<data name="fileout" format="nwk,nhx" label="${fileout_label}" />
     </outputs>
     
     <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
     <tests>
         <!-- [HELP] Test files have to be in the ~/test-data directory -->
-
         <test>
          <param name="filein" value="rooting-newick" />
          <output name="fileout" file="rooting-out_tree" />
         </test>
-
-        <!-- [HELP] Multiple tests can be defined with different parameters -->
-<!--
-        <test>
-        </test>
--->
     </tests>
     
     <!-- [OPTIONAL] Help displayed in Galaxy -->

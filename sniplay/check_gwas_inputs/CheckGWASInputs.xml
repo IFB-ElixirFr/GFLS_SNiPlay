@@ -32,7 +32,7 @@
          <param name="hapmap" value="gwas-hapmap" />
          <param name="trait" value="gwas-trait" />
          <output name="out_hapmap" file="gwas-result.hapmap" />
-         <output name="out_trait" file="gwas-result.trait" />
+         <output name="out_trait" file="gwas-result.trait" compare="sim_size" delta="0"/>
          <output name="stats" file="gwas-result.stats" />
         </test>
     </tests>

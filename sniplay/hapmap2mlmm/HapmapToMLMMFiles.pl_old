@@ -98,7 +98,7 @@ foreach my $snp(@snps)
 }
 close($M);
 
-system("gawk -E $TRANSPOSE_EXE geno_transposed >geno_transposed2");
+system("$TRANSPOSE_EXE geno_transposed >geno_transposed2");
 
 open(my $F,">$geno");
 open(my $G,"geno_transposed2");

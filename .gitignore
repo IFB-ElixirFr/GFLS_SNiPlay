@@ -1,2 +1,14 @@
 tool_test_output*
 *.swp
+sniplay/AnnotationStatsFromVCF/test-data
+sniplay/GetHaplotypesFromPhasedVCF/test-data
+sniplay/PedToFasta/test-data
+sniplay/check_gwas_inputs/test-data
+sniplay/egglib/test-data
+sniplay/SNP_density/test-data
+sniplay/Rooting/test-data
+sniplay/ped2bed/test-data
+sniplay/hapmap2mlmm/test-data
+sniplay/VCF2Hapmap/test-data
+sniplay/MDSplot/test-data
+

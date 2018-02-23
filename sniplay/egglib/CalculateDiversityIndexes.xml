@@ -1,5 +1,11 @@
 <tool id="calculate_diversity" name="Diversity by gene" version="2.1.6">
-	<description>calculates various diversity indexes with EggLib.</description>
+    <description>calculates various diversity indexes with EggLib.</description>
+    <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
+    <requirements>
+        <requirement type="binary">perl</requirement>
+        <requirement type="package" version="1.6.924">perl-bioperl</requirement>
+        <requirement type="package" version="1.90b4">plink</requirement>
+    </requirements>
     <!-- [STRONGLY RECOMMANDED] Exit code rules -->
     <stdio>
         <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
@@ -21,7 +27,7 @@
         <!-- [HELP] Multiple tests can be defined with different parameters -->
         <test>
          <param name="input" value="egglib-alignment.fa" />
-         <output name="output" file="egglib-result.txt" />
+         <output name="output" file="egglib-result.txt" compare="sim_size" delta="0" />
         </test>
     </tests>
 	<help>

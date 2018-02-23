@@ -1,3 +1,5 @@
+#!/usr/bin/gawk -f
+
 BEGIN {
     max_x =0;
     max_y =0;

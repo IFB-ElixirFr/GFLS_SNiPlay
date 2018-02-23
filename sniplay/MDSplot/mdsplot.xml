@@ -39,9 +39,9 @@
     
     <!-- [REQUIRED] Output files -->
     <outputs>
-	<data name="fileout_matrix" type="data" format="txt" label="${fileout_label}.ibs_matrix.txt" />
-	<data name="fileout_plot" type="data" format="txt" label="${fileout_label}.mds_plot.txt" />
-	<data name="fileout_log" type="data" format="txt" label="${fileout_label}.log" />
+	<data name="fileout_matrix" format="txt" label="${fileout_label}.ibs_matrix.txt" />
+	<data name="fileout_plot" format="txt" label="${fileout_label}.mds_plot.txt" />
+	<data name="fileout_log" format="txt" label="${fileout_label}.log" />
     </outputs>
     
     <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->

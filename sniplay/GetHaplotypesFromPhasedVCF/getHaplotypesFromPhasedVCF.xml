@@ -19,8 +19,8 @@
     <tests>
         <test>
             <param name="input" value="getHaplotypesFromPhasedVCF-input.vcf"/>
-            <output name="output_distinct" file="getHaplotypesFromPhasedVCF-result.distinct_haplotypes.txt"/>
-            <output name="output_haplo" file="getHaplotypesFromPhasedVCF-result.haplo.fas"/>
+            <output name="output_distinct" file="getHaplotypesFromPhasedVCF-result.distinct_haplotypes.txt" compare="sim_size" delta="0"/>
+            <output name="output_haplo" file="getHaplotypesFromPhasedVCF-result.haplo.fas" compare="sim_size" delta="0"/>
         </test>
     </tests>
     <help><![CDATA[
