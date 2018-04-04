@@ -29,10 +29,10 @@
 
     <tests>
         <test>
-            <param name="vcf" value="input.vcf"/>
-            <param name="genome" value="in.fasta"/>
-            <param name="gff" value="in.gff3"/>
-            <output name="output" file="output.vcf" compare="diff" lines_diff="4"/>
+            <param name="vcf" value="snpeff_input.vcf"/>
+            <param name="genome" value="snpeff_in.fasta"/>
+            <param name="gff" value="snpeff_in.gff3"/>
+            <output name="output" file="snpeff_output.vcf" compare="diff" lines_diff="4"/>
         </test>
     </tests>
 

@@ -68,6 +68,8 @@
 					<when value="yes">
 						<param format="txt" name="structure" type="data" label="Structure file"/>
 					</when>
+                                        <when value="no">
+                                        </when>
 				</conditional>
 			</when>
 			<when value="mlm">
@@ -81,6 +83,8 @@
 					<when value="yes">
 						<param format="txt" name="structure" type="data" label="Structure file"/>
 					</when>
+                                        <when value="no">
+                                        </when>
 				</conditional>
 				<param name="mlmVarCompEst" type="select" label="Variance Component Estimation">
 					<option value="P3D" selected="True">P3D</option>

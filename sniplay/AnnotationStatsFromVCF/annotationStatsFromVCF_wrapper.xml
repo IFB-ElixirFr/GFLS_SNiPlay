@@ -2,6 +2,7 @@
     <description> from VCF file </description>
     <requirements>
 	<requirement type="binary">perl</requirement>
+        <requirement type="package" version="1.6.924">perl-bioperl</requirement>
 	<requirement type="package" version="0.1.12b">vcftools</requirement>
     </requirements>
     <stdio>
@@ -12,19 +13,21 @@
     </command>
     <inputs>
         <param type="data" name="input" format="vcf" label="VCF file" />
+        <param name="step" type="integer" value="200000" label="Step" help="Step in bp"/>
         <param type="text" name="output_label" label="Output_label" value='VCF_stats' />
     </inputs>
     <outputs>
-        <data name="output_count" format="txt" label="${output_label}."/>
-	<data name="output_stats_effect" format="txt" label="${output_label}."/>
-	<data name="output_stats_location" format="txt" label="${output_label}."/>
+        <data name="output_count" format="txt" label="${output_label}"/>
+	<data name="output_stats_effect" format="txt" label="${output_label}.effect"/>
+	<data name="output_stats_location" format="txt" label="${output_label}.location"/>
     </outputs>
     <tests>
         <test>
-            <param name="input" value="vcf2fastaAndHapmap-sample.vcf"/>
-            <output name="output_count" file="vcf2fastaAndHapmap-sample.vcf"/>
-            <output name="output_stats_effect" file="vcf2fastaAndHapmap-sample.vcf"/>
-	    <output name="output_stats_location" file="vcf2fastaAndHapmap-sample.vcf"/>
+            <param name="input" value="annotationStatsFromVCF.vcf"/>
+            <param name="step" value="50000"/>
+            <output name="output_count" file="annotationStatsFromVCF.txt"/>
+            <output name="output_stats_effect" file="annotationStatsFromVCF.effect"/>
+	    <output name="output_stats_location" file="annotationStatsFromVCF.location"/>
         </test>
     </tests>
     <help><![CDATA[
@@ -86,6 +89,9 @@ VCF file
 ----------
 Parameters
 ----------
+
+Step
+        Step in bp for the window to calculate SNP density
 
 Output file basename
         Prefix for the output VCF file
