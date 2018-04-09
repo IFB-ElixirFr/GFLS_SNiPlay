@@ -36,17 +36,19 @@
         </test>
     </tests>
 
-
-	<help>
-
-
-.. class:: infomark
-
-**Program encapsulated in Galaxy by Southgreen**
+    <help><![CDATA[
 
 .. class:: infomark
 
 **SnpEff version 4.0**
+
+.. class:: infomark
+
+**Galaxy integration** Dereeper Alexis (IRD), Valentin Marcon (INRA).
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 -----
 
@@ -66,11 +68,24 @@ Genetic variant annotation and effect prediction toolbox. It annotates and predi
 
 -----
 
-For further informations, please visite the SnpEff_ website.
+------------
+Dependencies
+------------
+SnpEff
+        SnpEff_ 4.3.1, Conda version
 
+.. _snpeff: https://anaconda.org/bioconda/snpeff
 
-.. _SnpEff: http://snpeff.sourceforge.net/
-        </help>
+-----
+
+For further informations, please visite the SnpEff website_.
+
+.. _website: http://snpeff.sourceforge.net/
+
+    ]]></help>
+    <citations>
+       <citation type="doi">10.4161/fly.19695</citation>
+    </citations>
 
 </tool>
 

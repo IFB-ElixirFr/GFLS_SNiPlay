@@ -1,24 +1,38 @@
 
 # GFLS (Galaxy For Life Science)  :heavy_minus_sign::sparkles::sparkles::four::herb::microscope::heavy_minus_sign: SNiPlay
 
-This repository concern the **SNiPlay** part of the GFLS project. ([website](http://sniplay.southgreen.fr/cgi-bin/home.cgi))
+This repository concern the **SNiPlay** part of the GFLS project ([website](http://sniplay.southgreen.fr/cgi-bin/home.cgi)).
 It is made in collaboration with Alexis Dereeper from the 'Institut de recherche pour le développement'.
 All the **XML** files (Wrappers) are made by his team.
 
 #### :file_folder: Content
 
 The repository contain all the wrappers for the pipeline SNiPlay.
-We are finishing the test and managing the dependencies with BioConda.
 
-- admixture
+- admixture [deprecated]
 - fastme
 - plink
 - readseq
 - snmf
 - snpeff_from_gff_vcf
 - tassel5
-- vcftools_filter_stats_diversity
+- vcftools_filter_stats_diversity (vcftoolsFilter,vcftoolsStats,vcftoolsSlidingWindow)
 
+It contain also the wrappers for the SNiPlay tool.
+
+- AnnotationStatsFromVCF
+- check_gwas_inputs
+- egglib
+- GetHaplotypesFromPhasedVCF
+- hapmap2mlmm
+- MDSplot
+- ped2bed
+- PedToFasta
+- Rooting
+- SNP_density
+- VCF2Hapmap
+
+We are finishing the test and managing the dependencies with BioConda.
 
 #### :page_with_curl: Publications
 

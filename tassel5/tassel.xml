@@ -136,23 +136,20 @@
         </test>
     </tests>
 
-	<help>
+    <help><![CDATA[
+
 
 .. class:: infomark
 
-**Program encapsulated in Galaxy by Southgreen**
+**Tassel5 version 5.2.40**
 
 .. class:: infomark
 
-**Tassel**
+**Galaxy integration**  Dereeper Alexis (IRD), Valentin Marcon (INRA). 
 
------
+.. class:: infomark
 
-==========
- Authors:
-==========
-
-**Terry Casstevens**
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 -----
 
@@ -164,10 +161,24 @@ Software package to evaluate traits associations, evolutionary patterns, and lin
 
 -----
 
-For further informations, please visite the website of TASSEL_.
+------------
+Dependencies
+------------
+Tassel5
+        tassel_ 5.2.40, Conda version
+
+.. _tassel: https://anaconda.org/bioconda/tassel
+
+-----
 
 
-.. _TASSEL: http://www.maizegenetics.net/tassel/
+For further informations, please visite the website_ of TASSEL.
 
-	</help>
+
+.. _website: http://www.maizegenetics.net/tassel/
+
+    ]]></help>
+    <citations>
+       <citation type="doi">10.1093/bioinformatics/btm308</citation>
+    </citations>
 </tool>

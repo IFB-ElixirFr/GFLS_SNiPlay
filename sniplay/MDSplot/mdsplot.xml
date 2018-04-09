@@ -63,33 +63,28 @@
     </tests>
     
     <!-- [OPTIONAL] Help displayed in Galaxy -->
-    <help>
+    <help><![CDATA[
 
 
 .. class:: infomark
 
-**Authors** plink_
+**Authors** PLINK._
 
-.. _plink: http://pngu.mgh.harvard.edu/purcell/plink/
+.. _PLINK.: https://www.cog-genomics.org/plink
 
-  | "PLINK: a toolset for whole-genome association and population-based linkage analysis.", **Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC.**, American Journal of Human Genetics, 81, 2007.
-
-
-.. class:: infomark
-
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+  | **Please cite** "PLINK: a toolset for whole-genome association and population-based linkage analysis.", **Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC.**, American Journal of Human Genetics, 81, 2007.
+  | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
 
 .. class:: infomark
 
-**Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+**Support** For any questions about Galaxy integration, please send an e-mail to 
+
 
 ---------------------------------------------------
-
-
 
 ========
 MDS plot
@@ -101,6 +96,16 @@ Description
 
   Compute an IBS matrix and a multi-dimensional scaling.
 
+------------
+Dependencies
+------------
+PLINK
+        plink_ 1.90b4, Conda version
+Bioperl
+        perl-bioperl_ 1.6.924, Conda version
+
+.. _plink: https://anaconda.org/bioconda/plink
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
 
 -----------------
 Workflow position
@@ -146,12 +151,6 @@ Output_name.mds_plot.txt
 
 Output_name.log
 	Log file
-
-------------
-Dependencies
-------------
-plink 
-	version 1.07
 	
 ---------------------------------------------------
 
@@ -213,7 +212,7 @@ densities.mds_plot.txt
 
 	
 
-    </help>
+    ]]></help>
     <citations>
         <!-- [HELP] As DOI or BibTex entry -->
     	<citation type="bibtex">@article{Dereeper03062015,

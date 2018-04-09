@@ -50,30 +50,23 @@
     </tests>
     
     <!-- [OPTIONAL] Help displayed in Galaxy -->
-    <help>
-
+    <help><![CDATA[
 
 .. class:: infomark
 
 **Authors** Jean-François Dufayard, CIRAD, South Green platform
 
+ | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
-
-.. class:: infomark
-
-**Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 ---------------------------------------------------
-
-
-
 
 =======
 Rooting
@@ -85,6 +78,13 @@ Description
 
   Compute a midpoint newick rooted tree.
 
+------------
+Dependencies
+------------
+Bioperl
+        perl-bioperl_ 1.6.924, Conda version
+
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
 
 -----------------
 Workflow position
@@ -165,7 +165,7 @@ out tree
 	(ref:0.9384270000000001,(((((((((((((((((((((((((((((((((((IRAT257:0.044246,IRAT112:0.023421):0.009006,ARAGUAIA:0.093061):0.004662...
 	
 
-    </help>
+    ]]></help>
     <citations>
         <!-- [HELP] As DOI or BibTex entry -->
     	<citation type="bibtex">@article{Dereeper03062015,

@@ -111,23 +111,21 @@
     </tests>
     
     <!-- [OPTIONAL] Help displayed in Galaxy -->
-    <help>
+    <help><![CDATA[
 
 .. class:: infomark
 
-**Authors**     Adam Auton, Petr Danecek and Anthony Marcketta (C++ Module) : VCFtools_
-
-.. _VCFtools: http://vcftools.sourceforge.net
+**Authors**  Adam Auton, Petr Danecek and Anthony Marcketta (C++ Module) : VCFtools (http://vcftools.sourceforge.net)
 
  | **Please cite** "The Variant Call Format and VCFtools", Petr Danecek, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert Handsaker, Gerton Lunter, Gabor Marth, Stephen T. Sherry, Gilean McVean, Richard Durbin and 1000 Genomes Project Analysis Group, **Bioinformatics**, 2011 
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA..
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 ---------------------------------------------------
 
@@ -145,6 +143,17 @@ Description
   | For further informations on VCFtools, please visite the VCFtools website_.
 
 .. _website: http://vcftools.sourceforge.net
+
+------------
+Dependencies
+------------
+VCFtools
+        vcftools_ 0.1.14, Conda version
+Bioperl
+        perl-bioperl_ 1.6.924, Conda version
+
+.. _vcftools: https://anaconda.org/bioconda/vcftools
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
 
 -----------------
 Workflow position
@@ -279,7 +288,7 @@ filtered_genelist_intron.vcf
 	chr1	5059	.	C	G	146.84	.	AC=2;AF=1.00;AN=2;DP=8;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=24.14;MQ0=1;QD=18.35;EFF=INTRON(MODIFIER||||Cc01g00020|mRNA||GSCOCT00012438001|),UPSTREAM(MODIFIER||||Cc01g00010|mRNA||GSCOCT00012439001|)	GT:AD:DP:GQ:PL	1/1:0,8:8:18:175,18,0
 
 
-    </help>
+    ]]></help>
     <citations>
                 <!-- [HELP] As DOI or BibTex entry -->
         <citation type="bibtex">

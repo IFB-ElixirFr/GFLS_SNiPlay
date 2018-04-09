@@ -1,0 +1,4 @@
+categories: [Variant Analysis]
+description: Filter large VCF genotyping file
+name: plink
+owner: vmarcon

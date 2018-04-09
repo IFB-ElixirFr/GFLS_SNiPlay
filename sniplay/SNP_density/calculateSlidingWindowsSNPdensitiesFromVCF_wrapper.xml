@@ -58,7 +58,7 @@
     </tests>
     
     <!-- [OPTIONAL] Help displayed in Galaxy -->
-    <help>
+    <help><![CDATA[
 
 .. class:: infomark
 
@@ -69,11 +69,11 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 ---------------------------------------------------
 
@@ -89,6 +89,19 @@ Description
 
   Calculate SNP densities along chromosome from a VCF file
 
+------------
+Dependencies
+------------
+VCFtools
+        vcftools_ 0.1.14, Conda version
+VCFtools Perl libraries
+	perl-vcftools-vcf_ 0.1.14, Conda version
+Bioperl
+	perl-bioperl_ 1.6.924, Conda version
+
+.. _vcftools: https://anaconda.org/bioconda/vcftools
+.. _perl-vcftools-vcf: https://anaconda.org/bioconda/perl-vcftools-vcf
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
 
 -----------------
 Workflow position
@@ -187,7 +200,7 @@ densities.by_sample
 	chr1       43   43   40
 	chr1       139  167  141
 
-    </help>
+    ]]></help>
     <citations>
         <!-- [HELP] As DOI or BibTex entry -->
     	<citation type="bibtex">@article{Dereeper03062015,

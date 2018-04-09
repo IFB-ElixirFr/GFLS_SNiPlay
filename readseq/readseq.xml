@@ -198,7 +198,7 @@
     </tests>
     
     <!-- [OPTIONAL] Help displayed in Galaxy -->
-    <help>
+    <help><![CDATA[
 
 .. class:: infomark
 
@@ -209,7 +209,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
 
 .. class:: infomark
 
@@ -228,6 +228,13 @@ Description
 
   Compute a phylip tree from a fasta alignment.
 
+------------
+Dependencies
+------------
+ReadSeq
+	readseq_ 2.1.30, Conda version
+
+.. _readseq: https://anaconda.org/bioconda/readseq
 
 -----------------
 Workflow position
@@ -277,12 +284,6 @@ Output_name
 Output_name.log
 	Log file
 
-------------
-Dependencies
-------------
-ReadSeq
-	readseq.jar at 10.03.13 version
-
 ---------------------------------------------------
 
 ---------------
@@ -319,7 +320,7 @@ phylip conversion
 	IRAT112      GAGAACCGTC CTGTAAGTAC TCTTGCTTTA AGTAATAAAG TAATACTAAT
 	KARASUKARA   GAGAACCGTC CTGTAAGTAC TCTTGCTTTA AATACGAAAG TAATACTAAT
 	
-    </help>
+    ]]></help>
 <citations>
 <citation type="doi" >10.1002/0471250953.bia01es00</citation>
 </citations>

@@ -36,11 +36,8 @@
          <output name="stats" file="gwas-result.stats" />
         </test>
     </tests>
-	<help>
+	<help><![CDATA[
 	
-        <![CDATA[
-
-
 .. class:: infomark
 
 **Authors** South Green
@@ -49,7 +46,12 @@
 
 .. class:: infomark
 
-**Galaxy integration** South Green.
+**Galaxy integration** South Green. Valentin Marcon, INRA.
+
+.. class:: infomark
+
+**Support** For any questions, please send an e-mail to 
+
 
 ---------------------------------------------------
 
@@ -171,10 +173,7 @@ Logfile and statistics
         Modified markers:
         Difference in variation: 0
 
-        ]]>
-
-	
-	</help>
+	]]></help>
     <citations>
         <!-- [HELP] As DOI or BibTex entry -->
     	<citation type="bibtex">@article{Dereeper03062015,

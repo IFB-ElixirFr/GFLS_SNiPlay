@@ -1,4 +1,4 @@
-<tool id="fastme" name="FastME" version="2.1.4.2">
+<tool id="fastme" name="FastME" version="2.1.5">
     <description>Distance-based inference of phylogenetic trees</description>
     <requirements>
         <requirement type="package" version="2.1.5">fastme</requirement>
@@ -158,20 +158,20 @@
             <output name="outputTree" file="TreeTn93BionjSpr.nwk" />
         </test>
     </tests>
-    <help>
+    <help><![CDATA[
+
+.. class:: infomark
+
+**FastME version 2.1.5** http://www.atgc-montpellier.fr/fastme
 
 .. class:: infomark
 
 
-**FastME version 2.1.5**
-
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Correia Damien, CNRS. Valentin Marcon, INRA.
 
 .. class:: infomark
 
-
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Correia Damien, CNRS.
 **Support** For any questions about Galaxy integration, please send an e-mail to vincent.lefort@lirmm.fr
-
 
 -----
 
@@ -194,9 +194,10 @@ FastME included Nearest Neighbor Interchange (NNI) and also Subtree Pruning and 
 ------------
 Dependencies
 ------------
-FastME
-    http://www.atgc-montpellier.fr/fastme
+FASTME
+        fastme_ 2.1.5 , Conda version
 
+.. _fastme: https://anaconda.org/bioconda/fastme
 
 
 ---------------------------------------------------
@@ -349,11 +350,11 @@ OPTIONS
   -h, --help  Display this usage.
 
 
-For further informations, please visite FastME_
+For further informations, please visite FastME website_
 
-.. _FastME: http://www.atgc-montpellier.fr/fastme/usersguide.php
+.. _website: http://www.atgc-montpellier.fr/fastme/usersguide.php
 
-    </help>
+    ]]></help>
     <citations>
        <citation type="doi">10.1093/molbev/msv150</citation>
        <citation type="doi">10.1089/106652702761034136</citation>

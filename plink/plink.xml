@@ -73,7 +73,7 @@
     </tests> 
     
     <!-- [OPTIONAL] Help displayed in Galaxy -->
-    <help>
+    <help><![CDATA[
 
 .. class:: infomark
 
@@ -85,7 +85,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Dereeper Alexis (IRD), Andres Gwendoline (Institut Français de Bioinformatique).
+**Galaxy integration** Dereeper Alexis (IRD), Andres Gwendoline (Institut Français de Bioinformatique), Valentin Marcon (INRA).
 
 .. class:: infomark
 
@@ -93,6 +93,9 @@
 
 
 
-    </help>
-
+    ]]></help>
+    <citations>
+       <citation type="doi">10.1086/519795</citation>
+       <citation type="doi">10.1186/s13742-015-0047-8</citation>
+    </citations>
 </tool>

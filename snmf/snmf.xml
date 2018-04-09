@@ -52,16 +52,18 @@
 		</test>
 	</tests>
 
-	<help>
-	
-
-.. class:: infomark
-
-**Program encapsulated in Galaxy by Southgreen**
-
+	<help><![CDATA[
 .. class:: infomark
 
 **sNMF version 1.2**
+
+.. class:: infomark
+
+**Galaxy integration** Alexis Dereeper, IRD.  Valentin Marcon, INRA. 
+
+.. class:: infomark
+
+**Support**  For any questions about Galaxy integration, please send an e-mail to 
 
 -----
 
@@ -71,13 +73,28 @@
 
 Fast and efficient program for estimating individual admixture coefficients based on sparse non-negative matrix factorization and population genetics. 
 
+------------
+Dependencies
+------------
+sNMF
+        snmf_ 1.2, Conda version
+PLINK
+        plink_ 1.90b4, Conda version
+Bioperl
+        perl-bioperl_ 1.6.924, Conda version
+
+.. _snmf: https://anaconda.org/bioconda/snmf
+.. _plink: https://anaconda.org/bioconda/plink
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
+
+
 -----
 
-For further informations, please visite the sNMF_ website.
+For further informations, please visite the sNMF website_.
 
 
-.. _sNMF: http://membres-timc.imag.fr/Olivier.Francois/snmf/index.htm
-	</help>
+.. _website: http://membres-timc.imag.fr/Olivier.Francois/snmf/index.htm
+	]]></help>
 <citations>
 <citation type="doi" >10.1534/genetics.113.160572</citation>
 </citations>

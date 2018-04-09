@@ -30,25 +30,25 @@
          <output name="output" file="egglib-result.txt" compare="sim_size" delta="0" />
         </test>
     </tests>
-	<help>
+	<help><![CDATA[
 	
 
 
 .. class:: infomark
 
-**Authors** EggLib_
+**Authors** EggLib : http://mycor.nancy.inra.fr/egglib/
 
-.. _EggLib: http://egglib.sourceforge.net/
-
-  | "EggLib: processing, analysis and simulation tools for population genetics and genomics.", **De Mita S. and M. Siol.**, BMC Genet. 2012. 13:27.
-
-.. class:: infomark
-
-**Galaxy integration** South Green.
+  | **Please cite** "EggLib: processing, analysis and simulation tools for population genetics and genomics.", **De Mita S. and M. Siol.**, BMC Genet. 2012. 13:27.
+  | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
 
 .. class:: infomark
 
-**Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
+**Galaxy integration** South Green. Valentin Marcon, INRA.
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to
+
 
 ---------------------------------------------------
 
@@ -66,6 +66,22 @@ Description
   | For further informations, please visite the EggLib website_.
 
 .. _website: http://egglib.sourceforge.net/
+
+------------
+Dependencies
+------------
+PLINK
+        plink_ 1.90b4, Conda version
+Bioperl
+        perl-bioperl_ 1.6.924, Conda version
+egglib
+        egglib_ 2.1.5, supplied with the wrapper
+
+.. _plink: https://anaconda.org/bioconda/plink
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
+.. _egglib: https://anaconda.org/bioconda/egglib
+
+
 
 
 -----------------
@@ -98,13 +114,6 @@ Output files
 Diversity
 
 Log file
-
-
-------------
-Dependencies
-------------
-EggLib 
-	version 2.1.5
 
 ---------------------------------------------------
 
@@ -161,7 +170,7 @@ Diversity
 	LOCOs11g09160;8;6577;6577;2;0.00011728;0.000130324;0.414213;2;0.428571;0.857143;0;1;
 
 
-	</help>
+	]]></help>
     <citations>
         <!-- [HELP] As DOI or BibTex entry -->
     	<citation type="bibtex">@article{Dereeper03062015,

@@ -1,0 +1,5 @@
+categories: [Genome-Wide Association Study]
+description: Software to evaluate traits associations, evolutionary patterns, and
+  linkage disequilibrium.
+name: tassel5
+owner: vmarcon
