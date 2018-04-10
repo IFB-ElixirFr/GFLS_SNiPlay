@@ -162,16 +162,15 @@
 
 .. class:: infomark
 
-**FastME version 2.1.5** http://www.atgc-montpellier.fr/fastme
+**FastME* version 2.1.5 http://www.atgc-montpellier.fr/fastme
 
 .. class:: infomark
 
-
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Correia Damien, CNRS. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Correia Damien, CNRS. Marcon Valentin, INRA.
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to vincent.lefort@lirmm.fr
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 -----
 
@@ -180,16 +179,20 @@
 FastME 2.0
 ############
 
-Comprehensive, accurate and fast distance-based phylogeny inference program
-
-
 -----------
 Description
 -----------
 
+Comprehensive, accurate and fast distance-based phylogeny inference program
+
 FastME provides distance algorithms to infer phylogenies. It's based on balanced minimum evolution, which is the very principle of NJ.
 
 FastME included Nearest Neighbor Interchange (NNI) and also Subtree Pruning and Regrafting (SPR), while remaining as fast as NJ and providing a number of facilities: distance estimation for DNA and proteins with various models and options, bootstrapping, and parallel computations.
+
+For further informations, please visit FastME website_
+
+.. _website: http://www.atgc-montpellier.fr/fastme/usersguide.php
+
 
 ------------
 Dependencies
@@ -235,8 +238,8 @@ Parameters
   Distance method : BIONJ
 
 
-Output files
-============
+Output file
+===========
 
 **Newick tree**::
 
@@ -349,10 +352,6 @@ OPTIONS
 
   -h, --help  Display this usage.
 
-
-For further informations, please visite FastME website_
-
-.. _website: http://www.atgc-montpellier.fr/fastme/usersguide.php
 
     ]]></help>
     <citations>

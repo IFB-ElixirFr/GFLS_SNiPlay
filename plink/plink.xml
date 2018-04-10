@@ -1,7 +1,7 @@
-<tool id="sniplay_plink" name="plink" version="1.0">
+<tool id="sniplay_plink" name="PLINK" version="1.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
-    <description> - Filter large VCF file</description>
+    <description>Filter large VCF file</description>
     
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
@@ -53,8 +53,8 @@
     
     <!-- [REQUIRED] Output files -->
     <outputs>
-	<data name="fileout" format="vcf" label="Plink filtered VCF"/>
-	<data name="filelog" format="txt" label="Plink logfile" />
+	<data name="fileout" format="vcf" label="PLINK filtered VCF"/>
+	<data name="filelog" format="txt" label="PLINK logfile" />
     </outputs>
     
     <tests>
@@ -77,21 +77,45 @@
 
 .. class:: infomark
 
-**Authors**     Shaun Purcell : plink_
-
-.. _plink: https://www.cog-genomics.org/plink2
+**Authors**  Shaun Purcell : https://www.cog-genomics.org/plink2
 
  | **Please cite** "PLINK: a toolset for whole-genome association and population-based linkage analysis.", Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC, **American Journal of Human Genetics**, 2007 
 
 .. class:: infomark
 
-**Galaxy integration** Dereeper Alexis (IRD), Andres Gwendoline (Institut Français de Bioinformatique), Valentin Marcon (INRA).
+**Galaxy integration** Dereeper Alexis (IRD), Andres Gwendoline (Institut Français de Bioinformatique), Marcon Valentin (INRA).
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 
+---------------------------------------------------
+
+=====
+PLINK
+=====
+
+-----------
+Description
+-----------
+
+  | Genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner.  
+  | For further informations, please visit the plink website_.
+
+.. _website: https://www.cog-genomics.org/plink2
+
+------------
+Dependencies
+------------
+
+PLINK
+        plink_ 1.90b4, Conda version
+Bioperl
+        perl-bioperl_ 1.6.924, Conda version
+
+.. _plink: https://anaconda.org/bioconda/plink
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
 
     ]]></help>
     <citations>

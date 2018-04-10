@@ -1,5 +1,5 @@
 <tool id="check_GWAS_inputs" name="Check GWAS Inputs" version="1.1">
-	<description>checks concordance between input files for GWAS analysis</description>
+	<description>Checks concordance between input files for GWAS analysis</description>
 
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
@@ -46,7 +46,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** South Green. Valentin Marcon, INRA.
+**Galaxy integration** South Green. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -82,9 +82,9 @@ VCF to Hapmap   Hapmap file	       hapmap
 
 
 
-----------
-Input file
-----------
+-----------
+Input files
+-----------
 
 Hapmap file
 	Allelic file in Hapmap format

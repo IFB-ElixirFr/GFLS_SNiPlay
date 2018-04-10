@@ -209,14 +209,13 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to support.abims@sb-roscoff.fr
+**Support** For any questions about Galaxy integration, please send an e-mail to 
 
 ---------------------------------------------------
-
 
 =======
 Readseq
@@ -226,7 +225,7 @@ Readseq
 Description
 -----------
 
-  Compute a phylip tree from a fasta alignment.
+  | Compute a phylip tree from a fasta alignment.
 
 ------------
 Dependencies
@@ -266,9 +265,9 @@ Fasta file
 	The input data file contains sequence alignment(s)
 	
 
-----------
-Parameters
-----------
+---------
+Parameter
+---------
 
 Output name
         Output base name for the ouput files
@@ -290,8 +289,8 @@ Output_name.log
 Working example
 ---------------
 
-Input files
-===========
+Input file
+==========
 
 Fasta file
 -----------
@@ -308,8 +307,8 @@ Parameters
 Output name -> phylip conversion
 
 
-Output files
-============
+Output file
+===========
 
 phylip conversion
 -----------------

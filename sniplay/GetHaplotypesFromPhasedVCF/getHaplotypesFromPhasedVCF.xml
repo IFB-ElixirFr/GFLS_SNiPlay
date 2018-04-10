@@ -1,4 +1,6 @@
 <tool id="getHaplotypesFromPhasedVCF" name="Get Haplotypes From Phased VCF" version="1.0.0">
+    <description>Get Haplotypes From Phased VCF</description>
+
     <requirements>
 	<requirement type="binary">perl</requirement>
     </requirements>
@@ -33,7 +35,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -79,9 +81,9 @@ Input file
 VCF file
         Phased VCF file
 
-----------
-Parameters
-----------
+---------
+Parameter
+---------
 
 Output file basename
         Prefix for the output VCF file
@@ -103,8 +105,8 @@ Fasta file
 Working example
 ---------------
 
-Input files
-===========
+Input file
+==========
 
 VCF file
 ---------
@@ -119,8 +121,8 @@ VCF file
 	Chr1    4299    .       G       A       .       PASS    AR2=1;DR2=1;AF=0.168    GT:DS:GP        0|0:0:1,0,0    
 
                               
-Parameters
-==========
+Parameter
+=========
 
 Output name -> haplotypes
 

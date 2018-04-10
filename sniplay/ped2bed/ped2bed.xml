@@ -1,4 +1,4 @@
-<tool id="ped2bed" name="plink: ped2bed" version="1.24">
+<tool id="ped2bed" name="PLINK: ped2bed" version="1.24">
 	<description>Convert ped to bed</description>
 	<requirements>
         	<requirement type="binary">perl</requirement>
@@ -40,16 +40,15 @@
 
 .. class:: infomark
 
-**Authors** PLINK._
-
-.. _PLINK.: https://www.cog-genomics.org/plink
+Ped to Bed format conversion is done with PLINK.
+**Authors** PLINK: https://www.cog-genomics.org/plink
 
   | **Please cite** "PLINK: a toolset for whole-genome association and population-based linkage analysis.", **Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC.**, American Journal of Human Genetics, 81, 2007.
   | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
 
 .. class:: infomark
 
-**Galaxy integration** South Green. Valentin Marcon, INRA.
+**Galaxy integration** South Green. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -65,8 +64,9 @@ Ped2Bed
 Description
 -----------
 
+  | Ped to Bed format conversion is done with PLINK
   | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner.
-  | For further informations, please visite the plink website_.
+  | For further informations, please visit the PLINK website_.
 
 .. _website: https://www.cog-genomics.org/plink
 
@@ -103,16 +103,13 @@ Admixture   Bed, fam and bim file      txt
 =========== ========================== =======
 
 
-----------
-Input file
-----------
+-----------
+Input files
+-----------
 
 PED file
-	Allelic file in PED format 
 
 MAP file
-
-
 
 ------------
 Output files
@@ -125,7 +122,6 @@ Fam file
 Bim file
 
 All logs 
-	Log file
 
 ---------------------------------------------------
 

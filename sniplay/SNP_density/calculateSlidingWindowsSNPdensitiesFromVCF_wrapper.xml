@@ -69,7 +69,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -151,8 +151,8 @@ Output_name.by_sample
 Working example
 ---------------
 
-Input files
-===========
+Input file
+==========
 
 vcf file
 -----------

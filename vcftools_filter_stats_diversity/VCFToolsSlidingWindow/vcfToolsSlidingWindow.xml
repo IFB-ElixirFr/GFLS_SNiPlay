@@ -1,7 +1,7 @@
 <tool id="sniplay_vcftoolsslidingwindow" name="VCFtools SlidingWindow" version="1.3.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
-    <description> Make diversity computation with sliding window </description>
+    <description>VCFtools SlidingWindow</description>
     
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
@@ -95,13 +95,13 @@
 
 .. class:: infomark
 
-**Authors**     Adam Auton, Petr Danecek and Anthony Marcketta (C++ Module) : VCFtools (http://vcftools.sourceforge.net)
+**Authors** Adam Auton, Petr Danecek and Anthony Marcketta (C++ Module) : VCFtools (http://vcftools.sourceforge.net)
 
  | **Please cite** "The Variant Call Format and VCFtools", Petr Danecek, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert Handsaker, Gerton Lunter, Gabor Marth, Stephen T. Sherry, Gilean McVean, Richard Durbin and 1000 Genomes Project Analysis Group, **Bioinformatics**, 2011 
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -118,8 +118,8 @@ VCF tools SlidingWindow
 Description
 -----------
 
-  | Compute statistics on VCF file 
-  | For further informations on VCFtools, please visite the VCFtools website_.
+  | Make diversity computation with sliding window.
+  | For further informations on VCFtools, please visit the VCFtools website_.
 
 .. _website: http://vcftools.sourceforge.net
 
@@ -164,9 +164,9 @@ Input file
 VCF file
 	VCF file with all SNPs
 
-----------
-Parameters
-----------
+---------
+Parameter
+---------
 
 Output file basename
 	Prefix for the output VCF file
@@ -183,10 +183,12 @@ Output files
 
 .TsTv file
 	TsTv (Transition/transversion ratio)
+
 .windowed.pi file
 	Nucleotide diversity Pi
 
 .log file
+        Log and parameters of vcftools execution
 
 ---------------------------------------------------
 
@@ -210,8 +212,8 @@ VCF file
 	chr1	2209	.	G	T	213.84	.	AC=2;AF=1.00;AN=2;DP=7;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=41.50;MQ0=0;QD=30.55;EFF=DOWNSTREAM(MODIFIER||||Cc01g00020|mRNA||GSCOCT00012438001|),UPSTREAM(MODIFIER||||Cc01g00010|mRNA||GSCOCT00012439001|)	GT:AD:DP:GQ:PL	1/1:0,7:7:18:242,18,0
 
 
-Parameters
-==========
+Parameter
+=========
 
 Output name -> snp_density
 

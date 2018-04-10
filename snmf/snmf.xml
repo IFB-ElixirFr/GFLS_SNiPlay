@@ -1,5 +1,5 @@
 <tool id="snmf" name="sNMF" version="1.2">
-	<description>a population structure from large SNP genotype datasets</description>
+	<description>Fast and efficient program for estimating individual ancestry coefficients</description>
 	<requirements>
                 <requirement type="binary">perl</requirement>
                 <requirement type="package" version="1.6.924">perl-bioperl</requirement>
@@ -55,23 +55,32 @@
 	<help><![CDATA[
 .. class:: infomark
 
-**sNMF version 1.2**
+**sNMF** version 1.2
 
 .. class:: infomark
 
-**Galaxy integration** Alexis Dereeper, IRD.  Valentin Marcon, INRA. 
+**Galaxy integration** Dereeper Alexis, IRD. Marcon Valentin, INRA. 
 
 .. class:: infomark
 
 **Support**  For any questions about Galaxy integration, please send an e-mail to 
 
------
 
-===========
- Overview:
-===========
+---------------------------------------------------
 
-Fast and efficient program for estimating individual admixture coefficients based on sparse non-negative matrix factorization and population genetics. 
+====
+sNMF
+====
+
+-----------
+Description
+-----------
+
+  | Fast and efficient program for estimating individual admixture coefficients based on sparse non-negative matrix factorization and population genetics. 
+  | For further informations, please visit the sNMF website_.
+
+
+.. _website: http://membres-timc.imag.fr/Olivier.Francois/snmf/index.htm
 
 ------------
 Dependencies
@@ -87,15 +96,8 @@ Bioperl
 .. _plink: https://anaconda.org/bioconda/plink
 .. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
 
-
------
-
-For further informations, please visite the sNMF website_.
-
-
-.. _website: http://membres-timc.imag.fr/Olivier.Francois/snmf/index.htm
 	]]></help>
 <citations>
-<citation type="doi" >10.1534/genetics.113.160572</citation>
+       <citation type="doi">10.1534/genetics.113.160572</citation>
 </citations>
 </tool>

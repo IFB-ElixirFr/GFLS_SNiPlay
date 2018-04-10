@@ -1,5 +1,5 @@
 <tool id="annotationStatsFromVCF" name="Get annotation statistics" version="1.0.0">
-    <description> from VCF file </description>
+    <description>Get annotation from VCF file </description>
     <requirements>
 	<requirement type="binary">perl</requirement>
         <requirement type="package" version="1.6.924">perl-bioperl</requirement>
@@ -14,7 +14,7 @@
     <inputs>
         <param type="data" name="input" format="vcf" label="VCF file" />
         <param name="step" type="integer" value="200000" label="Step" help="Step in bp"/>
-        <param type="text" name="output_label" label="Output_label" value='VCF_stats' />
+        <param type="text" name="output_label" label="Output_label" value='VCF_stats' optional='false' />
     </inputs>
     <outputs>
         <data name="output_count" format="txt" label="${output_label}"/>
@@ -40,7 +40,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -48,15 +48,15 @@
 
 ---------------------------------------------------
 
-==============================
-Get Haplotypes From Phased VCF
-==============================
+=========================
+Get annotation statistics
+=========================
 
 -----------
 Description
 -----------
 
-    | Get Haplotype from phased VCF
+    | Get annotation statistics from VCF
 
 ------------
 Dependencies
@@ -78,7 +78,6 @@ Workflow position
 =============== ========================== =======
 Name            output file(s)             format
 =============== ========================== =======
-Beagle          Phased VCF file            VCF
 =============== ========================== =======
 
 
@@ -95,28 +94,27 @@ Input file
 ----------
 
 VCF file
-        Phased VCF file
+        VCF file
 
 ----------
 Parameters
 ----------
 
 Step
-        Step in bp for the window to calculate SNP density
+        Step in bp 
 
-Output file basename
-        Prefix for the output VCF file
+Output label
+        Prefix for the ouput files
 
 ------------
 Output files
 ------------
 
+Output_name
 
-Text file
-        File describing haplotypes
+Output_name.effect file
 
-Fasta file
-        Fasta file with haplotypes
+Output_name.location file
 
 ---------------------------------------------------
 
@@ -124,8 +122,8 @@ Fasta file
 Working example
 ---------------
 
-Input files
-===========
+Input file
+==========
 
 VCF file
 ---------
@@ -143,33 +141,41 @@ VCF file
 Parameters
 ==========
 
-Output name -> haplotypes
+Step -> 50000
+Output label -> VCF_stats
 
 
 Output files
 ============
 
-haplotypes.distinct_haplotypes.txt
+VCF_stats
 ----------------------------------
 
 ::
 
-	===Chr10===
-	haplo1:2:CIRAD403_1,CIRAD403_2,
-	TTTAAGAAATTCCTATATAGGTCTTCTAAGCGTATCTATTAACAT
-	haplo2:2:MAHAE_1,MAHAE_2,
-	TAAATCTTGGTGCTGATCTGATATTTAATGCGT
+        Chrom	Bin	dN/dS ratio
+        chr1	50000	0.791666666666667
+        chr1	100000	0.981132075471698
+        chr1	150000	2.08333333333333
 
 
-haplotypes.haplo.fas
+VCF_stats.effect
 --------------------
 
 ::
 
-	>Chr10_AZUCENA_1
-	TTTAAGAAATTCCTATATAGGTCTTCTAAGCGTATCTATTAACAT
-	>Chr10_AZUCENA_2
-	TAAATCTTGGTGCTGATCTGATATTTAATGCGT
+        Intron	960	Intron:960
+        UTR	281	UTR:281
+        Exon	3248	Synonym:124	Non-syn:120
+
+VCF_stats.location
+--------------------
+
+::
+
+        Intergenic	466	Intergenic:466
+        Genic	4489	Exon:3248	Intron:960	UTR:281
+
 
     ]]></help>
     <citations>

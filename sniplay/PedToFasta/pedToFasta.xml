@@ -57,7 +57,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA. 
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA. 
 
 .. class:: infomark
 
@@ -73,7 +73,7 @@ Ped2Fasta
 Description
 -----------
 
-  Convert PED file to Fasta File
+  | Convert PED file to Fasta File
 
 -----------------
 Workflow position
@@ -104,16 +104,16 @@ Input file
 PED file
 	PED file usually from VCF tools
 
-----------
-Parameters
-----------
+---------
+Parameter
+---------
 
 Output file name
 	Prefix for the output fasta file
 
-------------
-Output files
-------------
+-----------
+Output file
+-----------
 
 Fasta file
 	PED file conversion 
@@ -124,8 +124,8 @@ Fasta file
 Working example
 ---------------
 
-Input files
-===========
+Input file
+==========
 
 PED file
 ---------
@@ -134,13 +134,13 @@ PED file
 
 	CATB1   CATB1   0       0       0       0       C       T       T       A       C       T       A       T       A       T       A       G       G       A
 
-Parameters
-==========
+Parameter
+=========
 
 Output name -> pedFile
 
-Output files
-============
+Output file
+===========
 
 pedFile.fa
 ----------

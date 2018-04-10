@@ -1,5 +1,5 @@
 <tool id="calculate_diversity" name="Diversity by gene" version="2.1.6">
-    <description>calculates various diversity indexes with EggLib.</description>
+    <description>Calculates various diversity indexes with EggLib</description>
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
         <requirement type="binary">perl</requirement>
@@ -43,7 +43,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** South Green. Valentin Marcon, INRA.
+**Galaxy integration** South Green. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -63,7 +63,7 @@ Description
 -----------
 
   | Provides various diversity indexes using EggLib library.
-  | For further informations, please visite the EggLib website_.
+  | For further informations, please visit the EggLib website_.
 
 .. _website: http://egglib.sourceforge.net/
 
@@ -105,15 +105,15 @@ Input file
 Fasta file
 	Fasta alignment
 
-
-
 ------------
 Output files
 ------------
 
 Diversity
+        Diversity indexes
 
 Log file
+        Log file 
 
 ---------------------------------------------------
 
@@ -121,8 +121,8 @@ Log file
 Working example
 ---------------
 
-Input files
-===========
+Input file
+==========
 
 Fasta file
 ----------
@@ -158,8 +158,8 @@ Fasta file
 	GCTGGTTTTGCTCAGAGAGCGGGCGCGTGTTCGCCGCGGGTCTCAACGACTTCGGGCAGCTCGGGATAGGCTCCTCCGTGACTCATTCCCTGGTACTGAGCTTCTTGTACATCATGCCTCCA
 	TGTGAAATTTTCATCTACATTGTGAGCCAGCCTACTTTTACACAGTAAGCGAAAGCTGGCTGGACATATCAGAGTTGCAATGGGGATTGACCAAATCAATTCTGACTCCTGTTACATGTTGC
 
-Output files
-============
+Output file
+===========
 
 Diversity
 ---------

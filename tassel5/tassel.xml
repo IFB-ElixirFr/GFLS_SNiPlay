@@ -1,5 +1,5 @@
 <tool id="Tassel" name="Tassel" version="5.0">
-	<description> Software package to evaluate traits associations, evolutionary patterns, and linkage disequilibrium. </description>
+	<description>Software to evaluate traits associations, evolutionary patterns, and linkage disequilibrium</description>
 	<requirements>
                 <requirement type="package" version="5.2.40">tassel</requirement>
         </requirements>
@@ -141,25 +141,31 @@
 
 .. class:: infomark
 
-**Tassel5 version 5.2.40**
+**Tassel5** version 5.2.40
 
 .. class:: infomark
 
-**Galaxy integration**  Dereeper Alexis (IRD), Valentin Marcon (INRA). 
+**Galaxy integration** Dereeper Alexis (IRD), Marcon Valentin (INRA). 
 
 .. class:: infomark
 
 **Support** For any questions about Galaxy integration, please send an e-mail to 
 
------
 
-==========
- Overview
-==========
+---------------------------------------------------
 
-Software package to evaluate traits associations, evolutionary patterns, and linkage disequilibrium.
+=======
+Tassel5
+=======
 
------
+-----------
+Description
+-----------
+
+  | Software to evaluate traits associations, evolutionary patterns, and linkage disequilibrium.
+  | For further informations on tassel, please visit the website_.
+
+.. _website: http://www.maizegenetics.net/tassel/
 
 ------------
 Dependencies
@@ -168,14 +174,6 @@ Tassel5
         tassel_ 5.2.40, Conda version
 
 .. _tassel: https://anaconda.org/bioconda/tassel
-
------
-
-
-For further informations, please visite the website_ of TASSEL.
-
-
-.. _website: http://www.maizegenetics.net/tassel/
 
     ]]></help>
     <citations>

@@ -30,7 +30,7 @@
    
     <!-- [REQUIRED] Input files and tool parameters -->
     <inputs>
-	<param name="filein" type="data" format="nwk,nhx" optional="false" label="Fasta alignment input" />
+	<param name="filein" type="data" format="nwk,nhx" optional="false" label="Newick tree input" />
 	<param name="fileout_label" type="text" value="out tree" label="Output name" help="Output name for files" />
     </inputs> 
     
@@ -60,7 +60,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -105,7 +105,7 @@ Input file
 ----------
 
 Newick file
-	
+        Input tree file
 
 ----------
 Parameters
@@ -137,8 +137,8 @@ Rooting
 Working example
 ---------------
 
-Input files
-===========
+Input file
+==========
 
 Newick file
 -----------
@@ -148,14 +148,14 @@ Newick file
 	(((((((((((((((((((((((((GOGOLEMPUK:0.001198,GOGOLEMPAK:0.002128):0.030378,TREMBESE:0.013258):0.055246,(((JIMBRUKJOL:0.045219,KETANKONIR:0.035298):0.006267, ...
 
 
-Parameters
-==========
+Parameter
+=========
 
 Output name -> out tree
 
 
-Output files
-============
+Output file
+===========
 
 out tree
 --------

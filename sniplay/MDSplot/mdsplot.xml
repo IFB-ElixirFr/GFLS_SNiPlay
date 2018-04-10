@@ -68,16 +68,14 @@
 
 .. class:: infomark
 
-**Authors** PLINK._
-
-.. _PLINK.: https://www.cog-genomics.org/plink
+**Authors** PLINK: Shaun Purcell : https://www.cog-genomics.org/plink
 
   | **Please cite** "PLINK: a toolset for whole-genome association and population-based linkage analysis.", **Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC.**, American Journal of Human Genetics, 81, 2007.
   | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA.
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -121,19 +119,20 @@ VCFtools Filter PED and MAP file	   tabular and MAP
 
 
 
-----------
-Input file
-----------
+-----------
+Input files
+-----------
 
 PED file
+	PED file usually from VCF tools
 
 MAP file
 	4 columns tabular file: chromosome, snp id, genetic distance, bp position 
 
 
-----------
-Parameters
-----------
+---------
+Parameter
+---------
 
 Output name
         Output base name for the ouput files
@@ -183,8 +182,8 @@ MAP file
 
 
 
-Parameters
-==========
+Parameter
+=========
 
 Output name -> densities
 

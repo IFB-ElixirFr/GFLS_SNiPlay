@@ -1,5 +1,5 @@
 <tool id="snpEff" name="SnpEff" version="4.0">
-	<description>predicts SNP effect from a genomic VCF file</description>
+	<description>Predicts SNP effect from a genomic VCF file</description>
 	<requirements>
 		<requirement type="package" version="4.3.1">snpEff</requirement>
 	</requirements> 	
@@ -40,33 +40,31 @@
 
 .. class:: infomark
 
-**SnpEff version 4.0**
+**SnpEff** version 4.0
+  | **Please cite** "A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3.", **Cingolani P, Platts A, Wang le L, Coon M, Nguyen T, Wang L, Land SJ, Lu X, Ruden DM.**, Fly (Austin). 2012 Apr-Jun;6(2):80-92.
 
 .. class:: infomark
 
-**Galaxy integration** Dereeper Alexis (IRD), Valentin Marcon (INRA).
+**Galaxy integration** Dereeper Alexis (IRD), Marcon Valentin (INRA).
 
 .. class:: infomark
 
 **Support** For any questions about Galaxy integration, please send an e-mail to 
 
------
+---------------------------------------------------
 
-==============
- Please cite:
-==============
+======
+SnpEff
+======
 
-"A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3.", **Cingolani P, Platts A, Wang le L, Coon M, Nguyen T, Wang L, Land SJ, Lu X, Ruden DM.**, Fly (Austin). 2012 Apr-Jun;6(2):80-92.
+-----------
+Description
+-----------
 
------
+  | Genetic variant annotation and effect prediction toolbox. It annotates and predicts the effects of variants on genes (such as amino acid changes).
+  | For further informations, please visit the SnpEff website_.
 
-===========
- Overview:
-===========
-
-Genetic variant annotation and effect prediction toolbox. It annotates and predicts the effects of variants on genes (such as amino acid changes).
-
------
+.. _website: http://snpeff.sourceforge.net/
 
 ------------
 Dependencies
@@ -76,16 +74,9 @@ SnpEff
 
 .. _snpeff: https://anaconda.org/bioconda/snpeff
 
------
-
-For further informations, please visite the SnpEff website_.
-
-.. _website: http://snpeff.sourceforge.net/
-
     ]]></help>
     <citations>
        <citation type="doi">10.4161/fly.19695</citation>
     </citations>
-
 </tool>
 

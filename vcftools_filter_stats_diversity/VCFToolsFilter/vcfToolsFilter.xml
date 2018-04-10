@@ -1,7 +1,7 @@
 <tool id="sniplay_vcftoolsfilter" name="VCFtools Filter" version="1.2.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
-    <description> </description>
+    <description>VCFtools Filter</description>
     
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
@@ -121,7 +121,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Valentin Marcon, INRA..
+**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
 
 .. class:: infomark
 
@@ -139,8 +139,8 @@ VCF tools filter
 Description
 -----------
 
-  | Filter VCF file 
-  | For further informations on VCFtools, please visite the VCFtools website_.
+  | Filter a VCF file according to some parameters.
+  | For further informations on VCFtools, please visit the VCFtools website_.
 
 .. _website: http://vcftools.sourceforge.net
 
@@ -223,6 +223,7 @@ VCF file
 	VCF file filtered 
 
 Log file
+	Log and parameters of vcftools execution
 
 ---------------------------------------------------
 

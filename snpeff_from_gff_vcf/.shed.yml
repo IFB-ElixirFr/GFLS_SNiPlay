@@ -1,4 +1,4 @@
 categories: [Variant Analysis]
-description: snpeff v4.3 from VCF, fasta reference and GFF files
+description: SnpEff v4.3 from VCF, fasta reference and GFF files
 name: snpeff_from_gff_vcf
 owner: vmarcon
