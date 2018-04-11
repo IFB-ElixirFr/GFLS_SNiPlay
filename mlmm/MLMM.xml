@@ -1,0 +1,91 @@
+<tool id="mlmm" name="MLMM" version="1.0">
+	<description>GWAS using Multi-Locus Mixed-Model (MLMM)</description>
+	<requirements>
+		<requirement type="binary">Rscript</requirement>
+                <requirement type="binary">perl</requirement>
+                <requirement type="package" version="1.6.924">perl-bioperl</requirement>
+	</requirements>
+        <stdio>
+            <exit_code range="1:" level="fatal" />
+        </stdio>
+	<command interpreter="bash">./MLMM.sh $geno $map $pheno $steps $method $output $pdf $kinship $rss $step_table $log</command>
+	<inputs>
+		<param format="txt" name="geno" type="data" label="Genotype matrix" help="NxM, N = individuals in line, M = Markers in columns, Genotype coded in 0,1,2"/>
+		<param type="data" format="txt" name="map" label="SNP Information file" help="3 columns: SNP, Chrom, Pos"/>
+		<param format="txt" name="pheno" type="data" label="Phenotype matrix" help="NxT, N = individuals in line, T = Trait in columns (Phenot1, Phenot2...)"/>
+		<param type="text" name="steps" label="Maximum number of steps for the forward approach" value="10"/>
+		<param name="method" type="select">
+                        <option value="extBIC">EBIC</option>
+                        <option value="mbonf" selected="True">MBonf</option>
+                </param>
+	</inputs>
+	<outputs>
+		<data format="txt" name="output" label="Association results"/>
+		<data format="txt" name="kinship" label="Kinship matrix"/>
+		<data format="pdf" name="pdf" label="PDF Graphical outputs"/>
+		<data format="txt" name="rss" label="RSS"/>
+		<data format="txt" name="step_table" label="Step Table"/>
+		<data format="txt" name="log" label="Log file"/>
+	</outputs>
+        <tests>
+            <test>
+                <param name="geno" value="genot.txt"/>
+                <param name="map" value="map.txt"/>
+                <param name="pheno" value="phenot.txt"/>
+                <param name="steps" value="10"/>
+                <param name="method" value="mbonf"/>
+                <output name="output" value="output.txt"/>
+                <output name="kinship" value="kinship.txt"/>
+                <output name="rss" value="rss.txt"/>
+                <output name="step_table" value="step_table.txt"/>
+            </test>
+        </tests>
+	<help><![CDATA[
+
+
+.. class:: infomark
+
+**MLMM** version 1.0 
+ |  **Please cite** "An efficient multi-locus mixed-model approach for genome-wide association studies in structured populations.", **Segura V, Vilhjalmsson BJ, Platt A, Korte A, Seren U, Long Q, Nordborg M.**, Nature Genetics, 44: 825-830, 2012.
+
+
+.. class:: infomark
+
+**Galaxy integration** Southgreen, Marcon Valentin (INRA). 
+
+.. class:: infomark
+
+Support** For any questions about Galaxy integration, please send an e-mail to 
+
+---------------------------------------------------
+
+
+====
+MLMM
+====
+
+-----------
+Description
+-----------
+ 
+  | MLMM is an efficient multi-locus mixed-model approach for genome-wide association studies in structured populations.
+  | For further informations, please visite the MLMM website_.
+
+
+.. _website: https://sites.google.com/site/vincentosegura/mlmm
+
+------------
+Dependencies
+------------
+MLMM
+        mlmm 1.0, Based on a archive provide by Vincent Segura: https://sites.google.com/site/vincentosegura/mlmm
+Bioperl
+        perl-bioperl_ 1.6.924, Conda version
+
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
+
+        ]]></help>
+        <citations>
+            <citation type="doi">10.1038/ng.2314</citation>
+        </citations>
+</tool>

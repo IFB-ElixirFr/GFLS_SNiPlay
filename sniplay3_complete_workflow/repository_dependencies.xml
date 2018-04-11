@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<repositories description="SNiPlay3 complete workflow: exploration and large scale analyses of genomic variations"> 
+    <repository  name="sniplay" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" />
+    <repository  name="fastme" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" /> 
+    <repository  name="snpsift" owner="iuc" toolshed="http://testtoolshed.g2.bx.psu.edu" /> 
+    <repository  name="readseq" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" /> 
+    <repository  name="vcftools_filter_stats_diversity" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" />
+    <repository  name="snpeff_from_gff_vcf" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" />
+    <repository  name="snmf" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" />
+    <repository  name="plink" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" />
+    <repository  name="tassel5" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" />
+    <repository  name="mlmm" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu" />
+</repositories>

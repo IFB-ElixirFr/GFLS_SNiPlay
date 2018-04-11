@@ -1,0 +1,888 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "SNiPlay Workflow", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 273
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "6cadf2e0-c934-40e9-b7da-6617917bad24", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 201, 
+                "top": 360
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "253e89d3-c948-419e-af50-f8c8a448af00", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 201, 
+                "top": 458
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "c83428cf-c1d4-47a2-98ff-721de1e99d22", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/1.2.0", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "input": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool VCFtools Filter", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "VCFtools Filter", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "fileout_map", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 411, 
+                "top": 221.81666564941406
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/1.2.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "vcftools_filter_stats_diversity", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"4\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
+            "tool_version": "1.2.0", 
+            "type": "tool", 
+            "uuid": "631d47f0-20d4-43b2-9201-df377902566b", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snpeff_from_gff_vcf/snpEff/4.0", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "genome": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "gff": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "vcf": {
+                    "id": 3, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool SnpEff", 
+                    "name": "gff"
+                }, 
+                {
+                    "description": "runtime parameter for tool SnpEff", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool SnpEff", 
+                    "name": "vcf"
+                }
+            ], 
+            "label": null, 
+            "name": "SnpEff", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "statsFile", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 393, 
+                "top": 429
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snpeff_from_gff_vcf/snpEff/4.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "snpeff_from_gff_vcf", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"gff\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"vcf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "4.0", 
+            "type": "tool", 
+            "uuid": "63658036-2ebe-459c-83d9-a7dd29ff0321", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_filter/4.3.0", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool SnpSift Filter", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "SnpSift Filter", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 604, 
+                "top": 326
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_filter/4.3.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "snpsift", 
+                "owner": "iuc", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"inverse\": \"\\\"false\\\"\", \"expr\": \"\\\"(FILTER != 'LowQual')\\\"\", \"__rerun_remap_job_id__\": null, \"filtering\": \"{\\\"mode\\\": \\\"entries\\\", \\\"__current_case__\\\": 0}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "4.3.0", 
+            "type": "tool", 
+            "uuid": "1e790f32-adfd-4b0c-bc61-9fc558249a6d", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/1.2.0", 
+            "errors": null, 
+            "id": 6, 
+            "input_connections": {
+                "input": {
+                    "id": 5, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool VCFtools Filter", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "VCFtools Filter", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "fileout_map", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 678, 
+                "top": 482.816650390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/1.2.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "vcftools_filter_stats_diversity", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"2\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
+            "tool_version": "1.2.0", 
+            "type": "tool", 
+            "uuid": "990bd647-19b2-4286-a1f2-2abe5c2de6fc", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/1.2.0", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "input": {
+                    "id": 6, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool VCFtools Filter", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "VCFtools Filter", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "fileout_map", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 378, 
+                "top": 716.816650390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/1.2.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "vcftools_filter_stats_diversity", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"2\\\"\", \"type_p\": \"\\\"SNP\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"plink\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
+            "tool_version": "1.2.0", 
+            "type": "tool", 
+            "uuid": "12053570-88ed-4d97-8be1-ff9981df4382", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsstats/1.2.0", 
+            "errors": null, 
+            "id": 8, 
+            "input_connections": {
+                "filein": {
+                    "id": 6, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool VCFtools Stats", 
+                    "name": "filein"
+                }
+            ], 
+            "label": null, 
+            "name": "VCFtools Stats", 
+            "outputs": [
+                {
+                    "name": "fileout_het", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_imiss", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_sum", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 848, 
+                "top": 291.81666564941406
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsstats/1.2.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "vcftools_filter_stats_diversity", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"fileout_label\": \"\\\"vcf_stats\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.2.0", 
+            "type": "tool", 
+            "uuid": "20eed6b5-29e4-4037-b8d8-85b2554c9615", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsslidingwindow/1.3.0", 
+            "errors": null, 
+            "id": 9, 
+            "input_connections": {
+                "filein": {
+                    "id": 6, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool VCFtools SlidingWindow", 
+                    "name": "group"
+                }, 
+                {
+                    "description": "runtime parameter for tool VCFtools SlidingWindow", 
+                    "name": "filein"
+                }
+            ], 
+            "label": null, 
+            "name": "VCFtools SlidingWindow", 
+            "outputs": [
+                {
+                    "name": "fileout_snp", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_taj", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_tstv", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_windowed", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_fst", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_fst_marker", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_windowed_combined", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_taj_combined", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_tstv_combined", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_snp_combined", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1029, 
+                "top": 242.81666564941406
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsslidingwindow/1.3.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "vcftools_filter_stats_diversity", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"group\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"fileout_label\": \"\\\"snp_density\\\"\", \"window\": \"\\\"200000\\\"\", \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.3.0", 
+            "type": "tool", 
+            "uuid": "374c1d03-dbe6-43d8-9a75-b83d5fac56f2", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snmf/snmf/1.2", 
+            "errors": null, 
+            "id": 10, 
+            "input_connections": {
+                "vcf": {
+                    "id": 6, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool sNMF", 
+                    "name": "vcf"
+                }
+            ], 
+            "label": null, 
+            "name": "sNMF", 
+            "outputs": [
+                {
+                    "name": "best_k_output", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "best_k_groups", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "best_k_logfile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outputs", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "logs", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1284.800048828125, 
+                "top": 444.1166687011719
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snmf/snmf/1.2", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "snmf", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"vcf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"kmin\": \"\\\"2\\\"\", \"threshold_group\": \"\\\"50\\\"\", \"kmax\": \"\\\"5\\\"\"}", 
+            "tool_version": "1.2", 
+            "type": "tool", 
+            "uuid": "7dd4c260-bee4-42db-891d-f24fc262e94d", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_density/2.0.0", 
+            "errors": null, 
+            "id": 11, 
+            "input_connections": {
+                "filein": {
+                    "id": 6, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool SNP density", 
+                    "name": "filein"
+                }
+            ], 
+            "label": null, 
+            "name": "SNP density", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_bysample", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1237, 
+                "top": 657.816650390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_density/2.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "sniplay", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"fileout_label\": \"\\\"densities\\\"\", \"__page__\": null, \"step\": \"\\\"200000\\\"\", \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.0.0", 
+            "type": "tool", 
+            "uuid": "99a1d523-7782-4c36-ab4f-f09d86212a04", 
+            "workflow_outputs": []
+        }, 
+        "12": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_mdsplot/1.2.0", 
+            "errors": null, 
+            "id": 12, 
+            "input_connections": {
+                "filemap": {
+                    "id": 7, 
+                    "output_name": "fileout_map"
+                }, 
+                "fileped": {
+                    "id": 7, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MDS plot", 
+                    "name": "groups"
+                }, 
+                {
+                    "description": "runtime parameter for tool MDS plot", 
+                    "name": "fileped"
+                }, 
+                {
+                    "description": "runtime parameter for tool MDS plot", 
+                    "name": "filemap"
+                }
+            ], 
+            "label": null, 
+            "name": "MDS plot", 
+            "outputs": [
+                {
+                    "name": "fileout_matrix", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_plot", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 731, 
+                "top": 675.816650390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_mdsplot/1.2.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "sniplay", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"fileped\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"filemap\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"fileout_label\": \"\\\"analyse\\\"\", \"groups\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.2.0", 
+            "type": "tool", 
+            "uuid": "16887250-114f-4afb-89c7-9ffd0f0ddec4", 
+            "workflow_outputs": []
+        }, 
+        "13": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_pedToFasta/1.0.0", 
+            "errors": null, 
+            "id": 13, 
+            "input_connections": {
+                "filein": {
+                    "id": 7, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Ped2Fasta", 
+                    "name": "filein"
+                }
+            ], 
+            "label": null, 
+            "name": "Ped2Fasta", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 592, 
+                "top": 907.816650390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_pedToFasta/1.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "sniplay", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"fileout_label\": \"\\\"filtered\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "e68df48c-2cbe-4f1b-9223-33647b9508b2", 
+            "workflow_outputs": []
+        }, 
+        "14": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/ped2bed/1.24", 
+            "errors": null, 
+            "id": 14, 
+            "input_connections": {
+                "map": {
+                    "id": 7, 
+                    "output_name": "fileout_map"
+                }, 
+                "ped": {
+                    "id": 7, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PLINK: ped2bed", 
+            "outputs": [
+                {
+                    "name": "bed", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fam", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "bim", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "logs", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 934.5, 
+                "top": 714
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/ped2bed/1.24", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "sniplay", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"ped\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36321}]}\", \"map\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36321}]}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_version": "1.24", 
+            "type": "tool", 
+            "uuid": "ffd301d8-d99c-4e4e-9881-f61ad019b4d7", 
+            "workflow_outputs": []
+        }, 
+        "15": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/readseq/sniplay_readseq/1.0.3", 
+            "errors": null, 
+            "id": 15, 
+            "input_connections": {
+                "filein": {
+                    "id": 13, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Readseq", 
+                    "name": "filein"
+                }
+            ], 
+            "label": null, 
+            "name": "Readseq", 
+            "outputs": [
+                {
+                    "name": "fileout_log", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 835, 
+                "top": 963.816650390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/readseq/sniplay_readseq/1.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "readseq", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"fileout_label\": \"\\\"phylip conversion\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"format\": \"\\\"12\\\"\"}", 
+            "tool_version": "1.0.3", 
+            "type": "tool", 
+            "uuid": "f55fcf51-daac-428f-801f-1b8307bc3d13", 
+            "workflow_outputs": []
+        }, 
+        "16": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/fastme/fastme/2.1.5", 
+            "errors": null, 
+            "id": 16, 
+            "input_connections": {
+                "input": {
+                    "id": 15, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FastME", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "FastME", 
+            "outputs": [
+                {
+                    "name": "outputTree", 
+                    "type": "nhx"
+                }, 
+                {
+                    "name": "outputLog", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outputBoostrap", 
+                    "type": "nhx"
+                }, 
+                {
+                    "name": "outputMatrix", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1132, 
+                "top": 925.816650390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/fastme/fastme/2.1.5", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "fastme", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"distance\": \"\\\"--method=I\\\"\", \"__page__\": null, \"equilibrium\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"bootChoice\": \"{\\\"boot\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"treeRefinement\": \"\\\"--spr\\\"\", \"gammaChoice\": \"{\\\"__current_case__\\\": 1, \\\"gamma\\\": \\\"false\\\"}\", \"fileout_label\": \"\\\"Newick tree\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"typeChoice\": \"{\\\"datatype\\\": \\\"d\\\", \\\"modeldna\\\": \\\"4\\\", \\\"__current_case__\\\": 0}\", \"removeGap\": \"\\\"\\\"\"}", 
+            "tool_version": "2.1.5", 
+            "type": "tool", 
+            "uuid": "74189f4d-bd98-46fc-9778-b8e9a698a539", 
+            "workflow_outputs": []
+        }, 
+        "17": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_rooting/1.0.3", 
+            "errors": null, 
+            "id": 17, 
+            "input_connections": {
+                "filein": {
+                    "id": 16, 
+                    "output_name": "outputTree"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Rooting", 
+            "outputs": [
+                {
+                    "name": "fileout_log", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout", 
+                    "type": "nwk,nhx"
+                }
+            ], 
+            "position": {
+                "left": 1296, 
+                "top": 798
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_rooting/1.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "sniplay", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"fileout_label\": \"\\\"out tree\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36319}]}\"}", 
+            "tool_version": "1.0.3", 
+            "type": "tool", 
+            "uuid": "ded86308-97bc-4580-adf1-23b1cc86c302", 
+            "workflow_outputs": []
+        }
+    }, 
+    "tags": [], 
+    "uuid": "f3ca58e0-87e5-4314-906e-9d2d34f95dc8"
+}

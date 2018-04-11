@@ -7,7 +7,7 @@ All the **XML** files (Wrappers) are made by his team.
 
 #### :file_folder: Content
 
-The repository contain all the wrappers for the pipeline SNiPlay.
+The repository contain all the wrappers for the workflow SNiPlay.
 
 - admixture [deprecated]
 - fastme
@@ -17,6 +17,7 @@ The repository contain all the wrappers for the pipeline SNiPlay.
 - snpeff_from_gff_vcf
 - tassel5
 - vcftools_filter_stats_diversity (vcftoolsFilter,vcftoolsStats,vcftoolsSlidingWindow)
+- mlmm
 
 It contain also the wrappers for the SNiPlay tool.
 
@@ -31,6 +32,8 @@ It contain also the wrappers for the SNiPlay tool.
 - Rooting
 - SNP_density
 - VCF2Hapmap
+
+And the sniplay3_complete_workflow repository.
 
 We are finishing the test and managing the dependencies with BioConda.
 

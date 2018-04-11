@@ -1,0 +1,6 @@
+categories: [Variant Analysis]
+description: 'SNiPlay3 complete workflow: a package for exploration and large scale
+  analyses of SNP polymorphisms (filtering, density, vcftools, diversity, linkagedisequilibrium,
+  GWAS) (all SNiPlay3 components)'
+name: sniplay3_complete_workflow
+owner: vmarcon
