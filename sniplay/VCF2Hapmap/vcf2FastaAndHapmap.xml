@@ -1,4 +1,4 @@
-<tool id="sniplay_vcf2fastaandhapmap" name="VCF to Hapmap" version="1.1.0">
+<tool id="sniplay_vcf2fastaandhapmap" name="VCF to Hapmap" version="2.0.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
     <description> Convert VCF to Hapmap  </description>
@@ -102,11 +102,11 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions, please send an e-mail to  
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
 
@@ -120,28 +120,6 @@ Description
 
   | Convert VCF to Hapmap. Additionnaly it creates flanking sequences of variants if fasta reference is provided.
   | Furthermore it also creates fasta alignment of genes if GFF annotation is provided 
-
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=============== ========================== =======
-Name            output file(s)             format 
-=============== ========================== =======
-VCFtools Filter VCF file		   VCF
-=============== ========================== =======
-
-
-**Downstream tool**
-
-=============== ========================== ===========
-Name            input file(s)              format 
-=============== ========================== ===========
-SNP density	Hapmap file 	 	   tabular
-=============== ========================== ===========
-
 
 ----------
 Input file

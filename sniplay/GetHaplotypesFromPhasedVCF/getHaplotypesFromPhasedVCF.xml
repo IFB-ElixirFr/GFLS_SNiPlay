@@ -1,4 +1,4 @@
-<tool id="getHaplotypesFromPhasedVCF" name="Get Haplotypes From Phased VCF" version="1.0.0">
+<tool id="getHaplotypesFromPhasedVCF" name="Get Haplotypes From Phased VCF" version="2.0.0">
     <description>Get Haplotypes From Phased VCF</description>
 
     <requirements>
@@ -35,11 +35,11 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
 
@@ -52,27 +52,6 @@ Description
 -----------
 
     | Get Haplotype from phased VCF
-
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=============== ========================== =======
-Name            output file(s)             format
-=============== ========================== =======
-Beagle          Phased VCF file            VCF
-=============== ========================== =======
-
-
-**Downstream tool**
-
-=============== ========================== ===========
-Name            input file(s)              format
-=============== ========================== ===========
-=============== ========================== ===========
-
 
 ----------
 Input file

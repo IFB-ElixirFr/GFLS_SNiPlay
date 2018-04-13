@@ -1,4 +1,4 @@
-<tool id="sniplay_rooting" name="Rooting" version="1.0.3">
+<tool id="sniplay_rooting" name="Rooting" version="2.0.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
     <description> Midpoint rooting of newick tree </description>
@@ -60,11 +60,11 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
 
@@ -85,20 +85,6 @@ Bioperl
         perl-bioperl_ 1.6.924, Conda version
 
 .. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
-
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=========== ========================== =======
-Name            output file(s)         format 
-=========== ========================== =======
-fastme      Newick tree                Newick 
-=========== ========================== =======
-
-
 
 ----------
 Input file

@@ -1,4 +1,4 @@
-<tool id="sniplay_readseq" name="Readseq" version="1.0.3">
+<tool id="sniplay_readseq" name="Readseq" version="2.0.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
     <description> Convert various alignment formats </description>
@@ -206,14 +206,13 @@
 
   | **Please cite** If you use this tool, please cite Don Gilbert software@bio.indiana.edu
 
+.. class:: infomark
+
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
-
-.. class:: infomark
-
-**Support** For any questions about Galaxy integration, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
 
@@ -234,28 +233,6 @@ ReadSeq
 	readseq_ 2.1.30, Conda version
 
 .. _readseq: https://anaconda.org/bioconda/readseq
-
------------------
-Workflow position
------------------
-
-**Upstream tools**
-
-=========== ========================== =======
-Name            output file(s)         format 
-=========== ========================== =======
-=========== ========================== =======
-
-
-**Downstream tools**
-
-=========== ========================== =======
-Name            output file(s)         format
-=========== ========================== =======
-fastme      Newick tree                Newick 
-Rooting     out tree                   Newick 
-=========== ========================== =======
-
 
 ----------
 Input file

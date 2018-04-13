@@ -1,4 +1,4 @@
 categories: [Variant Analysis]
-description: SnpEff v4.3 from VCF, fasta reference and GFF files
+description: SNP annotation : coding/non-coding, synonymous/non-synonymous
 name: snpeff_from_gff_vcf
 owner: vmarcon

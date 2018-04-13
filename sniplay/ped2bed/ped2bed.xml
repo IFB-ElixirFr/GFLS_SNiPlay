@@ -1,4 +1,4 @@
-<tool id="ped2bed" name="PLINK: ped2bed" version="1.24">
+<tool id="ped2bed" name="PLINK: ped2bed" version="2.0.0">
 	<description>Convert ped to bed</description>
 	<requirements>
         	<requirement type="binary">perl</requirement>
@@ -41,18 +41,18 @@
 .. class:: infomark
 
 Ped to Bed format conversion is done with PLINK.
-**Authors** PLINK: https://www.cog-genomics.org/plink
+**Authors** PLINK: Shaun Purcell (https://www.cog-genomics.org/plink)
 
   | **Please cite** "PLINK: a toolset for whole-genome association and population-based linkage analysis.", **Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC.**, American Journal of Human Genetics, 81, 2007.
   | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
 
 .. class:: infomark
 
-**Galaxy integration** South Green. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Dereeper Alexis (IRD) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
 
@@ -80,28 +80,6 @@ Bioperl
 
 .. _plink: https://anaconda.org/bioconda/plink
 .. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
-
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=============== ========================== ===========
-Name            output file(s)             format 
-=============== ========================== ===========
-VCFtools filter PED and map files          ped and map
-=============== ========================== ===========
-
-
-**Downstream tool**
-
-=========== ========================== =======
-Name            input file(s)          format
-=========== ========================== =======
-Admixture   Bed, fam and bim file      txt
-=========== ========================== =======
-
 
 -----------
 Input files

@@ -1,4 +1,4 @@
-<tool id="sniplay_vcftoolsstats" name="VCFtools Stats" version="1.2.0">
+<tool id="sniplay_vcftoolsstats" name="VCFtools Stats" version="2.0.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
     <description>VCFtools Stats</description>
@@ -57,14 +57,13 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
-
 
 ===============
 VCF tools Stats
@@ -89,26 +88,6 @@ Bioperl
 
 .. _vcftools: https://anaconda.org/bioconda/vcftools
 .. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
-
------------------
-Workflow position
------------------
-
-**Upstream tools**
-
-=========== ========================== =======
-Name            output file(s)         format 
-=========== ========================== =======
-=========== ========================== =======
-
-
-**Downstream tools**
-
-=========== ========================== =======
-Name            output file(s)         format
-=========== ========================== =======
-=========== ========================== =======
-
 
 ----------
 Input file

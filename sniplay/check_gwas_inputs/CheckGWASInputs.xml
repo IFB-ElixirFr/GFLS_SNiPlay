@@ -1,4 +1,4 @@
-<tool id="check_GWAS_inputs" name="Check GWAS Inputs" version="1.1">
+<tool id="check_GWAS_inputs" name="Check GWAS Inputs" version="2.0.0">
 	<description>Checks concordance between input files for GWAS analysis</description>
 
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
@@ -46,15 +46,13 @@
 
 .. class:: infomark
 
-**Galaxy integration** South Green. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Dereeper Alexis (IRD) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions, please send an e-mail to 
-
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
-
 
 ===============
 CheckGWASInputs
@@ -65,22 +63,6 @@ Description
 -----------
 
   | CheckGWASInputs checks concordance between input files for GWAS analysis.
-
-
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=============== ====================== ===========
-Name            output file(s)         format 
-=============== ====================== ===========
-VCF to Hapmap   Hapmap file	       hapmap
-=============== ====================== ===========
-
-
-
 
 -----------
 Input files

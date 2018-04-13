@@ -1,5 +1,5 @@
-<tool id="annotationStatsFromVCF" name="Get annotation statistics" version="1.0.0">
-    <description>Get annotation from VCF file </description>
+<tool id="annotationStatsFromVCF" name="Get VCF annotation statistics" version="2.0.0">
+    <description>Get annotation fromi a VCF file annotated by snpeff</description>
     <requirements>
 	<requirement type="binary">perl</requirement>
         <requirement type="package" version="1.6.924">perl-bioperl</requirement>
@@ -40,11 +40,11 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
 
@@ -68,26 +68,6 @@ Bioperl
 
 .. _vcftools: https://anaconda.org/bioconda/vcftools
 .. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
-
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=============== ========================== =======
-Name            output file(s)             format
-=============== ========================== =======
-=============== ========================== =======
-
-
-**Downstream tool**
-
-=============== ========================== ===========
-Name            input file(s)              format
-=============== ========================== ===========
-=============== ========================== ===========
-
 
 ----------
 Input file

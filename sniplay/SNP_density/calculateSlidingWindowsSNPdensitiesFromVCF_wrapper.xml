@@ -3,7 +3,6 @@
     <!-- [REQUIRED] Tool description displayed after the tool name -->
     <description> Calculate SNP densities along chromosome from a VCF input</description>
 
-
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
         <requirement type="binary">perl</requirement>
@@ -66,18 +65,15 @@
 
  | **Please cite** "SNiPlay3: a web-based application for exploration and large scale analyses of genomic variations", **Dereeper A. et al.**, Nucl. Acids Res. (1 july 2015) 43 (W1).
 
+.. class:: infomark
+
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA.
-
-.. class:: infomark
-
-**Support** For any questions about Galaxy integration, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
-
-
 
 =============
 SNP densities
@@ -103,25 +99,12 @@ Bioperl
 .. _perl-vcftools-vcf: https://anaconda.org/bioconda/perl-vcftools-vcf
 .. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
 
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=============== ====================== ===========
-Name            output file(s)         format 
-=============== ====================== ===========
-=============== ====================== ===========
-
-
 ----------
 Input file
 ----------	
 
 VCF file
 	File with SNPs
-
 
 ----------
 Parameters
@@ -133,7 +116,6 @@ Step
 Output name
         Output base name for the two ouput files
 
-
 ------------
 Output files
 ------------
@@ -143,7 +125,6 @@ Output_name
 
 Output_name.by_sample
 	Tabular file with SNP density for each sample
-
 	
 ---------------------------------------------------
 

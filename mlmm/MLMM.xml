@@ -1,4 +1,4 @@
-<tool id="mlmm" name="MLMM" version="1.0">
+<tool id="mlmm" name="MLMM (GWAS analysis)" version="2.0.0">
 	<description>GWAS using Multi-Locus Mixed-Model (MLMM)</description>
 	<requirements>
 		<requirement type="binary">Rscript</requirement>
@@ -48,17 +48,15 @@
 **MLMM** version 1.0 
  |  **Please cite** "An efficient multi-locus mixed-model approach for genome-wide association studies in structured populations.", **Segura V, Vilhjalmsson BJ, Platt A, Korte A, Seren U, Long Q, Nordborg M.**, Nature Genetics, 44: 825-830, 2012.
 
+.. class:: infomark
+
+**Galaxy integration** Provided by Southgreen & Dereeper Alexis (IRD) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Galaxy integration** Southgreen, Marcon Valentin (INRA). 
-
-.. class:: infomark
-
-Support** For any questions about Galaxy integration, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
-
 
 ====
 MLMM

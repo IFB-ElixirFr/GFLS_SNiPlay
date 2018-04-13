@@ -1,4 +1,4 @@
-<tool id="fastme" name="FastME" version="2.1.5">
+<tool id="fastme" name="FastME" version="2.0.0">
     <description>Distance-based inference of phylogenetic trees</description>
     <requirements>
         <requirement type="package" version="2.1.5">fastme</requirement>
@@ -166,11 +166,11 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Correia Damien, CNRS. Marcon Valentin, INRA.
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions about Galaxy integration, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 -----
 

@@ -1,4 +1,4 @@
-<tool id="sniplay_pedToFasta" name="Ped2Fasta" version="1.0.0">
+<tool id="sniplay_pedToFasta" name="Ped2Fasta" version="2.0.0">
     
     <!-- [REQUIRED] Tool description displayed after the tool name -->
     <description> Convert PED file to Fasta File </description>
@@ -57,11 +57,11 @@
 
 .. class:: infomark
 
-**Galaxy integration** Andres Gwendoline, Institut Français de Bioinformatique. Marcon Valentin, INRA. 
+**Galaxy integration** Provided by Southgreen & Andres Gwendoline (Institut Français de Bioinformatique) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 
-**Support** For any questions, please send an e-mail to 
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
 
 ---------------------------------------------------
 
@@ -74,28 +74,6 @@ Description
 -----------
 
   | Convert PED file to Fasta File
-
------------------
-Workflow position
------------------
-
-**Upstream tool**
-
-=============== ========================== =======
-Name            output file(s)             format 
-=============== ========================== =======
-VCFtools Filter VCF file  	 	   VCF
-=============== ========================== =======
-
-
-**Downstream tool**
-
-=========== ========================== =======
-Name            input file(s)          format
-=========== ========================== =======
-Readseq     Fasta alignment	       fasta
-=========== ========================== =======
-
 
 ----------
 Input file
@@ -148,8 +126,6 @@ pedFile.fa
 ::
 
         YWYWWRRSYYMKRRKMYRKSRKYRYRYKRKRSKKSYRWYSYRRYRRRWYWWYYWRRYRSRWSSRMYRRKSWMSKWRRYYWMYKYWRSYRWRYMWYYYMKYKYWRYRYRY
-
-
     ]]></help>
 
     <citations>
