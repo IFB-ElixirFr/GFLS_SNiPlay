@@ -3,4 +3,4 @@ description: 'SNiPlay3: a package for exploration and large scale analyses of SN
   polymorphisms (filtering, density, vcftools, diversity, linkagedisequilibrium, GWAS)
   (does not include external tools)'
 name: sniplay
-owner: vmarcon
+owner: dereeper

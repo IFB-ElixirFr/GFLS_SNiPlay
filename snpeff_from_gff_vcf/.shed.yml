@@ -1,4 +1,4 @@
 categories: [Variant Analysis]
 description: "SNP annotation : coding/non-coding, synonymous/non-synonymous"
 name: snpeff_from_gff_vcf
-owner: vmarcon
+owner: dereeper

@@ -69,7 +69,7 @@
         }, 
         "3": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "errors": null, 
             "id": 3, 
             "input_connections": {
@@ -105,12 +105,12 @@
                 "top": 221.81666564941406
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "vcftools_filter_stats_diversity", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"4\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
             "tool_version": "2.0.0", 
@@ -120,7 +120,7 @@
         }, 
         "4": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snpeff_from_gff_vcf/snpEff/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/snpeff_from_gff_vcf/snpEff/2.0.0", 
             "errors": null, 
             "id": 4, 
             "input_connections": {
@@ -172,12 +172,12 @@
                 "top": 429
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snpeff_from_gff_vcf/snpEff/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/snpeff_from_gff_vcf/snpEff/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "snpeff_from_gff_vcf", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"gff\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"vcf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
@@ -187,7 +187,7 @@
         }, 
         "5": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_filter/4.3.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_filter/4.3.0", 
             "errors": null, 
             "id": 5, 
             "input_connections": {
@@ -215,12 +215,12 @@
                 "top": 326
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_filter/4.3.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_filter/4.3.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "snpsift", 
                 "owner": "iuc", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"inverse\": \"\\\"false\\\"\", \"expr\": \"\\\"(FILTER != 'LowQual')\\\"\", \"__rerun_remap_job_id__\": null, \"filtering\": \"{\\\"mode\\\": \\\"entries\\\", \\\"__current_case__\\\": 0}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "4.3.0", 
@@ -230,7 +230,7 @@
         }, 
         "6": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "errors": null, 
             "id": 6, 
             "input_connections": {
@@ -266,12 +266,12 @@
                 "top": 482.816650390625
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "vcftools_filter_stats_diversity", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"2\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
             "tool_version": "2.0.0", 
@@ -281,7 +281,7 @@
         }, 
         "7": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "errors": null, 
             "id": 7, 
             "input_connections": {
@@ -317,12 +317,12 @@
                 "top": 716.816650390625
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "vcftools_filter_stats_diversity", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"2\\\"\", \"type_p\": \"\\\"SNP\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"plink\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
             "tool_version": "2.0.0", 
@@ -332,7 +332,7 @@
         }, 
         "8": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsstats/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsstats/2.0.0", 
             "errors": null, 
             "id": 8, 
             "input_connections": {
@@ -372,12 +372,12 @@
                 "top": 291.81666564941406
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsstats/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsstats/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "vcftools_filter_stats_diversity", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"fileout_label\": \"\\\"vcf_stats\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
@@ -387,7 +387,7 @@
         }, 
         "9": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsslidingwindow/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsslidingwindow/2.0.0", 
             "errors": null, 
             "id": 9, 
             "input_connections": {
@@ -459,12 +459,12 @@
                 "top": 242.81666564941406
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsslidingwindow/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsslidingwindow/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "vcftools_filter_stats_diversity", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"group\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"fileout_label\": \"\\\"snp_density\\\"\", \"window\": \"\\\"200000\\\"\", \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
@@ -474,7 +474,7 @@
         }, 
         "10": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snmf/snmf/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/snmf/snmf/2.0.0", 
             "errors": null, 
             "id": 10, 
             "input_connections": {
@@ -518,12 +518,12 @@
                 "top": 444.1166687011719
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snmf/snmf/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/snmf/snmf/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "snmf", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"vcf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"kmin\": \"\\\"2\\\"\", \"threshold_group\": \"\\\"50\\\"\", \"kmax\": \"\\\"5\\\"\"}", 
             "tool_version": "2.0.0", 
@@ -533,7 +533,7 @@
         }, 
         "11": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_density/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_density/2.0.0", 
             "errors": null, 
             "id": 11, 
             "input_connections": {
@@ -565,12 +565,12 @@
                 "top": 657.816650390625
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_density/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_density/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "sniplay", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"fileout_label\": \"\\\"densities\\\"\", \"__page__\": null, \"step\": \"\\\"200000\\\"\", \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
@@ -580,7 +580,7 @@
         }, 
         "12": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_mdsplot/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_mdsplot/2.0.0", 
             "errors": null, 
             "id": 12, 
             "input_connections": {
@@ -628,12 +628,12 @@
                 "top": 675.816650390625
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_mdsplot/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_mdsplot/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "sniplay", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"__page__\": null, \"fileped\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"filemap\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"fileout_label\": \"\\\"analyse\\\"\", \"groups\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
@@ -643,7 +643,7 @@
         }, 
         "13": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_pedToFasta/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_pedToFasta/2.0.0", 
             "errors": null, 
             "id": 13, 
             "input_connections": {
@@ -671,12 +671,12 @@
                 "top": 907.816650390625
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_pedToFasta/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_pedToFasta/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "sniplay", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"fileout_label\": \"\\\"filtered\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
@@ -686,7 +686,7 @@
         }, 
         "14": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/ped2bed/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/ped2bed/2.0.0", 
             "errors": null, 
             "id": 14, 
             "input_connections": {
@@ -725,12 +725,12 @@
                 "top": 714
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/ped2bed/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/ped2bed/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "sniplay", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"ped\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36321}]}\", \"map\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36321}]}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
             "tool_version": "2.0.0", 
@@ -740,7 +740,7 @@
         }, 
         "15": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/readseq/sniplay_readseq/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/readseq/sniplay_readseq/2.0.0", 
             "errors": null, 
             "id": 15, 
             "input_connections": {
@@ -772,12 +772,12 @@
                 "top": 963.816650390625
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/readseq/sniplay_readseq/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/readseq/sniplay_readseq/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "readseq", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"fileout_label\": \"\\\"phylip conversion\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"format\": \"\\\"12\\\"\"}", 
             "tool_version": "2.0.0", 
@@ -787,7 +787,7 @@
         }, 
         "16": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/fastme/fastme/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/fastme/fastme/2.0.0", 
             "errors": null, 
             "id": 16, 
             "input_connections": {
@@ -827,12 +827,12 @@
                 "top": 925.816650390625
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/fastme/fastme/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/fastme/fastme/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "fastme", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"distance\": \"\\\"--method=I\\\"\", \"__page__\": null, \"equilibrium\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"bootChoice\": \"{\\\"boot\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"treeRefinement\": \"\\\"--spr\\\"\", \"gammaChoice\": \"{\\\"__current_case__\\\": 1, \\\"gamma\\\": \\\"false\\\"}\", \"fileout_label\": \"\\\"Newick tree\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"typeChoice\": \"{\\\"datatype\\\": \\\"d\\\", \\\"modeldna\\\": \\\"4\\\", \\\"__current_case__\\\": 0}\", \"removeGap\": \"\\\"\\\"\"}", 
             "tool_version": "2.0.0", 
@@ -842,7 +842,7 @@
         }, 
         "17": {
             "annotation": "", 
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_rooting/2.0.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_rooting/2.0.0", 
             "errors": null, 
             "id": 17, 
             "input_connections": {
@@ -869,12 +869,12 @@
                 "top": 798
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_rooting/2.0.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/sniplay_rooting/2.0.0", 
             "tool_shed_repository": {
                 "changeset_revision": null, 
                 "name": "sniplay", 
-                "owner": "vmarcon", 
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
             "tool_state": "{\"fileout_label\": \"\\\"out tree\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36319}]}\"}", 
             "tool_version": "2.0.0", 

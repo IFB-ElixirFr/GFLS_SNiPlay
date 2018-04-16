@@ -2,4 +2,4 @@ categories: [Variant Analysis]
 description: 'Subset of VCFtools fonctionalities : Filtering, Statistics, Diversity
   (slidingWindow)'
 name: vcftools_filter_stats_diversity
-owner: vmarcon
+owner: dereeper
