@@ -4,7 +4,7 @@
                 <requirement type="binary">perl</requirement>
                 <requirement type="package" version="1.6.924">perl-bioperl</requirement>
 		<requirement type="package" version="1.2">snmf</requirement>
-		<requirement type="package" version="1.90">plink</requirement>
+		<requirement type="package" version="1.90b4">plink</requirement>
 	</requirements>
         <stdio>
                 <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
@@ -22,7 +22,7 @@
 		<data format="txt" name="best_k_output" label="Best K Output"/>
 		<data format="txt" name="best_k_groups" label="Best K Groups"/>
 		<data format="txt" name="best_k_logfile" label="Best K Logfile"/>
-		<data format="txt" name="outputs" label="All Outputs"/>
+		<data format="txt" name="outputs" label="Structure by sNMF"/>
 		<data format="txt" name="logs" label="All Logs"/>
 	</outputs>
 
