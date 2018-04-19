@@ -1,7 +1,7 @@
 {
     "a_galaxy_workflow": "true", 
     "annotation": "", 
-    "format-version": "0.1", 
+    "format-version": "0.2", 
     "name": "SNiPlay Workflow", 
     "steps": {
         "0": {
