@@ -11,7 +11,7 @@
             "id": 0, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": null, 
+            "label": "Input VCF", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -32,7 +32,7 @@
             "id": 1, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": null, 
+            "label": "Input Fasta Reference", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -53,7 +53,7 @@
             "id": 2, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": null, 
+            "label": "Input GFF Annotation, 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -861,7 +861,7 @@
                 }, 
                 {
                     "name": "fileout", 
-                    "type": "nwk,nhx"
+                    "type": "nhx"
                 }
             ], 
             "position": {

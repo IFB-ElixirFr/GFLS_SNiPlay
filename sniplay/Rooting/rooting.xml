@@ -30,14 +30,14 @@
    
     <!-- [REQUIRED] Input files and tool parameters -->
     <inputs>
-	<param name="filein" type="data" format="nwk,nhx" optional="false" label="Newick tree input" />
+	<param name="filein" type="data" format="nhx" optional="false" label="Newick tree input" />
 	<param name="fileout_label" type="text" value="out tree" label="Output name" help="Output name for files" />
     </inputs> 
     
     <!-- [REQUIRED] Output files -->
     <outputs>
 	<data name="fileout_log" format="txt" label="${fileout_label}.log" />
-	<data name="fileout" format="nwk,nhx" label="${fileout_label}" />
+	<data name="fileout" format="nhx" label="${fileout_label}" />
     </outputs>
     
     <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->

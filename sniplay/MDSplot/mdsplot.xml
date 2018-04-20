@@ -6,6 +6,7 @@
     <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
     <requirements>
         <requirement type="binary">perl</requirement>
+        <requirement type="package">rsync</requirement>
         <requirement type="package" version="1.6.924">perl-bioperl</requirement>
         <requirement type="package" version="1.90b4">plink</requirement>
     </requirements>
@@ -102,9 +103,13 @@ PLINK
         plink_ 1.90b4, Conda version
 Bioperl
         perl-bioperl_ 1.6.924, Conda version
+Rsync
+        rsync_, Conda version
+
 
 .. _plink: https://anaconda.org/bioconda/plink
 .. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
+.. _rsync: https://anaconda.org/conda-forge/rsync
 
 -----------
 Input files
