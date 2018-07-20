@@ -1,4 +1,4 @@
 categories: [Variant Analysis]
 description: Filter large VCF genotyping file
 name: plink
-owner: dereeper
+owner: vmarcon

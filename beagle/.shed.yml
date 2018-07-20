@@ -1,4 +1,4 @@
 categories: [Variant Analysis]
 description: Performs genotype calling, genotype phasing, imputation of ungenotyped markers, and identity-by-descent segment detection
 name: beagle
-owner: dereeper
+owner: vmarcon

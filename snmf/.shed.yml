@@ -1,5 +1,5 @@
 categories: [Variant Analysis]
 description: Fast and efficient program for estimating individual ancestry coefficients
 name: snmf
-owner: dereeper
+owner: vmarcon
 long_description: Fast and efficient program for estimating individual ancestry coefficients based on sparse non-negative matrix factorization and population genetics. 

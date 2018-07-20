@@ -3,4 +3,4 @@ description: 'SNiPlay3 complete workflow: a package for exploration and large sc
   analyses of SNP polymorphisms (filtering, density, vcftools, diversity, linkagedisequilibrium,
   GWAS) (all SNiPlay3 components)'
 name: sniplay3_complete_workflow
-owner: dereeper
+owner: vmarcon
