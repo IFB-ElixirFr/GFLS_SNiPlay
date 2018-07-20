@@ -1,0 +1,78 @@
+<tool id="Beagle" name="Beagle" version="1.0.0" >
+	<description>Beagle version 4.0 performs genotype calling, genotype phasing, imputation of ungenotyped markers, and identity-by-descent segment detection</description>
+	<requirements>
+		<requirement type="package" version="4.0">Beagle</requirement>
+	</requirements>
+	<command interpreter="bash">$__tool_directory__/execute_beagle.sh $vcf_input $phase $impute</command>
+	<inputs>
+		<param format="vcf" name="vcf_input" type="data" label="Variant call format"/>
+		<param type="text" name="phase" value="5" help="Non-negative integer" label="specifies the number of iterations for estimating genotype phase (default: phase-its=5).Increasing this parameter will typicall increase genotype phaseaccuracy."/>
+		<param type="text" name="impute" value="5" help="Non-negative integer" label="specifies the number of iterations for estimating genotypes at ungenotyped markers (default:impute-its=5). Increasing this parameter (up to ~10 iterations) will typically increase genotype imputation accuracy."/>
+	</inputs>
+	<outputs>
+		<data format="vcf" name="vcf_ouput" label="Phased and imputed VCF" from_work_dir="out.vcf"/>
+		<data format="txt" name="log" label="Beagle log file" from_work_dir="out.log"/>
+	</outputs>
+
+	<!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+	<tests>
+	<!-- [HELP] Test files have to be in the ~/test-data directory -->
+		<test>
+			<param name="vcf_input" value="Annotated_VCF.vcf" />
+			<param name="phase" value="5" />
+			<param name="impute" value="5" />
+			<output name="vcf_ouput" file="output.vcf" compare="sim_size"/>
+			<output name="log" file="filelog.txt" compare="sim_size"/>
+		</test>
+	</tests>
+	<help><![CDATA[
+
+
+
+.. class:: infomark
+
+**Beagle** version 4 
+ |  **If you use Beagle in a published analysis, please report the program version and cite the following article** "S R Browning and B L Browning (2007) Rapid and accurate haplotype phasing and missing data inference for whole genome association studies by use of localized haplotype clustering. Am J Hum Genet 81:1084-97."
+
+.. class:: infomark
+
+**Galaxy integration** Provided by Southgreen & Marcon Valentin (IFB & INRA)
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
+
+---------------------------------------------------
+
+======
+Beagle
+======
+
+-----------
+Description
+-----------
+
+  |  Beagle version 4.0 performs genotype calling, genotype phasing, imputation of ungenotyped markers, and identity-by-descent segment detection.
+
+Version 4 has multiple improvements:
+
+    a standard format (Variant Call Format) for input and output files
+    a powerful identity by descent detection algorithm: Refined IBD
+    support for multi-threaded computation
+    support for multi-allelic markers
+    improved methods for phasing and genotype imputation
+    elimination of temporary files
+    use of a sliding window permit control memory use
+
+  | For further informations, please visite the Beagle website_.
+
+
+.. _website: https://faculty.washington.edu/browning/beagle/b4_0.html
+
+
+	]]></help>
+        <citations>
+            <citation type="doi">10.1086/521987</citation>
+        </citations>
+
+</tool>

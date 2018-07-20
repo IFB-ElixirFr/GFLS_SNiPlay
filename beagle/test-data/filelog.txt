@@ -1,0 +1,101 @@
+beagle.jar (r1399)
+Copyright (C) 2014 Brian L. Browning
+Enter "java -jar beagle.jar" for a summary of command line arguments.
+Start time: 10:43 AM CEST on 20 Jul 2018
+
+Command line: java -Xmx1963m -jar beagle.jar
+  gt=/work/GALAXY/galaxy/database/files/071/dataset_71177.dat
+  phase-its=5
+  impute-its=5
+  out=out
+
+reference samples: 0
+target samples:    257
+  singles: 257
+  duos:    0
+  trios:   0
+
+Window 1 [ 3:15001183-19992016 ]
+target markers:    3094
+
+Starting burn-in iterations
+
+Window=1 Iteration=1
+Time for building model:         5 seconds
+Time for sampling (singles):     5 seconds
+Singles model
+mean edges/level: 21     max edges/level: 39
+mean edges/node:  1.655  mean count/edge: 24
+
+Window=1 Iteration=2
+Time for building model:         4 seconds
+Time for sampling (singles):     5 seconds
+Singles model
+mean edges/level: 23     max edges/level: 46
+mean edges/node:  1.513  mean count/edge: 22
+
+Window=1 Iteration=3
+Time for building model:         7 seconds
+Time for sampling (singles):     6 seconds
+Singles model
+mean edges/level: 25     max edges/level: 52
+mean edges/node:  1.425  mean count/edge: 21
+
+Window=1 Iteration=4
+Time for building model:         4 seconds
+Time for sampling (singles):     7 seconds
+Singles model
+mean edges/level: 27     max edges/level: 51
+mean edges/node:  1.393  mean count/edge: 19
+
+Window=1 Iteration=5
+Time for building model:         4 seconds
+Time for sampling (singles):     5 seconds
+Singles model
+mean edges/level: 28     max edges/level: 57
+mean edges/node:  1.374  mean count/edge: 18
+
+Starting phasing iterations
+
+Window=1 Iteration=6
+Time for building model:         5 seconds
+Time for sampling (singles):     6 seconds
+Singles model
+mean edges/level: 29     max edges/level: 54
+mean edges/node:  1.349  mean count/edge: 18
+
+Window=1 Iteration=7
+Time for building model:         4 seconds
+Time for sampling (singles):     7 seconds
+Singles model
+mean edges/level: 29     max edges/level: 56
+mean edges/node:  1.362  mean count/edge: 18
+
+Window=1 Iteration=8
+Time for building model:         5 seconds
+Time for sampling (singles):     7 seconds
+Singles model
+mean edges/level: 29     max edges/level: 51
+mean edges/node:  1.346  mean count/edge: 18
+
+Window=1 Iteration=9
+Time for building model:         5 seconds
+Time for sampling (singles):     7 seconds
+Singles model
+mean edges/level: 29     max edges/level: 57
+mean edges/node:  1.352  mean count/edge: 18
+
+Window=1 Iteration=10
+Time for building model:         3 seconds
+Time for sampling (singles):     6 seconds
+Singles model
+mean edges/level: 30     max edges/level: 56
+mean edges/node:  1.340  mean count/edge: 17
+
+Number of markers:             3094
+Total time for building model: 46 seconds
+Total time for sampling:       1 minute 2 seconds
+Total run time:                1 minute 53 seconds
+
+End time: 10:45 AM CEST on 20 Jul 2018
+beagle.jar (r1399) finished
