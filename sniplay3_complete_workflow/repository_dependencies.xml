@@ -1,13 +1,13 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <repositories description="SNiPlay3 complete workflow: exploration and large scale analyses of genomic variations"> 
-    <repository  name="sniplay" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" />
-    <repository  name="fastme" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" /> 
-    <repository  name="snpsift" owner="iuc" toolshed="http://toolshed.g2.bx.psu.edu" /> 
-    <repository  name="readseq" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" /> 
-    <repository  name="vcftools_filter_stats_diversity" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" />
-    <repository  name="snpeff_from_gff_vcf" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" />
-    <repository  name="snmf" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" />
-    <repository  name="plink" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" />
-    <repository  name="tassel5" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" />
-    <repository  name="mlmm" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu" />
+    <repository changeset_revision="29be73cd5f77" name="sniplay" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="6f45c7652175" name="fastme" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/> 
+    <repository changeset_revision="f0e87bdad733" name="snpsift" owner="iuc" toolshed="http://testtoolshed.g2.bx.psu.edu"/> 
+    <repository changeset_revision="5373cbc32277" name="readseq" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/> 
+    <repository changeset_revision="9a3f08e994c1" name="vcftools_filter_stats_diversity" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="9b01782f9dba" name="snpeff_from_gff_vcf" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="48d2a8ffb4df" name="snmf" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="e722daf60a15" name="plink" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="216e304c474e" name="tassel5" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="91751cca2e2f" name="mlmm" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
 </repositories>
