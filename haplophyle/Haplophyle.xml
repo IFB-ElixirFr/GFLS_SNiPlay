@@ -18,13 +18,23 @@
 
     <!-- [REQUIRED] The command to execute -->
     <command interpreter="perl">
-	Haplophyle.sh $input $input2 $fileout $dotfile $cytoscape_html $filelog $groups 
+	Haplophyle.sh $input $fileout $dotfile $cytoscape_html $filelog
+        #if str( $color.choice ) == "yes":
+           $color.input2 $color.groups 
+        #end if
     </command>
     <!-- [REQUIRED] Input files and tool parameters -->
     <inputs>
 	<param name="input" type="data" format="fasta" optional="false" label="Haplotype sequences in Fasta" />
-	<param name="input2" type="data" format="txt" optional="false" label="Haplotype sequences and their individuals" />
-	<param name="groups" type="data" format="txt" optional="true" label="Groups (optional)" help="Semicolon separated file (ind;group)"/>
+        <conditional name="color">
+           <param name="choice" type="boolean" truevalue="yes" falsevalue="no" label="Group colorization?"/>
+           <when value="no">
+           </when>
+           <when value="yes">
+	      <param name="input2" type="data" format="txt" optional="true" label="Haplotype sequences and their individuals" />
+              <param name="groups" type="data" format="txt" optional="true" label="Groups (optional)" help="Semicolon separated file (ind;group)"/>
+           </when>
+        </conditional>
     </inputs>
     
     <!-- [REQUIRED] Output files -->
@@ -40,12 +50,23 @@
         <!-- [HELP] Test files have to be in the ~/test-data directory -->
         <test>
             <param name="input" value="haplotype.fasta" />
-            <param name="input2" value="haplotype.txt" />
-            <!--param name="groups" value="" /-->
+            <conditional name="color">
+               <param name="choice" value="yes" />
+               <param name="input2" value="haplotype.txt" />
+               <!--param name="groups" value="" /-->
+            </conditional>
             <output name="fileout" file="network.txt" compare="sim_size" />
             <output name="dotfile" file="dotfile.txt" compare="sim_size" />
             <output name="cytoscape_html" file="cytoscape.html" compare="sim_size"/>
-            <output name="filelog" file="filelog.txt" compare="sim_size"/>
+        </test>
+        <test>
+            <param name="input" value="haplotype.fasta" />
+            <conditional name="color">
+               <param name="choice" value="no" />
+            </conditional>
+            <output name="fileout" file="network.txt" compare="sim_size" />
+            <output name="dotfile" file="dotfile.txt" compare="sim_size" />
+            <output name="cytoscape_html" file="cytoscape.html" compare="sim_size"/>
         </test>
     </tests>
 
@@ -61,7 +82,7 @@
 
 .. class:: infomark
 
-**Galaxy integration** Provided by Southgreen & Dereeper Alexis (IRD) & Marcon Valentin (IFB & INRA
+**Galaxy integration** Provided by Southgreen & Dereeper Alexis (IRD) & Marcon Valentin (IFB & INRA)
 
 .. class:: infomark
 

@@ -39,7 +39,7 @@
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "aad8f697f86b", 
+                "changeset_revision": "0517aeb5d7d8", 
                 "name": "vcftools_filter_stats_diversity", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
@@ -47,7 +47,7 @@
             "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"3\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"4\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"1.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "2cf380c2-4f5d-4948-92be-00cc3fb8e63c", 
+            "uuid": "4a63fe7d-03bf-4f8a-b744-acc6c333fd56", 
             "workflow_outputs": []
         }, 
         "1": {
@@ -94,7 +94,7 @@
             "tool_state": "{\"phase\": \"\\\"5\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"impute\": \"\\\"5\\\"\", \"vcf_input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "1.0.0", 
             "type": "tool", 
-            "uuid": "ebf0143a-b917-4065-b945-41256734463e", 
+            "uuid": "552bf003-578f-46d1-ac19-19dacad937d2", 
             "workflow_outputs": []
         }, 
         "2": {
@@ -133,7 +133,7 @@
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/getHaplotypesFromPhasedVCF/2.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "15b23cdde685", 
+                "changeset_revision": "711ccfb4b3d0", 
                 "name": "sniplay", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
@@ -141,7 +141,7 @@
             "tool_state": "{\"output_label\": \"\\\"Haplotypes\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "4be4ee86-09aa-44b2-943a-9ddbd9fcf46c", 
+            "uuid": "4bfbaba7-3fc2-4076-82d6-3212c61fcb91", 
             "workflow_outputs": []
         }, 
         "3": {
@@ -153,13 +153,14 @@
                 "input": {
                     "id": 2, 
                     "output_name": "output_haplo"
-                }, 
-                "input2": {
-                    "id": 2, 
-                    "output_name": "output_distinct"
                 }
             }, 
-            "inputs": [], 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Haplophyle", 
+                    "name": "input"
+                }
+            ], 
             "label": null, 
             "name": "Haplophyle", 
             "outputs": [
@@ -192,13 +193,13 @@
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             }, 
-            "tool_state": "{\"input2\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 39226}]}\", \"input\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 39225}]}\", \"__rerun_remap_job_id__\": null, \"groups\": \"null\", \"__page__\": null}", 
+            "tool_state": "{\"color\": \"{\\\"__current_case__\\\": 0, \\\"choice\\\": \\\"false\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
             "tool_version": "1.0.0", 
             "type": "tool", 
-            "uuid": "b08a1638-79e9-4e52-aefc-8c2eb75ad321", 
+            "uuid": "31d5583a-740b-46e2-80d8-02d0315ac954", 
             "workflow_outputs": []
         }
     }, 
     "tags": [], 
-    "uuid": "0bc5f1cd-19b4-44e3-9b92-19dba4b4137e"
+    "uuid": "09263732-20d3-4166-98ce-e1c1a0ebf93b"
 }

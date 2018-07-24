@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Config #######
-maxsizeseq=500  
-maxnumseq=200 
+maxsizeseq=500
+maxnumseq=150
 ################
 
 tool_path=$(dirname $0)
 
 filein=$1
-filein2=$2
-fileout=$3
-dotfile=$4
-cytoscape_html=$5
-logfile=$6
+fileout=$2
+dotfile=$3
+cytoscape_html=$4
+logfile=$5
+filein2=$6
 groups=$7
 
 nbline=$(sed -n '$=' $filein)
