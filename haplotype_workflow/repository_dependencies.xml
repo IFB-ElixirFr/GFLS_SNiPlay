@@ -3,5 +3,6 @@
     <repository changeset_revision="9a3f08e994c1" name="vcftools_filter_stats_diversity" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
     <repository changeset_revision="3e3cc724ff6d" name="beagle" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
     <repository changeset_revision="29be73cd5f77" name="sniplay" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
-    <repository changeset_revision="1d8ac9ac00ee" name="haplophyle" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="bb2d371dc230" name="haplophyle" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="6bf83148cae7" name="cytoscape" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
 </repositories>

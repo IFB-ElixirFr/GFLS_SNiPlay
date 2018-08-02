@@ -1,8 +1,8 @@
 {
     "a_galaxy_workflow": "true", 
     "annotation": "", 
-    "format-version": "0.1", 
-    "name": "Haplotype_analysis", 
+    "format-version": "0.2", 
+    "name": "Haplotype_analysis_TTS", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -33,8 +33,8 @@
                 }
             ], 
             "position": {
-                "left": 236.5, 
-                "top": 198
+                "left": 121.5, 
+                "top": 197
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
@@ -80,8 +80,8 @@
                 }
             ], 
             "position": {
-                "left": 434.5, 
-                "top": 356
+                "left": 343.5, 
+                "top": 305
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/beagle/Beagle/1.0.0", 
@@ -127,8 +127,8 @@
                 }
             ], 
             "position": {
-                "left": 643, 
-                "top": 248
+                "left": 561, 
+                "top": 200
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/getHaplotypesFromPhasedVCF/2.0.0", 
@@ -166,12 +166,50 @@
             "outputs": [
                 {
                     "name": "fileout", 
-                    "type": "txt"
+                    "type": "json"
                 }, 
                 {
                     "name": "dotfile", 
                     "type": "txt"
                 }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 856.5, 
+                "top": 327
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/haplophyle/haplophyle/1.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "1d8ac9ac00ee", 
+                "name": "haplophyle", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"color\": \"{\\\"__current_case__\\\": 0, \\\"choice\\\": \\\"false\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "31d5583a-740b-46e2-80d8-02d0315ac954", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/cytoscape/Cytoscape/1.0.0", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "input": {
+                    "id": 3, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Cytoscape", 
+            "outputs": [
                 {
                     "name": "cytoscape_html", 
                     "type": "html"
@@ -182,24 +220,24 @@
                 }
             ], 
             "position": {
-                "left": 948.5, 
-                "top": 401
+                "left": 1089, 
+                "top": 220
             }, 
             "post_job_actions": {}, 
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/haplophyle/haplophyle/1.0.0", 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/cytoscape/Cytoscape/1.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "df02e4479a68", 
-                "name": "haplophyle", 
+                "changeset_revision": "6bf83148cae7", 
+                "name": "cytoscape", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             }, 
-            "tool_state": "{\"color\": \"{\\\"__current_case__\\\": 0, \\\"choice\\\": \\\"false\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_state": "{\"input\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 39540}]}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
             "tool_version": "1.0.0", 
             "type": "tool", 
-            "uuid": "31d5583a-740b-46e2-80d8-02d0315ac954", 
+            "uuid": "8e3d9a5c-09a2-4ef1-acd5-07ca5bb43484", 
             "workflow_outputs": []
         }
     }, 
     "tags": [], 
-    "uuid": "09263732-20d3-4166-98ce-e1c1a0ebf93b"
+    "uuid": "cde68e11-5437-43ad-8a93-6e26af4aad44"
 }

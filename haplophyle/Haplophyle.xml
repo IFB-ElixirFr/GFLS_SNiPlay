@@ -18,7 +18,7 @@
 
     <!-- [REQUIRED] The command to execute -->
     <command interpreter="perl">
-	Haplophyle.sh $input $fileout $dotfile $cytoscape_html $filelog
+	Haplophyle.sh $input $fileout $dotfile $filelog
         #if str( $color.choice ) == "yes":
            $color.input2 $color.groups 
         #end if
@@ -31,17 +31,16 @@
            <when value="no">
            </when>
            <when value="yes">
-	      <param name="input2" type="data" format="txt" optional="true" label="Haplotype sequences and their individuals" />
-              <param name="groups" type="data" format="txt" optional="true" label="Groups (optional)" help="Semicolon separated file (ind;group)"/>
+ 	      <param name="input2" type="data" format="txt" optional="true" label="Haplotype sequences and individuals carrying the haplotype" help="See example below"/>
+              <param name="groups" type="data" format="txt" optional="true" label="Groups" help="Semicolon separated file (ind;group)"/>
            </when>
         </conditional>
     </inputs>
     
     <!-- [REQUIRED] Output files -->
     <outputs>
-	<data name="fileout" format="txt" label="Haplotype Network" />
+	<data name="fileout" format="json" label="JSON for Cytoscape" />
 	<data name="dotfile" format="txt" label="Dot file" />
-	<data name="cytoscape_html" format="html" label="Cytoscape network" />
 	<data name="filelog" format="txt" label="Logfile" />
     </outputs>
 
@@ -55,18 +54,16 @@
                <param name="input2" value="haplotype.txt" />
                <!--param name="groups" value="" /-->
             </conditional>
-            <output name="fileout" file="network.txt" compare="sim_size" />
-            <output name="dotfile" file="dotfile.txt" compare="sim_size" />
-            <output name="cytoscape_html" file="cytoscape.html" compare="sim_size"/>
+            <output name="fileout" file="output.json" compare="sim_size" delta="0"/>
+            <output name="dotfile" file="dotfile.txt" compare="sim_size" delta="0"/>
         </test>
         <test>
             <param name="input" value="haplotype.fasta" />
             <conditional name="color">
                <param name="choice" value="no" />
             </conditional>
-            <output name="fileout" file="network.txt" compare="sim_size" />
-            <output name="dotfile" file="dotfile.txt" compare="sim_size" />
-            <output name="cytoscape_html" file="cytoscape.html" compare="sim_size"/>
+            <output name="fileout" file="output.json" compare="sim_size" delta="20"  />
+            <output name="dotfile" file="dotfile.txt" compare="sim_size" delta="0" />
         </test>
     </tests>
 
@@ -100,7 +97,6 @@ Description
 
   | Create haplotype network from haplotype sequences
 
-
 ----------
 Input file
 ----------
@@ -110,13 +106,14 @@ Haplotype fasta file
 Haplotype sequences and their individuals
 	Haplotype sequences and list of individuals holding the haplotype
 
+Groups
+
 ------------
 Output files
 ------------
 
-Network file
-	Network file
-
+JSON file for Cytoscape
+Dot file
 Log file
 
 ---------------------------------------------------
