@@ -179,46 +179,47 @@ Haplotype sequences and their individuals
 Output files
 ============
 
-Haplotype network
+output.json
 ----------------------------
 
 ::
 
-        var nodes = [
-        {id: 1, label: 'Haplo1',shape:'image',radius:'1'}
-        {id: 2, label: 'Haplo2',shape:'image',radius:'1'}
-        {id: 3, label: 'Haplo3',shape:'image',radius:'1'}
-        {id: 4, label: 'Haplo4',shape:'image',radius:'2'}
-        {id: 5, label: 'Haplo5',shape:'image',radius:'1'}
-        {id: 6, label: 'Haplo6',shape:'image',radius:'7'}
-        {id: 7, label: 'Haplo7',shape:'image',radius:'3'}
-        {id: 8, label: 'Haplo8',shape:'image',radius:'1'}
-        {id: 9, label: 'Haplo9',shape:'image',radius:'1'}
-        {id: 10, label: 'Haplo10',shape:'image',radius:'1'}
-        {id: 11, label: 'Haplo11',shape:'image',radius:'1'}
-        {id: 12, label: 'Haplo12',shape:'image',radius:'38'}
-        {id: 13, label: 'Haplo13',shape:'image',radius:'3'}
-        {id: 14, label: 'Haplo14',shape:'image',radius:'1'}
-        ];
-        var edges = [
-        {from: 3, to: 14,length:'7',style: 'line',color:'black',},
-        {from: 4, to: 6,length:'7',style: 'line',color:'black',},
-        {from: 6, to: 11,length:'7',style: 'line',color:'black',},
-        {from: 2, to: 6,length:'7',style: 'line',color:'black',},
-        {from: 2, to: 5,length:'7',style: 'line',color:'black',},
-        {from: 2, to: 10,length:'7',style: 'line',color:'black',},
-        {from: 3, to: 9,length:'7',style: 'line',color:'black',},
-        {from: 2, to: 12,length:'7',style: 'line',color:'black',},
-        {from: 1, to: 6,length:'7',style: 'line',color:'black',},
-        {from: 2, to: 8,length:'7',style: 'line',color:'black',},
-        {from: 12, to: 13,length:'7',style: 'line',color:'black',},
-        {from: 7, to: 12,length:'7',style: 'line',color:'black',},
-        {from: 1, to: 14,length:'7',style: 'line',color:'black',},
-        {from: 8, to: 11,length:'7',style: 'line',color:'black',},
-        {from: 4, to: 5,length:'7',style: 'line',color:'black',},
-        {from: 1, to: 10,length:'7',style: 'line',color:'black',},
-        {from: 3, to: 10,length:'7',style: 'line',color:'black',},
-        ];
+	{"elements": {"nodes": [{ "data": { "id": "MV1", "width": 0.1} },
+	{ "data": { "id": "MV2", "width": 0.1} },
+	{ "data": { "id": "MV3", "width": 0.1} },
+	{ "data": { "id": "haplo6", "width": 0.8 } },
+	{ "data": { "id": "haplo7", "width": 0.8 } },
+	{ "data": { "id": "haplo8", "width": 0.8 } }],
+	"edges": [
+	{ "data": { "id": "haplo4MV1", "weight": 1, "source": "haplo4", "target": "MV1"} },
+	{ "data": { "id": "haplo3haplo4", "weight": 1, "source": "haplo3", "target": "haplo4"} },
+	{ "data": { "id": "haplo5MV3", "weight": 1, "source": "haplo5", "target": "MV3"} },
+	{ "data": { "id": "MV1MV2", "weight": 1, "source": "MV1", "target": "MV2"} },
+	{ "data": { "id": "haplo8MV3", "weight": 1, "source": "haplo8", "target": "MV3"} }]}}
+
+
+dotfile.txt
+----------------------------
+
+::
+
+	graph G {
+	overlap="scale";
+	outputMode="nodesfirst";
+	MV1 [shape="circle", color="red", width=0.1, height=0.1,fixedsize=true];
+	MV2 [shape="circle", color="red", width=0.1, height=0.1,fixedsize=true];
+	haplo2 [shape="circle",style="filled", color="green" , imagescale="both", width=0.8, height=0.8,fixedsize=true];
+	haplo4 [shape="circle",style="filled", color="green" , imagescale="both", width=0.8, height=0.8,fixedsize=true];
+	haplo8 [shape="circle",style="filled", color="green" , imagescale="both", width=0.8, height=0.8,fixedsize=true];
+	haplo7 -- MV2 [len=0.2];
+	haplo1 -- haplo2 [len=0.2];
+	haplo4 -- MV1 [len=0.2];
+	MV2 -- MV3 [len=0.6];
+	haplo5 -- MV3 [len=0.8];
+	haplo8 -- MV3 [len=1,label="length: 24.0",color="red"];
+	}
+
+        
 
 
     ]]></help>

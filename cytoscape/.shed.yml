@@ -1,4 +1,6 @@
-categories: [Variant Analysis]
 description: Visualize interaction networks from JSON file 
 name: cytoscape
 owner: vmarcon
+categories:
+- Visualization
+- Graphics

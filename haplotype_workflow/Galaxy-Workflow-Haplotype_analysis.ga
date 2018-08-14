@@ -1,8 +1,8 @@
 {
     "a_galaxy_workflow": "true", 
     "annotation": "", 
-    "format-version": "0.2", 
-    "name": "Haplotype_analysis_TTS", 
+    "format-version": "0.1", 
+    "name": "Haplotype_analysis", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -34,12 +34,12 @@
             ], 
             "position": {
                 "left": 121.5, 
-                "top": 197
+                "top": 247
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0517aeb5d7d8", 
+                "changeset_revision": null, 
                 "name": "vcftools_filter_stats_diversity", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
@@ -81,12 +81,12 @@
             ], 
             "position": {
                 "left": 343.5, 
-                "top": 305
+                "top": 355
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/beagle/Beagle/1.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "3e3cc724ff6d", 
+                "changeset_revision": null, 
                 "name": "beagle", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
@@ -124,16 +124,20 @@
                 {
                     "name": "output_haplo", 
                     "type": "fasta"
+                }, 
+                {
+                    "name": "output_distinct_fasta", 
+                    "type": "fasta"
                 }
             ], 
             "position": {
-                "left": 561, 
-                "top": 200
+                "left": 581, 
+                "top": 194
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/getHaplotypesFromPhasedVCF/2.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "711ccfb4b3d0", 
+                "changeset_revision": null, 
                 "name": "sniplay", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
@@ -152,7 +156,7 @@
             "input_connections": {
                 "input": {
                     "id": 2, 
-                    "output_name": "output_haplo"
+                    "output_name": "output_distinct_fasta"
                 }
             }, 
             "inputs": [
@@ -179,12 +183,12 @@
             ], 
             "position": {
                 "left": 856.5, 
-                "top": 327
+                "top": 377
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/haplophyle/haplophyle/1.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "1d8ac9ac00ee", 
+                "changeset_revision": null, 
                 "name": "haplophyle", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
@@ -206,7 +210,12 @@
                     "output_name": "fileout"
                 }
             }, 
-            "inputs": [], 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Cytoscape", 
+                    "name": "input"
+                }
+            ], 
             "label": null, 
             "name": "Cytoscape", 
             "outputs": [
@@ -221,17 +230,17 @@
             ], 
             "position": {
                 "left": 1089, 
-                "top": 220
+                "top": 270
             }, 
             "post_job_actions": {}, 
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/cytoscape/Cytoscape/1.0.0", 
             "tool_shed_repository": {
-                "changeset_revision": "6bf83148cae7", 
+                "changeset_revision": null, 
                 "name": "cytoscape", 
                 "owner": "vmarcon", 
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             }, 
-            "tool_state": "{\"input\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 39540}]}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
             "tool_version": "1.0.0", 
             "type": "tool", 
             "uuid": "8e3d9a5c-09a2-4ef1-acd5-07ca5bb43484", 
@@ -239,5 +248,5 @@
         }
     }, 
     "tags": [], 
-    "uuid": "cde68e11-5437-43ad-8a93-6e26af4aad44"
+    "uuid": "2ce7df85-4151-40cc-b636-a135663b90ee"
 }
