@@ -22,7 +22,7 @@
             "tool_state": "{}", 
             "tool_version": null, 
             "type": "data_input", 
-            "uuid": "6cadf2e0-c934-40e9-b7da-6617917bad24", 
+            "uuid": "1b36351d-d27f-4696-b500-98a27b4d7ea3", 
             "workflow_outputs": []
         }, 
         "1": {
@@ -43,7 +43,7 @@
             "tool_state": "{}", 
             "tool_version": null, 
             "type": "data_input", 
-            "uuid": "253e89d3-c948-419e-af50-f8c8a448af00", 
+            "uuid": "bc1b70d3-0f2e-4f2c-a690-92c1001aed6e", 
             "workflow_outputs": []
         }, 
         "2": {
@@ -53,7 +53,7 @@
             "id": 2, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": "Input GFF Annotation, 
+            "label": "Input GFF Annotation", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
@@ -64,7 +64,7 @@
             "tool_state": "{}", 
             "tool_version": null, 
             "type": "data_input", 
-            "uuid": "c83428cf-c1d4-47a2-98ff-721de1e99d22", 
+            "uuid": "a4e7ebaf-ce63-4cc1-b516-bafa883ccc81", 
             "workflow_outputs": []
         }, 
         "3": {
@@ -115,7 +115,7 @@
             "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"4\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "631d47f0-20d4-43b2-9201-df377902566b", 
+            "uuid": "46ae7024-01b1-4f7c-a98a-7120fcc5a100", 
             "workflow_outputs": []
         }, 
         "4": {
@@ -182,7 +182,7 @@
             "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"gff\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"vcf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "63658036-2ebe-459c-83d9-a7dd29ff0321", 
+            "uuid": "21c3aa6f-3c39-45ff-86ed-8ea8123406f6", 
             "workflow_outputs": []
         }, 
         "5": {
@@ -225,7 +225,7 @@
             "tool_state": "{\"__page__\": null, \"inverse\": \"\\\"false\\\"\", \"expr\": \"\\\"(FILTER != 'LowQual')\\\"\", \"__rerun_remap_job_id__\": null, \"filtering\": \"{\\\"mode\\\": \\\"entries\\\", \\\"__current_case__\\\": 0}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "4.3.0", 
             "type": "tool", 
-            "uuid": "1e790f32-adfd-4b0c-bc61-9fc558249a6d", 
+            "uuid": "412c90d9-3f5d-4252-aaab-d850f370592b", 
             "workflow_outputs": []
         }, 
         "6": {
@@ -276,7 +276,7 @@
             "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"2\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "990bd647-19b2-4286-a1f2-2abe5c2de6fc", 
+            "uuid": "6e1f8c9e-d9d4-4615-b491-ff2dcdd7f7aa", 
             "workflow_outputs": []
         }, 
         "7": {
@@ -327,7 +327,7 @@
             "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"2\\\"\", \"type_p\": \"\\\"SNP\\\"\", \"allow_missing\": \"\\\"0.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"plink\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "12053570-88ed-4d97-8be1-ff9981df4382", 
+            "uuid": "04b09dcc-9d15-4403-9996-3a87f3cd2503", 
             "workflow_outputs": []
         }, 
         "8": {
@@ -382,7 +382,7 @@
             "tool_state": "{\"fileout_label\": \"\\\"vcf_stats\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "20eed6b5-29e4-4037-b8d8-85b2554c9615", 
+            "uuid": "d9f81699-84bb-4bcd-8eb8-701a9779a819", 
             "workflow_outputs": []
         }, 
         "9": {
@@ -469,7 +469,7 @@
             "tool_state": "{\"__page__\": null, \"group\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"fileout_label\": \"\\\"snp_density\\\"\", \"window\": \"\\\"200000\\\"\", \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "374c1d03-dbe6-43d8-9a75-b83d5fac56f2", 
+            "uuid": "31b0c431-a2e5-4fb3-b008-e59daab6c1dc", 
             "workflow_outputs": []
         }, 
         "10": {
@@ -528,7 +528,7 @@
             "tool_state": "{\"__page__\": null, \"vcf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"kmin\": \"\\\"2\\\"\", \"threshold_group\": \"\\\"50\\\"\", \"kmax\": \"\\\"5\\\"\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "7dd4c260-bee4-42db-891d-f24fc262e94d", 
+            "uuid": "84d98dfd-3b2d-4b5e-b67e-1bc3183c036c", 
             "workflow_outputs": []
         }, 
         "11": {
@@ -561,7 +561,7 @@
                 }
             ], 
             "position": {
-                "left": 1237, 
+                "left": 1237,
                 "top": 657.816650390625
             }, 
             "post_job_actions": {}, 
@@ -575,7 +575,7 @@
             "tool_state": "{\"fileout_label\": \"\\\"densities\\\"\", \"__page__\": null, \"step\": \"\\\"200000\\\"\", \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "99a1d523-7782-4c36-ab4f-f09d86212a04", 
+            "uuid": "f1c0ca03-2ac7-4941-a014-d875ffa34b5d", 
             "workflow_outputs": []
         }, 
         "12": {
@@ -595,20 +595,20 @@
             }, 
             "inputs": [
                 {
-                    "description": "runtime parameter for tool MDS plot", 
+                    "description": "runtime parameter for tool PLINK: MDS plot", 
                     "name": "groups"
                 }, 
                 {
-                    "description": "runtime parameter for tool MDS plot", 
+                    "description": "runtime parameter for tool PLINK: MDS plot", 
                     "name": "fileped"
                 }, 
                 {
-                    "description": "runtime parameter for tool MDS plot", 
+                    "description": "runtime parameter for tool PLINK: MDS plot", 
                     "name": "filemap"
                 }
             ], 
             "label": null, 
-            "name": "MDS plot", 
+            "name": "PLINK: MDS plot", 
             "outputs": [
                 {
                     "name": "fileout_matrix", 
@@ -638,7 +638,7 @@
             "tool_state": "{\"__page__\": null, \"fileped\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"filemap\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"fileout_label\": \"\\\"analyse\\\"\", \"groups\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "16887250-114f-4afb-89c7-9ffd0f0ddec4", 
+            "uuid": "4a40c204-aca3-4329-9518-e53608f2633b", 
             "workflow_outputs": []
         }, 
         "13": {
@@ -681,7 +681,7 @@
             "tool_state": "{\"fileout_label\": \"\\\"filtered\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "e68df48c-2cbe-4f1b-9223-33647b9508b2", 
+            "uuid": "faae8ed2-1b27-4bcf-861d-0e8ef08d5ec5", 
             "workflow_outputs": []
         }, 
         "14": {
@@ -735,7 +735,7 @@
             "tool_state": "{\"ped\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36321}]}\", \"map\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36321}]}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "ffd301d8-d99c-4e4e-9881-f61ad019b4d7", 
+            "uuid": "51b9be40-fdd1-46c7-8dba-fd7f08165ea3", 
             "workflow_outputs": []
         }, 
         "15": {
@@ -782,7 +782,7 @@
             "tool_state": "{\"fileout_label\": \"\\\"phylip conversion\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"format\": \"\\\"12\\\"\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "f55fcf51-daac-428f-801f-1b8307bc3d13", 
+            "uuid": "3dc8727e-0ca2-4c8b-8e4c-059d16576d08", 
             "workflow_outputs": []
         }, 
         "16": {
@@ -837,7 +837,7 @@
             "tool_state": "{\"distance\": \"\\\"--method=I\\\"\", \"__page__\": null, \"equilibrium\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"bootChoice\": \"{\\\"boot\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"treeRefinement\": \"\\\"--spr\\\"\", \"gammaChoice\": \"{\\\"__current_case__\\\": 1, \\\"gamma\\\": \\\"false\\\"}\", \"fileout_label\": \"\\\"Newick tree\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"typeChoice\": \"{\\\"datatype\\\": \\\"d\\\", \\\"modeldna\\\": \\\"4\\\", \\\"__current_case__\\\": 0}\", \"removeGap\": \"\\\"\\\"\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "74189f4d-bd98-46fc-9778-b8e9a698a539", 
+            "uuid": "0f479ac4-fcfa-4b14-b2af-b37891f64e78", 
             "workflow_outputs": []
         }, 
         "17": {
@@ -879,10 +879,10 @@
             "tool_state": "{\"fileout_label\": \"\\\"out tree\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"filein\": \"{\\\"values\\\": [{\\\"src\\\": \\\"hda\\\", \\\"id\\\": 36319}]}\"}", 
             "tool_version": "2.0.0", 
             "type": "tool", 
-            "uuid": "ded86308-97bc-4580-adf1-23b1cc86c302", 
+            "uuid": "c49727bf-cb46-4cf6-998c-539977b1a419", 
             "workflow_outputs": []
         }
     }, 
     "tags": [], 
-    "uuid": "f3ca58e0-87e5-4314-906e-9d2d34f95dc8"
+    "uuid": "6cb99c2c-e345-4e5b-b1c3-80172449e6bd"
 }

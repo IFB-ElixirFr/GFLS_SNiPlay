@@ -1,0 +1,134 @@
+<tool id="Cytoscape" name="Cytoscape" version="1.0.0">
+    
+    <!-- [REQUIRED] Tool description displayed after the tool name -->
+    <description>Visualize interaction networks from JSON file</description>
+    
+    <!-- [OPTIONAL] 3rd party tools, binaries, modules... required for the tool to work -->
+    <requirements>
+        <requirement type="binary">perl</requirement>
+        <requirement type="package" version="1.6.924">perl-bioperl</requirement>
+    </requirements>
+    
+
+    <!-- [STRONGLY RECOMMANDED] Exit code rules -->
+    <stdio>
+        <!-- [HELP] If no exit code rule is defined, the tool will stop if anything is written to STDERR -->
+        <exit_code range="1:" level="fatal" />
+    </stdio>    
+
+    <!-- [REQUIRED] The command to execute -->
+    <command interpreter="perl">
+	Cytoscape.sh $input $cytoscape_html $filelog 
+    </command>
+    <!-- [REQUIRED] Input files and tool parameters -->
+    <inputs>
+	<param name="input" type="data" format="json" optional="false" label="Cytoscape JSON file" />
+    </inputs>
+    
+    <!-- [REQUIRED] Output files -->
+    <outputs>
+	<data name="cytoscape_html" format="html" label="Cytoscape network" />
+	<data name="filelog" format="txt" label="Logfile" />
+    </outputs>
+
+    <!-- [OPTIONAL] Tests to be run manually by the Galaxy admin -->
+    <tests>
+        <!-- [HELP] Test files have to be in the ~/test-data directory -->
+        <test>
+            <param name="input" value="input.json" />
+            <output name="cytoscape_html" file="network.html"/>
+        </test>
+    </tests>    
+
+    <!-- [OPTIONAL] Help displayed in Galaxy -->
+    <help><![CDATA[
+
+.. class:: infomark
+
+**Authors**     Max Franz : Cytoscape.js_
+
+.. _Cytoscape.js: http://js.cytoscape.org/
+
+.. class:: infomark
+
+**Galaxy integration** Provided by Southgreen & Dereeper Alexis (IRD) & Marcon Valentin (IFB & INRA)
+
+.. class:: infomark
+
+**Support** For any questions about Galaxy integration, please send an e-mail to alexis.dereeper@ird.fr
+
+---------------------------------------------------
+
+================
+Cytoscape
+================
+
+-----------
+Description
+-----------
+
+  | Create a Cytoscape network from Cytoscape JSON file
+
+----------
+Input file
+----------
+
+JSON file for Cytoscape
+
+------------
+Output files
+------------
+
+Cytoscape network
+
+Log file
+
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+Input file
+==========
+
+input.json
+----------------------------
+
+::
+
+	{"elements": {"nodes": [{ "data": { "id": "MV1", "width": 0.1} },
+	{ "data": { "id": "MV2", "width": 0.1} },
+	{ "data": { "id": "MV3", "width": 0.1} },
+	{ "data": { "id": "haplo1", "width": 1.2000000000000002 } },
+	{ "data": { "id": "haplo2", "width": 0.8 } },
+	{ "data": { "id": "haplo3", "width": 5.0 } },
+	{ "data": { "id": "haplo4", "width": 0.8 } },
+	{ "data": { "id": "haplo5", "width": 0.8 } },
+	{ "data": { "id": "haplo6", "width": 0.8 } },
+	{ "data": { "id": "haplo7", "width": 0.8 } },
+	{ "data": { "id": "haplo8", "width": 0.8 } }],
+	"edges": [
+	{ "data": { "id": "haplo4MV1", "weight": 1, "source": "haplo4", "target": "MV1"} },
+	{ "data": { "id": "haplo3haplo4", "weight": 1, "source": "haplo3", "target": "haplo4"} },
+	{ "data": { "id": "haplo4haplo6", "weight": 1, "source": "haplo4", "target": "haplo6"} },
+	{ "data": { "id": "haplo1MV1", "weight": 1, "source": "haplo1", "target": "MV1"} },
+	{ "data": { "id": "haplo1haplo2", "weight": 1, "source": "haplo1", "target": "haplo2"} },
+	{ "data": { "id": "haplo7MV2", "weight": 1, "source": "haplo7", "target": "MV2"} },
+	{ "data": { "id": "MV2MV3", "weight": 1, "source": "MV2", "target": "MV3"} },
+	{ "data": { "id": "haplo5MV3", "weight": 1, "source": "haplo5", "target": "MV3"} },
+	{ "data": { "id": "MV1MV2", "weight": 1, "source": "MV1", "target": "MV2"} },
+	{ "data": { "id": "haplo8MV3", "weight": 1, "source": "haplo8", "target": "MV3"} }]}}
+
+Output file
+===========
+
+Cytoscape network
+----------------------------
+
+.. image:: $PATH_TO_IMAGES/network.png
+   :width: 500 px
+
+   ]]></help>
+
+</tool>

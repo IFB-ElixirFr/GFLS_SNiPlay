@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories description="Haplotype analysis workflow"> 
+    <repository changeset_revision="aad8f697f86b" name="vcftools_filter_stats_diversity" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="a929ef8dea25" name="beagle" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="88748d846a20" name="sniplay" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="6f11162b6fa2" name="haplophyle" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu"/>
+    <repository changeset_revision="e3beb33f88f0" name="cytoscape" owner="dereeper" toolshed="http://toolshed.g2.bx.psu.edu"/>
+</repositories>

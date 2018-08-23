@@ -1,0 +1,252 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "Haplotype_analysis", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool VCFtools Filter", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "VCFtools Filter", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "fileout_map", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 121.5, 
+                "top": 247
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/vcftools_filter_stats_diversity/sniplay_vcftoolsfilter/2.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "vcftools_filter_stats_diversity", 
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"nb_alleles_min\": \"\\\"2\\\"\", \"chromosomes\": \"\\\"3\\\"\", \"__page__\": null, \"nb_alleles_max\": \"\\\"4\\\"\", \"type_p\": \"\\\"ALL\\\"\", \"allow_missing\": \"\\\"1.0\\\"\", \"fileout_label\": \"\\\"filtered\\\"\", \"frequency\": \"\\\"0.001\\\"\", \"export\": \"\\\"VCF\\\"\", \"samples\": \"\\\"\\\"\", \"bound_end\": \"\\\"100000000\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"max_freq\": \"\\\"0.5\\\"\", \"__rerun_remap_job_id__\": null, \"bound_start\": \"\\\"1\\\"\"}", 
+            "tool_version": "2.0.0", 
+            "type": "tool", 
+            "uuid": "4a63fe7d-03bf-4f8a-b744-acc6c333fd56", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/beagle/Beagle/1.0.0", 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {
+                "vcf_input": {
+                    "id": 0, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Beagle", 
+                    "name": "vcf_input"
+                }
+            ], 
+            "label": null, 
+            "name": "Beagle", 
+            "outputs": [
+                {
+                    "name": "vcf_ouput", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 343.5, 
+                "top": 355
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/beagle/Beagle/1.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "beagle", 
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"phase\": \"\\\"5\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"impute\": \"\\\"5\\\"\", \"vcf_input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "552bf003-578f-46d1-ac19-19dacad937d2", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/getHaplotypesFromPhasedVCF/2.0.0", 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {
+                "input": {
+                    "id": 1, 
+                    "output_name": "vcf_ouput"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Get Haplotypes From Phased VCF", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Get Haplotypes From Phased VCF", 
+            "outputs": [
+                {
+                    "name": "output_distinct", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "output_haplo", 
+                    "type": "fasta"
+                }, 
+                {
+                    "name": "output_distinct_fasta", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 581, 
+                "top": 194
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/sniplay/getHaplotypesFromPhasedVCF/2.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "sniplay", 
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"output_label\": \"\\\"Haplotypes\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_version": "2.0.0", 
+            "type": "tool", 
+            "uuid": "4bfbaba7-3fc2-4076-82d6-3212c61fcb91", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/haplophyle/haplophyle/1.0.0", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "input": {
+                    "id": 2, 
+                    "output_name": "output_distinct_fasta"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Haplophyle", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Haplophyle", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "json"
+                }, 
+                {
+                    "name": "dotfile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 856.5, 
+                "top": 377
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/haplophyle/haplophyle/1.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "haplophyle", 
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"color\": \"{\\\"__current_case__\\\": 0, \\\"choice\\\": \\\"false\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "31d5583a-740b-46e2-80d8-02d0315ac954", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/dereeper/cytoscape/Cytoscape/1.0.0", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "input": {
+                    "id": 3, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Cytoscape", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Cytoscape", 
+            "outputs": [
+                {
+                    "name": "cytoscape_html", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "filelog", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1089, 
+                "top": 270
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/dereeper/cytoscape/Cytoscape/1.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "cytoscape", 
+                "owner": "dereeper", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "8e3d9a5c-09a2-4ef1-acd5-07ca5bb43484", 
+            "workflow_outputs": []
+        }
+    }, 
+    "tags": [], 
+    "uuid": "2ce7df85-4151-40cc-b636-a135663b90ee"
+}

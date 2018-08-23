@@ -8,7 +8,7 @@
         <exit_code range="1:" />
     </stdio>
     <command interpreter="perl">
-        GetHaplotypesFromPhasedVCF.pl $input $output_label &amp;&amp; mv ${output_label}.distinct_haplotypes.txt $output_distinct &amp;&amp; mv ${output_label}.haplo.fas $output_haplo
+        GetHaplotypesFromPhasedVCF.pl $input $output_label &amp;&amp; mv ${output_label}.distinct_haplotypes.txt $output_distinct &amp;&amp; mv ${output_label}.haplo.fas $output_haplo &amp;&amp; mv ${output_label}.distinct_haplotypes.fa $output_distinct_fasta
     </command>
     <inputs>
         <param type="data" name="input" format="vcf" label="Phased VCF" />
@@ -17,12 +17,14 @@
     <outputs>
         <data name="output_distinct" format="txt" label="${output_label}.distinct_haplotypes.txt"/>
         <data name="output_haplo" format="fasta" label="${output_label}.haplo.fas"/>
+        <data name="output_distinct_fasta" format="fasta" label="${output_label}.distinct_haplotypes.fa"/>
     </outputs>
     <tests>
         <test>
             <param name="input" value="getHaplotypesFromPhasedVCF-input.vcf"/>
             <output name="output_distinct" file="getHaplotypesFromPhasedVCF-result.distinct_haplotypes.txt" compare="sim_size" delta="0"/>
             <output name="output_haplo" file="getHaplotypesFromPhasedVCF-result.haplo.fas" compare="sim_size" delta="0"/>
+            <output name="output_distinct_fasta" file="getHaplotypesFromPhasedVCF-result.distinct_haplotypes.fas" compare="sim_size" delta="0"/>
         </test>
     </tests>
     <help><![CDATA[
@@ -72,11 +74,15 @@ Output files
 ------------
 
 
-Text file
-        File describing haplotypes
+Distinct Haplotypes text file
+        File describing distincts haplotypes
 
 Fasta file
         Fasta file with haplotypes
+
+Distinct Haplotypes fasta file
+        Fasta file with distincts haplotypes
+
 
 ---------------------------------------------------
 
@@ -130,6 +136,23 @@ haplotypes.haplo.fas
 	TTTAAGAAATTCCTATATAGGTCTTCTAAGCGTATCTATTAACAT
 	>Chr10_AZUCENA_2
 	TAAATCTTGGTGCTGATCTGATATTTAATGCGT
+
+haplotypes.distinct_haplotypes.fas
+----------------------------------
+
+::
+
+	>haplo1|2
+	CAATTTATATATACTTGTATATAACCACAACGAGAGAGTTTTACCT
+	TTTATAAAAAATAAATAATGTATTACGGCTAATATAGCAATCTTTT
+	AAAATAAATCTATATTTAAATGACTATGGAATTACTAATCACAATA
+	ACAGGATCTTGTTATTTTTAGCTTGTGTACTTATAATGATCCGATG
+	>haplo2|2
+	GCTACTTAAATATCTAGCATTAATCCACAACGAGAGGCTCTTACCT
+	TTAAAAAAGGGTCATCGCCTATAGGTTAGATAATCGACACATATAA
+	TTATAAGAAATTATATATAATTTTTAATCTAGTTCATTCTTGTGCA
+	TCATTATGTTATATAATAATAAACGTAACAAATATTGATACTACTC
+
 
     ]]></help>
     <citations>

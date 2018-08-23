@@ -1,0 +1,6 @@
+description: Visualize interaction networks from JSON file 
+name: cytoscape
+owner: dereeper
+categories:
+- Visualization
+- Graphics

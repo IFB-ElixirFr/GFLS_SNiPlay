@@ -7,6 +7,7 @@ my $out = $ARGV[1];
 
 open(O1,">$out.haplo.fas");
 open(O2,">$out.distinct_haplotypes.txt");
+open(O3,">$out.distinct_haplotypes.fa");
 
 my %indiv;
 my %genes;
@@ -96,13 +97,15 @@ foreach my $gene(sort {$a<=>$b} keys(%haplos)){
 		my $nb = $haplos{$gene}{$haplo};
 		my $ind = $haplotypes2{$gene}{$haplo};
 		print O2 $haplo_name.":$nb:".$haplotypes2{$gene}{$haplo}."\n".$haplo."\n"; 
-		if ($nb > 1){
-			#print "$nb \n";
+		if ($nb >= 1){
+			print O3 ">".$haplo_name."|$nb\n";
+                        print O3 $haplo."\n";
 		}
 	}
 }
 
 close(O1);
-close(O1);
+close(O2);
+close(O3);
 #print scalar keys(%haplos);
 
