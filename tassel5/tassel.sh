@@ -23,6 +23,7 @@ if [[ $analyseType == glm ]]
 then
  run_pipeline.pl $* >> $log1 2>&1
  mv "$galaxyOutDir/TASSELGLM1.txt" $out1
+ if [ $? -gt 0 ] ; then exit 1 ; fi ##check the run of commands
  mv "$galaxyOutDir/TASSELGLM2.txt" $out2
 fi
 
@@ -30,6 +31,7 @@ if [[ $analyseType == mlm ]]
 then
  run_pipeline.pl $* >> $log1 2>&1
  mv "$galaxyOutDir/TASSELMLM1.txt" $out1
+ if [ $? -gt 0 ] ; then exit 1 ; fi ##check the run of commands
  mv "$galaxyOutDir/TASSELMLM2.txt" $out2
  mv "$galaxyOutDir/TASSELMLM3.txt" $out3
 fi
@@ -44,4 +46,5 @@ if [[ $analyseType == ck ]]
 then
  run_pipeline.pl $* >> $log1 2>&1
  mv "$galaxyOutDir/kinship.txt" $out1
+ if [ $? -gt 0 ] ; then exit 1 ; fi ##check the run of commands
 fi

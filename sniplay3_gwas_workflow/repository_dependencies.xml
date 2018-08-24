@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories description="Tassel-based GWAS workflow (GLM model) including population structure and correction for structure"> 
+    <repository name="sniplay" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="snmf" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="tassel5" owner="vmarcon" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+</repositories>

@@ -1,0 +1,4 @@
+categories: [Genome-Wide Association Study]
+description: 'Tassel-based GWAS workflow (GLM model) including population structure and correction for structure'
+name: sniplay3_gwas_workflow
+owner: vmarcon

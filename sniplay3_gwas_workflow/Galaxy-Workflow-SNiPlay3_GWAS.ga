@@ -1,0 +1,273 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "SNiPlay3_GWAS", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "VCF file"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 199.99998474121094, 
+                "top": 287.03334045410156
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"VCF file\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "d3d80126-b2de-4655-b22b-46288f7b35e3", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snmf/snmf/1.2", 
+            "id": 1, 
+            "input_connections": {
+                "vcf": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool sNMF", 
+                    "name": "vcf"
+                }
+            ], 
+            "label": null, 
+            "name": "sNMF", 
+            "outputs": [
+                {
+                    "name": "best_k_output", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "best_k_groups", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "best_k_logfile", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outputs", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "logs", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 600.3666839599609, 
+                "top": 115.11666870117188
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionbest_k_logfile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "best_k_logfile"
+                }, 
+                "HideDatasetActionlogs": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "logs"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/snmf/snmf/1.2", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "snmf", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"vcf\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"kmin\": \"\\\"2\\\"\", \"threshold_group\": \"\\\"50\\\"\", \"kmax\": \"\\\"5\\\"\"}", 
+            "tool_version": null, 
+            "type": "tool", 
+            "uuid": "bfec040d-1a6e-4f57-ba51-65074e6959d7", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "outputs", 
+                    "uuid": "4865afb3-a9f9-459b-81d1-568568d33469"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "best_k_groups", 
+                    "uuid": "8c580ae4-eda9-4702-9026-01565d4486a3"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "best_k_output", 
+                    "uuid": "6afc5b5b-6870-4832-bc9d-26bd0686cf55"
+                }
+            ]
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_vcf2fastaandhapmap/1.1.0", 
+            "id": 2, 
+            "input_connections": {
+                "filein": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool VCF to Hapmap", 
+                    "name": "filein"
+                }
+            ], 
+            "label": null, 
+            "name": "VCF to Hapmap", 
+            "outputs": [
+                {
+                    "name": "fileout", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_seq", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "fileout_fa1", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 516.9999847412109, 
+                "top": 414.28334045410156
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionfileout": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "fileout"
+                }, 
+                "HideDatasetActionfileout_fa1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "fileout_fa1"
+                }, 
+                "HideDatasetActionfileout_seq": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "fileout_seq"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/sniplay/sniplay_vcf2fastaandhapmap/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "sniplay", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"fileout_label\": \"\\\"input\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"optional\": \"{\\\"file_opt\\\": \\\"none\\\", \\\"__current_case__\\\": 0}\", \"filein\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": null, 
+            "type": "tool", 
+            "uuid": "03cc0440-bc12-4dd8-bb1a-822b036bfa52", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/tassel5/Tassel/5.0", 
+            "id": 3, 
+            "input_connections": {
+                "analysis_opts|add_file|structure": {
+                    "id": 1, 
+                    "output_name": "best_k_output"
+                }, 
+                "hapmap": {
+                    "id": 2, 
+                    "output_name": "fileout"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Tassel", 
+                    "name": "hapmap"
+                }, 
+                {
+                    "description": "runtime parameter for tool Tassel", 
+                    "name": "analysis_opts"
+                }
+            ], 
+            "label": null, 
+            "name": "Tassel", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "output2", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "output3", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 872.9999847412109, 
+                "top": 397.28334045410156
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionlog": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "log"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/vmarcon/tassel5/Tassel/5.0", 
+            "tool_shed_repository": {
+                "changeset_revision": null, 
+                "name": "tassel5", 
+                "owner": "vmarcon", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"hapmap\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"analysis_opts\": \"{\\\"trait\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"fonction_selector\\\": \\\"glm\\\", \\\"add_file\\\": {\\\"additional_file_selector\\\": \\\"yes\\\", \\\"structure\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"filterAlignMinFreq\": \"\\\"0.05\\\"\"}", 
+            "tool_version": null, 
+            "type": "tool", 
+            "uuid": "8863d2f5-33ee-433e-aee0-b1f8eed8949b", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output2", 
+                    "uuid": "4d925953-f4a0-422f-b390-4f09f9430c98"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "output3", 
+                    "uuid": "9d05f670-1ee4-47df-946c-eb2807b89152"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "output1", 
+                    "uuid": "0bbd4038-69d6-4f32-a790-32652344fe0d"
+                }
+            ]
+        }
+    }, 
+    "uuid": "9f935e94-1f19-4365-aa1c-facc8c48ed90"
+}
